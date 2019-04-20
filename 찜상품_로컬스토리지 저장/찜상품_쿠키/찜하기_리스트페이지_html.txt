@@ -1,0 +1,57 @@
+더보기는 위한 block 태그 삭제 하고
+loop_new_product 로 처리 해야 함.
+
+
+
+            <!-- 신상품 영역 -->
+            <section class="list_shopping2x">
+                <h3>NEW ARRIVALS</h3>
+<br><a href="/m/page.html?id=4">찜상품</a>
+                <ul class="items">
+                    <!--/loop_new_product/-->
+                        <li class="ht"><div class="hton"></div>
+                            <a href="<!--/new_product@link/-->">
+                                <figure>
+                                    <img src="<!--/new_product@mobile_image/-->" class="listPic" alt="" />
+                                    <figcaption class="list_shoppingInfo">
+                                        <p class="listName bold"><!--/new_product@name/--></p>
+                                        <p><!--/new_product@mobile_icons/--></p>
+                                        <!--/if_new_product@is_soldout/-->
+                                        <p class="listSoldout">(품절)</p>
+                                        <!--/else/-->
+                                        <!--/if_new_product@price_replace/-->
+                                        <p class="listReplce"><!--/new_product@price_replace/--></p>
+                                        <!--/else/-->
+                                        <!--/if_new_product@price_discount/-->
+                                        <p class="listDiscount"><del><!--/number/new_product@price_sell/-->원</del></p>
+                                        <p class="listPrice">
+                                        <!--/if_new_product@discount_apply_type(mobile)/-->
+                                        <span class="fa fa-mobile fa-lg"></span>
+                                        <!--/end_if/-->
+                                        <!--/number/new_product@price_discount/-->원
+                                        </p>
+                                        <!--/else/-->
+                                        <p class="listPrice"><!--/number/new_product@price_sell/-->원</p>
+                                        <!--/end_if/-->
+                                        <!--/end_if/-->
+                                        <!--/if_new_product@reserve_price(+1)/-->
+                                        <p class="listReserve">
+                                        <!--/if_new_product@used_mobile_reserve/-->
+                                        <span class="fa fa-mobile fa-lg"></span>
+                                        <!--/end_if/-->
+                                        <!--/number/new_product@reserve_price/-->원 적립</p>
+                                        <!--/end_if/-->
+                                        <!--/if_new_product@point_price(+1)/-->
+                                        <p class="listPoint"><!--/number/new_product@point_price/--><!--/new_product@point_unit/--> 적립</p>
+                                        <!--/end_if/-->
+                                        <!--/end_if/-->
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                    <!--/end_loop/-->
+                </ul>
+
+
+
+            </section>

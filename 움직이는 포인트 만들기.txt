@@ -1,0 +1,88 @@
+          <a href="<!--/link_join/-->" class="-panda_join_point" ><i class="-ico -ico-chevron-up"></i>+2000 P</a>
+
+
+
+ @-webkit-keyframes -panda_join_point-motion {
+ 0% {
+opacity:1;
+}
+ 50% {
+opacity:1;
+transform: translateX(0) translateY(3px) translateZ(0px);
+-webkit-transform: translateX(0) translateY(3px) translateZ(0px);
+}
+ 100% {
+opacity:1;
+}
+}
+ @keyframes -panda_join_point-motion {
+ 0% {
+opacity:1;
+}
+ 50% {
+opacity:1;
+transform: translateX(0) translateY(3px) translateZ(0px);
+-webkit-transform: translateX(0) translateY(3px) translateZ(0px);
+}
+ 100% {
+opacity:1;
+}
+}
+ @-webkit-keyframes -panda_join_point-motion {
+ 0% {
+opacity:1;
+}
+ 50% {
+opacity:1;
+transform: translateX(0) translateY(3px) translateZ(0px);
+-webkit-transform: translateX(0) translateY(3px) translateZ(0px);
+}
+ 100% {
+opacity:1;
+}
+}
+ @keyframes -panda_join_point-motion {
+ 0% {
+opacity:1;
+}
+ 50% {
+opacity:1;
+transform: translateX(0) translateY(3px) translateZ(0px);
+-webkit-transform: translateX(0) translateY(3px) translateZ(0px);
+}
+ 100% {
+opacity:1;
+}
+}
+.-panda_join_point {
+	z-index:1;
+	position:absolute;
+	top:100%;
+	text-align:center;
+	white-space:nowrap;
+	padding:2px 7px 1px 7px;
+	border-radius:2px;
+	font-size:11px;
+	line-height:18px;
+	font-weight:bold;
+	background:#333;
+	color:#fff;
+	-webkit-transform-origin: center center;
+	-moz-transform-origin: center center;
+	-o-transform-origin: center center;
+	transform-origin: center center;
+	-webkit-animation: -panda_join_point-motion 1500ms infinite; /* Safari 4+ */
+	-moz-animation:    -panda_join_point-motion 1500ms infinite; /* Fx 5+ */
+	-o-animation:      -panda_join_point-motion 1500ms infinite; /* Opera 12+ */
+	animation:         -panda_join_point-motion 1500ms infinite; /* IE 10+, Fx 29+ */
+}
+.-panda_join_point > i {
+	position:absolute;
+	font-size:17px;
+	color:#333;
+	top:-9px;
+	left:4px;
+}
+#-grap.-fixed .-panda_join_point {
+	display:none;
+}

@@ -1,0 +1,71 @@
+버튼토글 JQUERY
+
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>jQuery Method | .fadeToggle()</title>
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+      $( document ).ready( function() {
+        $( 'button' ).click( function() {
+          $( 'h1' ).fadeToggle();
+        } )
+      } );
+    </script>
+  </head>
+  <body>
+    <button>Click</button>
+    <h1>Lorem Ipsum Dolor</h1>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+토글2
+
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>jQuery Methods | toggle</title>
+    <style>
+      p.a {
+        cursor: pointer;
+        font-weight: bold;
+      }
+      p.b {
+        display: none;
+      }
+    </style>
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+      $(document).ready( function() {
+        $( 'p.a' ).click( function() {
+          $( 'p.b' ).toggle( 'slow' );
+        });
+      });
+    </script>
+  </head>
+  <body>
+      <p class="a">Click to toggle</p>
+      <p class="b">Lorem ipsum dolor.</p>
+  </body>
+</html>

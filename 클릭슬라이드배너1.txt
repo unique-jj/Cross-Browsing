@@ -1,0 +1,90 @@
+          <div class="slide_cbn_1">
+
+	     <div class="cContents">
+	      <ul class="cWrapper">
+	       <li class="cList"><a href="#"><img src="/design/pencafe/renewal2018/img/w/slide_bn_1_img1.gif" /></a></li>
+	       <li class="cList"><a href="#"><img src="/design/pencafe/renewal2018/img/w/slide_bn_1_img2.gif" /></a></li>
+	       <li class="cList"><a href="#"><img src="/design/pencafe/renewal2018/img/w/slide_bn_1_img3.gif" /></a></li> 
+	      </ul>
+	     </div>
+	     <ul class="dotWrap cdot">
+	       <li class="dotList active"></li>
+	       <li class="dotList"></li>
+	       <li class="dotList"></li>
+	     </ul>
+	     <div class="sBnBtn">
+	      <input type="image" value="right" class="cRight" src="http://www.canmart.co.kr/design/jason006/img_j/prev.png" alt="왼쪽버튼" style="margin-right:790px;"/>
+	      <input type="image" value="left" class="cLeft" src="http://www.canmart.co.kr/design/jason006/img_j/next.png" alt="오른쪽버튼" style="margin-right:10px;" />  
+	     </div>
+
+          </div>
+
+<script src="/design/pencafe/renewal2018/js/jquery.scrollBanner.js"></script>
+<script>
+(function($) {
+ $(document).ready(function(){
+ $(".slide_cbn_1 .cContents").scrollBanner({
+  //컨텐츠 영역 정의
+  "cContentsClass" : "cContents",
+  "cContentsWidth" : "100%",
+  "cContentsHeight" : "190px",
+  //ul
+  "cWrapperClass" : "cWrapper",
+  //li
+  "cListClass" : "cList",
+  //한번에 노출할 리스트의 개수
+  "viewItemCnt" : "1",
+  //한번에 움직일 배너의 개수
+  "moveItemCnt" : "1",
+  //좌우버튼 정의
+  "leftBtnClass" : "cLeft",
+  "rightBtnClass" : "cRight",
+  //dot영역 정의
+  "dotMoveYn" : true,
+  "dotWrap" : "cdot",
+  "dotElementClass" : "dotList",
+  "dotActClass" : "active",
+  //자동롤링
+  "autoScrollYn" : true,
+  "scorllTimer" : "4000",
+  //터치이벤트
+  "touchEvent" : false,
+  //상하롤링
+  "verticalMove" : false
+ });
+ });
+})(jQuery);
+</script>
+
+
+/***슬라이드배너1***/
+.slide_cbn_1 { width:487px; height:190px; position:relative; float:left; margin-right:20px;}
+.slide_cbn_1 .dotWrap {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.slide_cbn_1 .dotWrap li {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  padding: 0px 2px;
+  background: url('/design/pencafe/renewal2018/img/w/dot_white.png') no-repeat top left;
+  opacity:.5;
+  -webkit-background-size: 8px;
+  background-size: 8px;
+  vertical-align: top;
+ }
+ 
+.slide_cbn_1 .dotWrap li.active {
+  background: url('/design/pencafe/renewal2018/img/w/dot_white.png') no-repeat top left;
+  -webkit-background-size: 8px;
+  background-size: 8px;
+  opacity:1;
+ }
+ 
+.slide_cbn_1 .cList {
+  text-align : center;
+ }
+
+.slide_cbn_1 .sBnBtn { position:absolute; top:0px; left:0px;  }

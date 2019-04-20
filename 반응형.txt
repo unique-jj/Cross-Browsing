@@ -1,0 +1,59 @@
+반응형 레이아웃
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+해드와 해드사이
+
+@media screen and (max-width:768px) {
+  body {color: red;}
+} 이것은 예를들어
+
+예제 HTML소스 확인
+http://book.cmsfactory.net/CSS/V01/layout/css-layout-2-responsive.html
+
+강좌 URL
+http://www.cmsfactory.net/node/10362
+
+
+
+
+
+
+
+
+<style>
+@media screen and (min-width: 1024px){
+.has-background.page-3 {
+background-image: url('http://www.akta.co.kr/design/valenAK/m/AW16W43MRP001.jpg');
+}
+
+.has-background.page-3-right {
+background-image: url('');
+}
+
+}
+
+/*DEVICE STYLES - left tablet landscape*/
+@media screen and (min-width: 980px) and (max-width: 1025px){
+.has-background.page-3 {
+background-image: url('http://www.akta.co.kr/design/valenAK/m/AW16W43MRP001.jpg');
+}
+
+/*DEVICE STYLES - right tablet landscape*/
+.has-background.page-3-right {
+background-image: url('');
+}
+}
+
+ /*tablet portrait*/
+@media screen and (max-width: 980px) {
+.has-background.page-3 {
+background-image: url('http://www.akta.co.kr/design/valenAK/m/AW16W43MRP02.jpg');
+}}
+
+ /*mobile test*/
+@media screen and (max-width: 475px) {
+.has-background.page-3 {
+background-image: url('http://www.akta.co.kr/design/valenAK/m/AW16W43MRP03.jpg');
+}
+}
+</style>

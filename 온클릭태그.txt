@@ -1,0 +1,4 @@
+    <div class="over" onclick="location.href='<!--/add1_product@link/-->';">      
+      <div style="opacity:1 !important; color:#fff;"> <!--/add1_product@name/--> </div>
+      <div style="opacity:1 !important;"> <!--/add1_product@price_sell/--> </div>
+    </div>

@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="CONTENT-TYPE" content="text/html;charset=UTF-8">
+<title>메뉴 예제</title>
+<style type="text/css">
+.brand-menu, .brand-menu li, .brand-sub ul .brand-sub ul li { border:0; padding:0; margin:0; }
+.brand-menu, .brand-sub { clear:both; }
+.brand-menu li, .brand-sub li { list-style:none; float:left; }
+.brand-menu li a img { width:100px; height:30px; }
+.brand-sub ul li a img { width:80px; height:20px; }
+.brand-sub { display:none; }
+</style>
+</head>
+<body>
+<script type="text/javascript" src="http://imomshop.special295.freesell.co.kr/js/jquery-1.7.2.min.js"></script>
+
+
+
+<div>
+    <ul class="brand-menu">
+        <li><a href="#"><img src="01_off.gif"></a></li>
+        <li><a href="#"><img src="02_off.gif"></a></li>
+        <li><a href="#"><img src="03_off.gif"></a></li>
+        <li><a href="#"><img src="04_off.gif"></a></li>
+        <li><a href="#"><img src="05_off.gif"></a></li>
+    </ul>
+</div>
+<div class="brand-sub">
+    <ul>
+        <li><a href="#"><img src="sub_01.gif"></a></li>
+        <li><a href="#"><img src="sub_01.gif"></a></li>
+        <li><a href="#"><img src="sub_01.gif"></a></li>
+    </ul>
+</div>
+<div class="brand-sub">
+    <ul>
+        <li><a href="#"><img src="sub_01.gif"></a></li>
+        <li><a href="#"><img src="sub_01.gif"></a></li>
+        <li><a href="#"><img src="sub_01.gif"></a></li>
+    </ul>
+</div>
+<div class="brand-sub">
+    <ul>
+        <li><a href="#"><img src="sub_01.gif"></a></li>
+        <li><a href="#"><img src="sub_01.gif"></a></li>
+        <li><a href="#"><img src="sub_01.gif"></a></li>
+    </ul>
+</div>
+<div class="brand-sub">
+    <ul>
+        <li><a href="#"><img src="sub_01.gif"></a></li>
+        <li><a href="#"><img src="sub_01.gif"></a></li>
+        <li><a href="#"><img src="sub_01.gif"></a></li>
+    </ul>
+</div>
+<div class="brand-sub">
+    <ul>
+        <li><a href="#"><img src="sub_01.gif"></a></li>
+        <li><a href="#"><img src="sub_01.gif"></a></li>
+        <li><a href="#"><img src="sub_01.gif"></a></li>
+    </ul>
+</div>
+
+<script type="text/javascript">
+//menu show/hide script
+(function($) {
+    //img.src on/off 처리 function
+    $.fn._img_on = function() {
+        return this.each(function() {
+            $(this).attr('src', $(this).attr('src').replace('_off', '_on'));
+        });
+    };
+    $.fn._img_off = function() {
+        return this.each(function() {
+            $(this).attr('src', $(this).attr('src').replace('_on', '_off'));
+        });
+    };
+    
+    $('.brand-menu li a').each(function(i) {
+        var _th = $(this);
+        _th.on('click', function(e) {
+			e.preventDefault(); //a 태그 작동하지 말아라
+            $('.brand-menu li a img')._img_off().eq(i)._img_on();    //싹다 off 하고 해당 놈만 on
+            $('.brand-sub').hide().eq(i).show();   //싹다 hide 하고 해당 놈만 show
+        });
+    }).eq(0).trigger('click');    
+})(jQuery);
+</script>
+
+</body>
+</html>

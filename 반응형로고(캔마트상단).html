@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script type="text/javascript" src="http://www.canmart.co.kr/design/jason006/js_j/jquery-1.7.2.min.js"></script>
+<script>
+(function($) {
+
+$(window).scroll(function () {
+    if ($(this).scrollTop() > 50) {
+        $('.logofixed a').stop().animate({top:'10'},300);
+    } else {
+        $('.logofixed a').stop().animate({top:'-43'},200);
+    }
+    return false;
+
+});
+
+})(jQuery);
+
+</script>
+<style>
+.logofixed {text-align: center;}
+.logofixed a {position: absolute; left: 490px; top: -42px; /*margin-left: -88px;*/}
+</style>
+</head>
+
+<body>
+
+
+<h1 class="logofixed"> <a href="<!--/link_home/-->" style="top: -43px;"><img src="http://www.canmart.co.kr/design/jason006/img_j/logofixed.jpg" alt="반응형로고"></a> </h1>
+
+
+
+
+</body>
+</html>

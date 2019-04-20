@@ -1,0 +1,838 @@
+<div id="hdWrap">
+  <div class="top_bn">
+    <div class="top_bn_img"><img src="/design/dltnduf86/renewal/w/img/top_bn_img.gif" alt="탑배너" /> <a href="" class="top_bn_btn"><img src="/design/dltnduf86/renewal/w/img/top_btn_close.png"></a> </div>
+  </div>
+  <div id="header">
+    <div class="lnb">
+      <div class="lnb_left">
+        <div class="bookmark"><a href="<!--/link_favorite/-->"><img src="/design/dltnduf86/renewal/w/img/bookmark_icon.png" alt="즐겨찾기" />BOOKMARK</a></div>
+      </div>
+      <div class="lnb_right"> 
+        <!--/if_login/--> 
+        <a href="<!--/link_logout/-->"><b>로그아웃</b></a> <span class="bar"></span> 
+        <!--/else/--> 
+        <a href="<!--/link_login/-->"><b>로그인</b></a> <span class="bar"></span> <a href="<!--/link_join/-->">회원가입</a> <span class="bar"></span> 
+        <!--/end_if/--> 
+        <a href="<!--/link_basket/-->">장바구니</a> <span class="basket_count"><!--/if_user_basket_quantity/--><!--/user_basket_quantity/--><!--/else/-->0<!--/end_if/--></span> <span class="bar"></span>
+        <div class="mp_wrap"><a href="<!--/link_mypage/-->">마이페이지</a> <img src="/design/dltnduf86/renewal/w/img/mp_drop_icon.gif" alt="마이페이지 드롭다운" class="mp_button "/> <span class="bar"></span>
+          <div class="mp_sub" >
+            <p><a href="/shop/mypage.html?mypage_type=myorder">주문내역</a></p>
+            <p><a href="/shop/mypage.html?mypage_type=myreserve">적립금내역</a></p>
+            <p><a href="/shop/mypage.html?mypage_type=mycoupon">쿠폰내역</a></p>
+            <p><a href="<!--/link_join/-->">회원정보수정</a></p>
+          </div>
+        </div>
+        <a href="<!--/link_order/-->">주문조회</a> <span class="bar"></span> <a href="#">고객센터</a> </div>
+    </div>
+    <div class="header_info">
+      <div class="logo"><a href="/"><img src="/design/dltnduf86/renewal/w/img/logo.gif" alt="로고" /></a></div>
+      <div class="search">
+        <div class="search_bar"> 
+          <!--/form_search/-->
+          <fieldset>
+            <legend>상품 검색 폼</legend>
+            <!--/input_search_word(input-keyword)/--> 
+            <a href="<!--/link_search_button/-->">
+            <input type="image" src="/design/dltnduf86/renewal/w/img/search_btn.gif" alt="검색" title="검색" />
+            </a>
+          </fieldset>
+          <!--/end_form/--> 
+        </div>
+        <div class="keyword"> <a href="#">파티션홀더</a><span class="bar"></span> <a href="#">자동문돔사인</a><span class="bar"></span> <a href="#">카다로그꽂이</a><span class="bar"></span> <a href="#">ID카드셋</a><span class="bar"></span> <a href="#">테이블사각대</a><span class="bar"></span> <a href="#">아크릴명찰</a> </div>
+      </div>
+      <div class="dc_bn">
+        <div class="cContents">
+          <ul class="cWrapper">
+            <li class="cList"> <img src="/design/dltnduf86/renewal/w/img/dc_bn1.gif" alt="배너1" /> </li>
+            <li class="cList"> <img src="/design/dltnduf86/renewal/w/img/dc_bn2.gif" alt="배너2" /> </li>
+            <li class="cList"> <img src="/design/dltnduf86/renewal/w/img/dc_bn3.gif" alt="배너3" /> </li>
+            
+      <!---상품돌릴경우 레이아웃
+      <li class="cList">
+       <div class="img"> <img src="" alt="할인상품이미지" /></div>
+       <div class="info">
+        <p class="dc_tit">TIME SALE</p>
+        <p class="dc_pdname">볼트형액자</p>
+        <p class="dc_pr">
+         <span class="dc_pr_origin">16800원</span>
+         <span class="dc_pr_per">(-26%)OFF</span>
+        </p>
+       </div>
+      </li>
+      ---->
+          </ul>
+        </div>
+        <div class="sBnBtn">
+          <input type="image" value="right" class="cRight" src="/design/dltnduf86/renewal/w/img/dc_bn_left.gif" alt="왼쪽버튼" />
+          <input type="image" value="left" class="cLeft" src="/design/dltnduf86/renewal/w/img/dc_bn_right.gif" alt="오른쪽버튼" />
+        </div>
+      </div>
+<script src="/design/dltnduf86/renewal/w/js/jquery.touchwipe.min.js"></script> 
+<script src="/design/dltnduf86/renewal/w/js/jquery.scrollBanner.js"></script> 
+<script>
+  jQuery(document).ready(function(){
+   jQuery(".cContents").scrollBanner({
+    "cContentsClass" : "cContents",
+    "cContentsWidth" : "100%",
+    "cContentsHeight" : "53px",
+    //ul
+    "cWrapperClass" : "cWrapper",
+    //li
+    "cListClass" : "cList",
+    //한번에 노출할 리스트의 개수
+    "viewItemCnt" : "1",
+    //한번에 움직일 배너의 개수
+    "moveItemCnt" : "1",
+    //좌우버튼 정의
+    "leftBtnClass" : "cLeft",
+    "rightBtnClass" : "cRight",
+    //dot영역 정의
+    "dotMoveYn" : true,
+    "dotWrap" : "cdot",
+    "dotElementClass" : "dotList",
+    "dotActClass" : "active",
+    //자동롤링
+    "autoScrollYn" : true,
+    "scorllTimer" : "4000",
+    //터치이벤트
+    "touchEvent" : true,
+    //상하롤링
+   "verticalMove" : false
+   });
+  });
+</script> 
+    </div>
+  </div>
+  <!-- #header -->
+  
+  <div class="gnb_wrap">
+    <div class="gnb">
+      <div class="container" style="position:relative;">
+        <ul>
+          <li><a href="/shop/shopbrand.html?xcode=001&type=X">표지판</a>
+            <ul>
+              <li><a href="/shop/shopbrand.html?xcode=001&mcode=001&type=X">차량표지판</a></li>
+              <li><a href="/shop/shopbrand.html?xcode=001&mcode=002&type=X">아크릴표지판</a></li>
+              <li><a href="/shop/shopbrand.html?xcode=001&mcode=003&type=X">포맥스표지판</a></li>
+              <li><a href="/shop/shopbrand.html?xcode=001&mcode=004&type=X">OPEN/CLOSED</a></li>
+              <li><a href="/shop/shopbrand.html?xcode=001&mcode=005&type=X">축광표지판</a></li>
+              <li><a href="/shop/shopbrand.html?xcode=001&mcode=006&type=X">여닫이표지판</a></li>
+              <li><a href="/shop/shopbrand.html?xcode=001&mcode=007&type=X">A형사인</a></li>
+              <li><a href="/shop/shopbrand.html?xcode=001&mcode=008&type=X">멀티표지판</a></li>
+              <li><a href="/shop/shopbrand.html?xcode=001&mcode=009&type=X">알루미늄&점자표지판</a></li>
+              <li><a href="/shop/shopbrand.html?xcode=001&mcode=010&type=X">투명표지판</a></li>
+              <li><a href="/shop/shopbrand.html?xcode=001&mcode=011&type=X">기타표지판</a></li>
+              <li><a href="/shop/shopbrand.html?xcode=001&mcode=012&type=X">금연스티커</a></li>
+              <li><a href="/shop/shopbrand.html?xcode=001&mcode=013&type=X">화장실표지판</a></li>
+              <li><a href="/shop/shopbrand.html?xcode=001&mcode=014&type=X">문자/호수판</a></li>
+              <li><a href="/shop/shopbrand.html?xcode=001&mcode=015&type=X">에폭시표지판</a></li>
+              <li><a href="/shop/shopbrand.html?xcode=001&mcode=016&type=X">걸이용표지판</a></li>
+              <li><a href="/shop/shopbrand.html?xcode=001&mcode=017&type=X">시스템사인</a></li>
+              <li><a href="/shop/shopbrand.html?xcode=001&mcode=018&type=X">우드사인</a></li>
+              <li><a href="/shop/shopbrand.html?xcode=001&mcode=019&type=X">멀티케이스/포토케이스</a></li>
+            </ul>
+          </li>
+          <li><a href="/shop/shopbrand.html?xcode=002&type=X">사무용품</a>
+            <ul>
+              <li><a href="/shop/shopbrand.html?xcode=002&mcode=005&type=X">쇼케이스[양면]</a></li>
+              <li><a href="/shop/shopbrand.html?xcode=002&mcode=002&type=X">쇼케이스</a></li>
+              <li><a href="/shop/shopbrand.html?xcode=002&mcode=003&type=X">쇼카드</a></li>
+              <li><a href="/shop/shopbrand.html?xcode=002&mcode=004&type=X">쇼클립</a></li>
+              <li><a href="/shop/shopbrand.html?xcode=002&mcode=001&type=X">조립형가격표</a></li>
+              <li><a href="/shop/shopbrand.html?xcode=002&mcode=006&type=X">파티션꽂이</a></li>
+              <li><a href="/shop/shopbrand.html?xcode=002&mcode=007&type=X">파티션홀더</a></li>
+              <li><a href="/shop/shopbrand.html?xcode=002&mcode=008&type=X">멀티프레임</a></li>
+            </ul>
+          </li>
+          <li><a href="/shop/shopbrand.html?xcode=003&type=X">디스플레이용품</a>
+            <ul>
+              <li><a href="/shop/shopbrand.html?xcode=003&mcode=001&type=X">Y자꽂이</a></li>
+              <li><a href="/shop/shopbrand.html?xcode=003&mcode=002&type=X">L자형꽂이</a></li>
+              <li><a href="/shop/shopbrand.html?xcode=003&mcode=003&type=X">멀티꽂이/건의함</a></li>
+              <li><a href="/shop/shopbrand.html?xcode=003&mcode=004&type=X">메뉴꽂이</a></li>
+              <li><a href="/shop/shopbrand.html?xcode=003&mcode=005&type=X">메뉴북</a></li>
+              <li><a href="/shop/shopbrand.html?xcode=003&mcode=006&type=X">부착용꽂이</a></li>
+              <li><a href="/shop/shopbrand.html?xcode=003&mcode=007&type=X">자석프레임</a></li>
+              <li><a href="/shop/shopbrand.html?xcode=003&mcode=009&type=X">회전형메뉴꽂이</a></li>
+              <li><a href="/shop/shopbrand.html?xcode=003&mcode=010&type=X">명함꽂이</a></li>
+              <li><a href="/shop/shopbrand.html?xcode=003&mcode=011&type=X">데스크용품</a></li>
+              <li><a href="/shop/shopbrand.html?xcode=003&mcode=012&type=X">아크릴액자</a></li>
+              <li><a href="/shop/shopbrand.html?xcode=003&mcode=013&type=X">자석액자</a></li>
+              <li><a href="/shop/shopbrand.html?xcode=003&mcode=014&type=X">전단지꽂이</a></li>
+              <li><a href="/shop/shopbrand.html?xcode=003&mcode=015&type=X">스탠드메뉴꽂이</a></li>
+              <li><a href="/shop/shopbrand.html?xcode=003&mcode=016&type=X">칸막이</a></li>
+              <li><a href="/shop/shopbrand.html?xcode=003&mcode=017&type=X">T자꽂이(사각받침)</a></li>
+              <li><a href="/shop/shopbrand.html?xcode=003&mcode=018&type=X">부착용꽂이판</a></li>
+              <li><a href="/shop/shopbrand.html?xcode=003&mcode=019&type=X">인포프레임</a></li>
+              <li><a href="/shop/shopbrand.html?xcode=003&mcode=020&type=X">포켓패드</a></li>
+            </ul>
+          </li>
+          <li><a href="/shop/shopbrand.html?xcode=004&type=X">아크릴진열대</a></li>
+          <li><a href="/shop/shopbrand.html?xcode=005&type=X">생활용품/기타</a>
+            <ul>
+              <li><a href="/shop/shopbrand.html?xcode=005&mcode=001&type=X">명찰</a></li>
+              <li><a href="/shop/shopbrand.html?xcode=005&mcode=002&type=X">모니터메모보드</a></li>
+              <li><a href="/shop/shopbrand.html?xcode=005&mcode=003&type=X">메모홀더</a></li>
+              <li><a href="/shop/shopbrand.html?xcode=005&mcode=004&type=X">열쇠고리/칼라키</a></li>
+              <li><a href="/shop/shopbrand.html?xcode=005&mcode=005&type=X">부자재 상품</a></li>
+              <li><a href="/shop/shopbrand.html?xcode=005&mcode=006&type=X">포스트포켓</a></li>
+              <li><a href="/shop/shopbrand.html?xcode=005&mcode=007&type=X">자석홀더</a></li>
+              <li><a href="/shop/shopbrand.html?xcode=005&mcode=008&type=X">사무용컷터/리무버</a></li>
+              <li><a href="/shop/shopbrand.html?xcode=005&mcode=009&type=X">수납바스켓</a></li>
+              <li><a href="/shop/shopbrand.html?xcode=005&mcode=010&type=X">메모보드</a></li>
+              <li><a href="/shop/shopbrand.html?xcode=005&mcode=011&type=X">조각고무자석</a></li>
+              <li><a href="/shop/shopbrand.html?xcode=005&mcode=012&type=X">칼라고무자석판</a></li>
+              <li><a href="/shop/shopbrand.html?xcode=005&mcode=013&type=X">양면테이프 / 벨크로(찍찍이)</a></li>
+              <li><a href="/shop/shopbrand.html?xcode=005&mcode=014&type=X">케이블 클립</a></li>
+              <li><a href="/shop/shopbrand.html?xcode=005&mcode=015&type=X">전선몰딩</a></li>
+              <li><a href="/shop/shopbrand.html?xcode=005&mcode=016&type=X">미끄럼방지테이프</a></li>
+            </ul>
+          </li>
+          <li><a href="/shop/shopbrand.html?xcode=013&type=X">개인결제창</a>
+            <ul>
+              <li><a href="/shop/shopbrand.html?xcode=013&mcode=001&type=X">개인결제창</a></li>
+            </ul>
+          </li>
+          <li><a href="/shop/shopbrand.html?xcode=006&type=P">NEW</a></li>
+          <li><a href="/shop/shopbrand.html?xcode=008&type=P">BEST</a></li>
+          <li><a href="/shop/shopbrand.html?xcode=009&type=P">SALE</a></li>
+          <div class="menu10"><a href="/board/board.html?code=dltnduf86"><img src="/design/dltnduf86/renewal/w/img/cate_menu10.gif" alt="대량주문"/></a></div>
+          <div class="menu_all">
+            <nav class="lightb lighten" role="navigation"> <a class="dropdown-button dropBtn1 allmenu" href="#" data-activates="nav-pc" style="background: url(&quot;/design/dltnduf86/renewal/w/img/cate_menu_all.png&quot;) center center no-repeat;"></a> </nav>
+          </div>
+        </ul>
+        <div id="nav-pc" class="fullmenu dropdown-content" style="display:none;">
+          <ul class="fix">
+            <div class="all_title">ALL CATEGORY</div>
+            <div class="all_box_wrap">
+              <div class="all_box_wh"><a href="/shop/shopbrand.html?xcode=006&type=P"><span>NEW</span>신상품</a></div>
+              <div class="all_box_wh"><a href="/shop/shopbrand.html?xcode=008&type=P"><span>BEST</span>베스트상품</a></div>
+              <div class="all_box_wh"><a href="/shop/shopbrand.html?xcode=009&type=P"><span>SALE</span>세일상품</a></div>
+              <div class="all_box_bk"><a href="/shop/shopbrand.html?xcode=013&type=X"><span>개인결제창</span>Personal payment</a></div>
+            </div>
+            
+            <!--/loop_category1/-->
+            <div class="all_lnb">
+              <div class="cate1" onclick="location='<!--/category1@link/-->'"><a href=""><!--/category1@name/--></a></div>
+              <!--/loop_category1@category2/-->
+              <div class="cate2"> <a href="<!--/category1@category2@link/-->"><!--/category1@category2@name/--></a> </div>
+              <!--/end_loop/--> 
+            </div>
+            <!--/end_loop/-->            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- #hdWrap --> 
+
+<script type="text/javascript">
+document.search.search.value = '검색어를 입력해 주세요.';
+</script> 
+<script type="text/javascript">
+document.search.search.onfocus = function () {
+    this.value = '';
+}
+</script> 
+
+<script>
+  $('.gnb li').hover(
+    function() {
+      $('ul', this).stop().slideDown(200);
+    },
+    function() {
+      $('ul', this).stop().slideUp(200);
+    }
+  );
+</script> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**셋팅전까지 가려놓기**/
+#blk_scroll_wings {
+	display:none;
+}
+/**all nav S**/
+
+.allmenu {
+	position: absolute;
+	z-index:99999999;
+	top: 0;
+	left: 0;
+	width: 45px;
+	height: 48px;
+	text-indent: -9999px;
+	background: url(/design/dltnduf86/renewal/w/img/cate_menu_all.png) no-repeat center center;
+}
+.allmenu.btn-close {
+	background: url("/design/dltnduf86/renewal/w/img/cate_menu_close.png") center center no-repeat;
+}
+nav ul.pc li a:hover, nav ul.pc li a.active {
+	color:#dc2c34 !important;
+	background:url('https://www.ottogi.co.kr/images/common/gnb_on.jpg') repeat-x left bottom;
+}
+#nav-pc {
+	max-height:990px !important;
+}
+#nav-pc {
+	color:#333;
+	z-index: 999999;
+	overflow-y:hidden;
+}
+#nav-pc > ul {
+	margin:0 auto;
+	min-height:130px;
+	padding:20px;
+	color:#333;
+	text-align:left;
+	overflow-y:hidden;
+}
+#nav-pc > ul > li {
+	width:16.666%;
+	float:left;
+	clear:none;
+	color:#333;
+}
+#nav-pc > ul > li a {
+	color:#333;
+	text-align:left;
+}
+#nav-pc > ul > li > ul.dep2 {
+	margin-top:17px;
+}
+#nav-pc > ul > li > ul.dep2 > li.h30 {
+	height:36px;
+	line-height:36px;
+	min-height:36px;
+}
+#nav-pc > ul > li > ul.dep2 > li > a, #nav-pc > ul > li > ul.dep2 > li > span {
+	font-size:16px;
+	color:#333;
+	padding-left:36px;
+	text-align:left;
+	background:url('../images/common/bg_menuli.png') no-repeat 20px 11px;
+}
+#nav-pc > ul > li > ul.dep2 > li ul {
+	margin:10px 0 15px
+}
+#nav-pc > ul > li > ul.dep2 > li ul li {
+	float:none !important;
+	clear:both;
+	min-height:22px;
+	height:22px;
+	text-align:left;
+	margin-left:20px;
+}
+#nav-pc > ul > li > ul.dep2 li > ul li a {
+	font-size:14px;
+	line-height:1.5;
+	min-height:22px;
+	height:22px;
+	text-align:left;
+}
+nav a.dropdown-button {
+	margin:0 0px;
+}
+.fullmenu {
+	background: #fff;
+	border:1px solid #35bdbb;
+	position:absolute;
+	top:0;
+	z-index:9999999;
+}
+/**all nav E**/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#hdWrap {
+}
+#hdWrap .top_bn {
+	width:100%;
+	height:90px;
+	background:url(/design/dltnduf86/renewal/w/img/top_bn_bg.gif);
+	background-repeat:repeat-x;
+	display:none;
+}
+#hdWrap .top_bn .top_bn_img {
+	width:1200px;
+	margin:0 auto;
+	position:relative;
+}
+#hdWrap .top_bn .top_bn_img .top_bn_btn {
+	position:absolute;
+	top:10%;
+	right:0%;
+}
+#header {
+	position: relative;
+	width: 1200px;
+	height: 170px;
+}
+#header .lnb {
+	width:100%;
+}
+#header .lnb_left {
+	float:left;
+	width:50%;
+	padding:12px 0;
+}
+#header .lnb_left div {
+	display:inline-block;
+}
+#header .lnb_left .bookmark {
+}
+#header .lnb_left .bookmark a {
+	color:#666;
+	font-weight:bold;
+}
+#header .lnb_left .bookmark img {
+	margin-right:10px;
+}
+#header .lnb_right {
+	float:right;
+	width:50%;
+	padding:12px 0;
+	text-align:right;
+}
+#header .lnb_right .basket_count {
+	background:#34bdba;
+	padding:2px 8px;
+	color:#fff;
+	font-weight:bold;
+	border-radius:10px;
+	font-size:11px;
+}
+#header .lnb_right .mp_wrap {
+	display:inline-block;
+	position:relative;
+}
+#header .lnb_right .mp_wrap .mp_sub {
+	position:absolute;
+	top:20px;
+	border:1px solid #34bdba;
+	background:#fff;
+	width:80px;
+	z-index:999;
+	display:none;
+}
+#header .lnb_right .mp_wrap .mp_sub p {
+	padding:3px 0;
+	text-align:center;
+}
+#header .header_info {
+	width:100%;
+}
+#header .header_info .logo {
+	width: 230px;
+	height: 132px;
+	margin-right: 145px;
+	float: left;
+	line-height: 110px;
+}
+#header .header_info .logo a img {
+	vertical-align:middle;
+}
+#header .header_info .search {
+	width:450px;
+	height:132px;
+	float:left;
+}
+#header .header_info .search .search_bar {
+	margin-top:25px;
+}
+#header .header_info .search .search_bar .MS_search_word {
+	border: 1px solid #34bdba;
+	width: 368px;
+	height: 50px;
+	float: left;
+	font-size: 16px;
+	padding-left: 20px;
+	color:#c2c2c2;
+}
+#header .header_info .search .search_bar a img {
+	float:left;
+}
+#header .header_info .search .search_bar:after {
+	clear:both;
+	content:"";
+}
+#header .header_info .search .keyword {
+	margin-top:10px;
+}
+#header .header_info .search .keyword a {
+	font-size:11px;
+}
+#header .header_info .search .keyword .bar {
+	margin:0 7px;
+}
+#header .header_info .dc_bn {
+	width:190px;
+	height:132px;
+	margin-left:184px;
+	float:left;
+	position:relative;
+}
+#header .header_info .dc_bn .dotWrap li {
+	display: inline-block;
+	width: 7px;
+	height: 7px;
+	padding: 0px 2px;
+	background: url(img/icon_dot02.png) no-repeat top left;
+	-webkit-background-size: 7px;
+	background-size: 7px;
+	vertical-align: top;
+}
+#header .header_info .dc_bn .dotWrap li.active {
+	background: url(img/icon_dot01.png) no-repeat top left;
+	-webkit-background-size: 7px;
+	background-size: 7px;
+}
+#header .header_info .dc_bn .cList {
+}
+#header .header_info .dc_bn .cList .img {
+	width:45px;
+	height:53px;
+	display:inline-block;
+	vertical-align:top;
+	margin-right:10px;
+	background:#000;
+}
+#header .header_info .dc_bn .cList .info {
+	display:inline-block;
+}
+#header .header_info .dc_bn .cList .info p {
+	padding:1px 0;
+}
+#header .header_info .dc_bn .cList .info .dc_tit {
+	color:#34bdba;
+	font-weight:bold;
+}
+#header .header_info .dc_bn .cList .info .dc_pdname {
+	color:#999;
+}
+#header .header_info .dc_bn .cList .info .dc_pr .dc_pr_origin {
+	color:#666;
+	font-weight:bold;
+	font-size:14px;
+	letter-spacing: 0.1em;
+}
+#header .header_info .dc_bn .cList .info .dc_pr .dc_pr_per {
+	color:#aaa;
+	font-size:10px;
+}
+#header .header_info .dc_bn .cContents {
+	margin-top:28px;
+	background:#ccc;
+}
+#header .header_info .dc_bn .sBnBtn {
+	position: absolute;
+	top: 30px;
+	right: 2px;
+}
+#header .header_info:after {
+	clear:both;
+	content:"";
+}
+#header .lnb:after {
+	clear:both;
+	content:"";
+}
+#hdWrap .gnb_wrap {
+	width:100%;
+	height:51px;
+	border-top:1px solid #e6e6e6;
+	border-bottom:1px solid #e6e6e6;
+	margin:0 auto;
+}
+/***나브***/
+.gnb {
+	background: none;
+	width:1235px;
+	margin:0 auto;
+}
+.gnb ul {
+	font-size: 0;
+	margin: 0;
+	padding: 0;
+	vertical-align:top;
+}
+.gnb ul li {
+	display: inline-block;
+	position: relative;
+	/*padding: 0px 23px;*/
+  border-left:1px solid #fff;
+	border-right:1px solid #fff; /*border-top:1px solid #fff;  border-bottom:1px solid #fff;*/
+	z-index:99999;
+	vertical-align:top;
+	margin-top:-3px;
+	-webkit-margin-before : -1px;
+}
+.gnb ul li a {
+	color: #333;
+	display: block;
+	font-family: "Noto Sans", sans-serif;
+	font-weight:bold;
+	font-size: 14px;
+	padding: 15px 23px;
+	transition: 0.3s linear;
+}
+.gnb ul li a:hover {
+	color:#36babc;
+}
+.gnb ul li:hover {
+	background: #fff;
+	border-left:1px solid #36babc;
+	border-right:1px solid #36babc;
+	border-top:1px solid #36babc;
+	border-bottom:1px solid #36babc;
+	color:#36babc;
+}
+.gnb ul li ul {
+	min-height:70px;
+	border-bottom: 1px solid #36babc;
+	border-left: 1px solid #36babc;
+	border-right: 1px solid #36babc;
+	border-top: 1px solid #36babc;
+	padding:15px 0;
+	background:#fff;
+	display: none;
+	position: absolute;
+	left:-1px;
+	width: 200px;
+	z-index:999;
+}
+.gnb ul li ul li {
+	display: block;
+	padding: 0px;
+	border:none;
+}
+.gnb ul li ul li:hover {
+	border:none;
+}
+.gnb ul li ul li:first-child {
+	border-top: none;
+}
+.gnb ul li ul li a {
+	background: #fff;
+	display: block;
+	padding: 10px 23px;
+	color: #666;
+	font-weight: normal;
+	font-size: 12px;
+}
+.gnb ul li ul li a:hover {
+	color:#37bbbd;
+}
+.gnb .fa.fa-angle-down {
+	margin-left: 6px;
+}
+.gnb .menu10 {
+	display: inline-block;
+	vertical-align: top;
+	width: 163px;
+	height: 50px;
+	margin-left:12px;
+	background:#333;
+}
+.gnb .menu10 a img {
+	margin-top:-1px;
+	-webkit-margin-before : -1px;
+}
+.gnb .menu_all {
+	display: inline-block;
+	text-align: right;
+	width: 45px;
+	height: 48px;
+	vertical-align:top;
+	position:relative;
+	margin-left:13px;
+}
+.all_title {
+	font-family: "Noto Sans", sans-serif;
+	color:#33beb9;
+	font-weight:bold;
+	font-size:20px;
+	width:100%;
+	text-align:left;
+	padding-bottom:5px;
+	border-bottom:3px solid #33beb9;
+}
+.all_box_wrap {
+	margin:30px 0;
+}
+.all_box_wh {
+	display:inline-block;
+	padding:10px 95px;
+	margin-right:10px;
+	border:1px solid #ccc;
+	background:#fff;
+}
+.all_box_wh a {
+	font-family: "Noto Sans", sans-serif;
+}
+.all_box_wh a span {
+	font-weight:bold;
+	font-family: "Noto Sans", sans-serif;
+	font-size:16px;
+	margin-right:5px;
+}
+.all_box_bk {
+	display:inline-block;
+	padding:10px 45px;
+	border:1px solid #393939;
+	background:#393939;
+}
+.all_box_bk a {
+	font-family: "Noto Sans", sans-serif;
+	color:#fff;
+}
+.all_box_bk a span {
+	font-weight:bold;
+	font-family: "Noto Sans", sans-serif;
+	font-size:16px;
+	margin-right:5px;
+}
+.all_lnb {
+	float: left;
+	width: 23%;
+	margin: 0 1% 3% 1%;
+	min-height: 350px;
+}
+.all_lnb:after {
+	clear:both;
+	content:"";
+}
+.all_lnb .cate1 {
+	border-bottom: 1px solid #d0d0d0;
+	padding-bottom: 10px;
+	background: url('/design/dltnduf86/renewal/w/img/cate1_bg.gif');
+	background-repeat: no-repeat;
+	background-position: right;
+}
+.all_lnb .cate1 a {
+	font-size:16px;
+	font-weight:bold;
+	font-family: "Noto Sans", sans-serif;
+}
+.all_lnb .cate2 {
+	padding: 2px 0;
+	margin-top: 10px;
+	width: 50%;
+	float: left;
+}
+.all_lnb .cate2 a {
+	font-size:12px;
+	font-weight:normal;
+}
+.all_lnb .cate3 {
+}
+.all_lnb .cate3 a {
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//All menu
+$(function() {
+    $('.menu_all a.allmenu').on('click', function(e) {
+        e.preventDefault();
+        var _th = $(this), _c = !_th.hasClass('btn-close');
+        $('#nav-pc').toggle(_c);
+        _th.toggleClass('btn-close', _c);
+    });
+});
+
+
+//mypage sub
+$(document).ready(function(){
+    $(".mp_button").click(function(){
+        $(".mp_sub").toggle();
+    });
+});
+
+
+//topbn cookie
+jQuery(function(){
+
+if( getcookie("checks") != "ok" ){  //처음 로드시 쿠키값을 확인하여 값이 없으면 배너 show
+  jQuery(".top_bn").show();
+}
+
+jQuery(".top_bn_btn").click(function(){  //닫기버튼 클릭시 쿠키저장 및 배너 hide
+  setcookie("checks","ok",1);
+  jQuery(".top_bn").hide();
+});
+
+function setcookie(aa,top_bn,top_bn_btn) { // 쿠키생성 함수
+  var todayDate = new Date();
+  todayDate.setDate( todayDate.getDate() + top_bn_btn);
+  document.cookie = aa+"="+top_bn+"; path=/; expires=" + todayDate.toGMTString() + ";"
+  return false;
+}
+
+function getcookie(Key) { // 쿠키호출 함수 
+  var cookies = document.cookie.split("; ");
+  for (var i = 0; i < cookies.length; i++) {
+    var coValues = cookies[i].split("=");
+    if (coValues[0] == Key) {
+      return unescape(coValues[1]);
+    }
+  }
+  return false;
+}
+
+});

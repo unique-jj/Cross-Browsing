@@ -1,0 +1,93 @@
+   <!--배너시작-->
+   <div class="h_adboxbg">
+    <div class="h_adbox" style="height: 70px;">
+     <ul class="h_ad">
+      <li><a href="/shop/shopdetail.html?branduid=521858"><img src="/design/foodsoap/img/hban1.jpg"></a></li>
+     </ul>
+     <div class="ad_btn_off"></div>
+     <div class="ad_btn_on" style="top: -10px; display: none;"></div>
+    </div>
+   </div>
+   <!--배너끝--> 
+
+
+
+
+
+
+
+
+
+
+
+
+.h_adbox .ad_btn_off {
+    position: absolute;
+    left: 50%;
+    margin-left: 550px;
+    top: 0px;
+    width: 70px;
+    height: 70px;
+    background: url('http://www.foodsoap.co.kr/design/foodsoap/img/h_ad_off.png') center no-repeat;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*배너*/
+
+	$('.ad_btn_off').click(function(){
+		$('.h_adbox').animate({'height':'0'},300);
+		$('.ad_btn_off').hide();
+		$('.ad_btn_on').animate({'top':'8px'},300).show();
+		$.cookie('top_ad', 'off', { path: '/' });
+		
+	});
+	
+	$('.ad_btn_on').click(function(){
+		$('.h_adbox').animate({'height':'70px'},300);
+		$('.ad_btn_off').show();
+		$('.ad_btn_on').animate({'top':'-10px'},300).hide();
+		$.cookie('top_ad', 'on', { path: '/' });
+	});
+	if($.cookie("top_ad") == "off"){
+		$('.h_adbox').css({'height':'0'});
+		$('.ad_btn_off').hide();
+		$('.ad_btn_on').css({'top':'8px'}).show();
+		$(window).scroll(function(){
+        if ($(this).scrollTop() > 132) {
+            $('.h_tmbox').addClass('fixed');
+        } else {
+            $('.h_tmbox').removeClass('fixed');
+        };
+		$.fn.scrollBottom = function() {
+			return $(document).height() - this.scrollTop() - this.height();
+		};
+	});
+	}else{
+		$('.h_adbox').css({'height':'70px'});
+		$('.ad_btn_off').show();
+		$('.ad_btn_on').css({'top':'-10px'}).hide();
+		$(window).scroll(function(){
+        if ($(this).scrollTop() > 248) {
+            $('.h_tmbox').addClass('fixed');
+        } else {
+            $('.h_tmbox').removeClass('fixed');
+        };
+		$.fn.scrollBottom = function() {
+			return $(document).height() - this.scrollTop() - this.height();
+		};
+	});
+	};		

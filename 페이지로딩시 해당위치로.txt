@@ -1,0 +1,12 @@
+<script>
+  var page_cha_n = $('.prd-list').offset().top - $('html, body').offset().top - 20;
+  scrollTop: $('html, body').animate({ scrollTop: page_cha_n}, 0);
+</script> 
+
+
+.prd-list : 보여질 곳
+
+<script>
+  var page_cha_n = $('.portfolio-div').offset().top - $('html, body').offset().top - 20;
+  scrollTop: $('html, body').animate({ scrollTop: page_cha_n}, 0);
+</script> 

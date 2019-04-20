@@ -1,0 +1,30 @@
+모바일-더보기
+
+HTML소스
+<div class="more">
+     <a href="<!--/link_more_product_list/-->" class="items-more">
+         <span>MORE(<strong><!--/block_current_best_product_page_cnt/--><!--/end_block/--></strong> / 
+     <!--/block_total_best_product_page_cnt/--><!--/end_block/-->)</span></a>
+</div>        
+
+자바스크립트소스
+$(function() {
+    $('div.more-wrap .items').each(function(i, el) {
+        $('li:eq(2)', el).nextAll().hide();   
+    });
+    
+    $('a.items-more').on('click', function(e) {
+        e.preventDefault();
+        _hidden_first = $('div.more-wrap .items li:hidden:first');
+        if (_hidden_first.length) {
+            _start_index = _hidden_first.index();
+            for (i=_start_index; i<=(_start_index+6); i++) {    
+                $('div.more-wrap .items li:nth-child('+ i +')').show();
+            }
+        }
+        
+        if (!$('div.more-wrap .items li:hidden:first').length) {
+            $(this).remove();
+        }
+    });
+});

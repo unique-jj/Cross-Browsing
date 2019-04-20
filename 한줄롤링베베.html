@@ -1,0 +1,56 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>한줄롤링</title>
+
+
+<script type="text/javascript" src="./한줄롤링_files/jquery.min(1).js"></script>
+</head>
+<body>
+<script type="text/javascript" src="./한줄롤링_files/jquery.vticker-min.js"></script> 
+<script type="text/javascript">
+$(function(){
+	$("#news-container").vTicker({ 
+		speed: 500,
+		pause: 3000,
+		animation: 'fade',
+		mousePause: false,
+		showItems: 3
+	});
+$("#news-container1").vTicker({ 
+		speed: 300,
+		pause: 4000,
+		animation: 'fade',
+		mousePause: true,
+		showItems: 1
+	});
+});
+</script>
+<h3>Demo1</h3>
+<div id="news-container" style="overflow: hidden; position: relative; height: 63px;">
+ <ul style="position: absolute; margin: 0px; padding: 0px; top: 0px;">
+  <li style="margin: 0px; padding: 0px; height: 21px; display: list-item;">News content1</li>
+  <li style="margin: 0px; padding: 0px; height: 21px; display: list-item;">News content2</li>
+  <li style="margin: 0px; padding: 0px; height: 21px; display: list-item;">News content3</li>
+  <li style="margin: 0px; padding: 0px; height: 21px; display: list-item;">News content4</li>
+  <li style="margin: 0px; padding: 0px; height: 21px; display: list-item;">News content5</li>
+ </ul>
+</div>
+<h3>Demo2</h3>
+<div id="news-container1" style="overflow: hidden; position: relative; height: 21px;">
+ <ul style="position: absolute; margin: 0px; padding: 0px; top: 0px;">
+  <li style="margin: 0px; padding: 0px; height: 21px; display: list-item;">News content1</li>
+  <li style="margin: 0px; padding: 0px; height: 21px; display: list-item;">News content2</li>
+  <li style="margin: 0px; padding: 0px; height: 21px; display: list-item;">News content3</li>
+  <li style="margin: 0px; padding: 0px; height: 21px; display: list-item;">News content4</li>
+  <li style="margin: 0px; padding: 0px; height: 21px; display: list-item;">News content5</li>
+ </ul>
+</div>
+<div style="clear:both;"></div>
+<br>
+<div> 
+ 
+
+</div>
+</body>
+</html>

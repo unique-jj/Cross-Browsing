@@ -1,0 +1,72 @@
+<!DOCTYPE html> 
+
+<html> 
+
+<head> 
+
+<meta charset="UTF-8"> 
+
+<title>Insert title here</title> 
+
+<style> 
+
+div#wrapper {position:relative;} 
+
+ div#wrapper div#popup {display:none; position:absolute; top:10px; left:10px; 
+
+    z-index : 1000; background-color:#fff; 
+
+   padding:20px; border:2px solid #ff0000; 
+
+ } 
+
+ div#wrapper div#popup table {width:500px; height:300px;} 
+
+ </style> 
+
+<script> 
+
+ function show() { 
+
+    document.getElementById("popup").style.display = "block"; 
+
+} 
+
+ function closepop() { 
+
+    document.getElementById("popup").style.display = "none"; 
+
+ } 
+
+ </script> 
+
+ </head> 
+
+ <body> 
+
+ <div id="wrapper"> 
+
+ <input type="button" onmouseover="show()" value="예상금액보기" /> 
+
+ <div id="popup"> 
+
+     <div><a href="javascript_:closepop();">닫기</a></div> 
+
+     <table border="1"> 
+
+       <tr> 
+
+            <td>abc</td> 
+
+        </tr> 
+
+    </table> 
+
+ </div> 
+
+ </div> 
+
+ </body> 
+
+</html> 
+

@@ -1,0 +1,55 @@
+<div class="m_dt">
+  <div class="m_dt_tit bg">상품설명</div>
+  <div class="m_dt_con">
+   상품설명내용
+  </div>
+  <div class="m_dt_tit bg">룰루룰루</div>
+  <div class="m_dt_con">
+   룰루룰루 내용
+  </div>
+  <div class="m_dt_tit bg">배송 및 교환/반품 안내</div>
+  <div class="m_dt_con">
+   배송 및 교환/반품 안내 내용
+  </div>
+</div>
+
+<style>
+.m_dt_tit {
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 15px;
+    color: #333;
+    font-weight: bold;
+    font-family: "Noto sant";
+    font-size: 1.1em;
+    background: url(/design/dltnduf86/renewal/m/img/arr_down.gif);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 30px;
+}
+
+.bg {
+    background: url(/design/dltnduf86/renewal/m/img/arr_up.gif);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 30px;
+}
+
+.m_dt_con {
+    min-height: 50px;
+    text-align: center;
+}
+.m_dt_con img {width:100%;}
+</style>
+
+<script>
+$(document).ready(function(){
+ $('div.m_dt_tit').each(function(index){
+  $(this).on('click',function(){
+    $('div.m_dt_con').not(":eq("+index+")").slideUp();
+    $('div.m_dt_con').eq(index).stop().slideToggle();
+    $('div.m_dt_tit').eq(index).toggleClass('bg');
+  });
+ });
+});
+</script>

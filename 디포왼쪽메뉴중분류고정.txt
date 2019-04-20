@@ -1,0 +1,32 @@
+<div id="aside">
+
+<div id="snb">
+        <div class="xans-element- xans-product xans-product-menupackage ">
+
+<!--/loop_category1/-->
+<script>
+var rhd =  '<!--/category1@link/-->';
+tmp_url = rhd.split("xcode=",2);
+document.write('<ul class=\"menuCategory\" style=\"display:none;\" id=t'+tmp_url[1]+'>');
+</script>
+<!--/loop_category1@category2/-->
+<li style="display:" class="xans-element- xans-product xans-product-menucategory xans-record-">
+<p style="margin: 0 0 0 7px; font-size:15px; color:#ff86bc; font-weight:bold;"><!--/category1@category2@name/-->
+</p>
+<ul class="xans-element- xans-product xans-product-categorylist sub">
+<!--/loop_category1@category2@category3/--><li class="xans-record-"><a href="<!--/category1@category2@category3@link/-->"><!--/category1@category2@category3@name/--></a></li><!--/end_loop/-->
+</ul>
+</li>
+<!--/end_loop/-->
+</ul>
+<!--/end_loop/-->
+<!--/personal{planleft}/-->
+
+
+</div>
+
+<div><a href="/shop/page.html?id=17"><IMG SRC="http://storyis.img7.kr/web/HYO/banner/MnT/brand_new_banner.gif" border="0"></a></div>
+<!--/personal{leftbanner}/-->
+
+ </div>
+ </div>

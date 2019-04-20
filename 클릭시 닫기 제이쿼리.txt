@@ -1,0 +1,19 @@
+클로스라는 클래스는 클릭하면 세가지 아이디를 가진 항목이 사라짐
+
+
+ <script type=textjavascript>
+    $(document).ready(function() {
+      $('.close').click(function() {
+	$('#modal_bg').hide();
+	$('#modal_email').hide();
+	$('#modal_browser').hide();
+      });
+    });
+ <script>
+
+
+
+
+
+
+

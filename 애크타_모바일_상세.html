@@ -1,0 +1,1128 @@
+<!--/include_header(1)/-->
+<script src="/design/valenAK/js/jquery.slides.js"></script>
+<script src="/design/valenAK/js/needpopup.min.js"></script>
+<script>  
+  needPopup.config.custom = {
+   'removerPlace': 'outside',
+   'closeOnOutside': false,
+   onShow: function() {
+     console.log('needPopup is shown');
+   },
+   onHide: function() {
+     console.log('needPopup is hidden');
+   }
+  };
+  needPopup.init();
+</script>
+
+
+<!-- 본문 -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0">
+<!-- container -->
+<div id="container"> 
+ <!-- contents -->
+ <div id="contents">
+  <div class="m_title"> <!--/cate2_name/--> </div>
+  
+  <!-- main -->
+  <main class="shopdetail">
+   <section class="shopdetailInfo">
+    <div class="shopdetailInfoTop">
+     <div class="thumb-wrap">
+      <!--/if_multi_image_enlarge/-->
+      <div id="slides"> 
+       <!--/loop_multi_image_list/--> 
+       <img src="<!--/multi_image_list@img/-->" width="100%" /> 
+       <!--/end_loop/--> 
+      </div>
+      <!--/else/-->
+      <div class="slide" > <img src="<!--/image_m/-->" width="100%" /> </div>
+      <!--/end_if/--> 
+     </div>
+    </div>
+    <div class="shopdetailInfoBottom"> 
+     <!--/form_product/-->
+     <div class="shopdetailInfoValue">
+      <p class="code"><!--/model/--></p>
+      <p class="name"><!--/name/--></p>
+      <p class="price"> 
+       <!--/if_price_replace/--> 
+        <!--/price_replace/--> 
+       <!--/else/--> 
+       <!--/if_dc_price_sell/--> 
+        <del>KRW <!--/number/price_consumer/-->원</del> 
+       <!--/else/--> 
+       <!--/if_price_consumer(+1)/--> 
+        <p><del>KRW <!--/price_consumer/--></del></p>
+        <p>KRW <!--/number/price_sell/--><p>
+       <!--/else/--> 
+        KRW <!--/number/price_sell/-->
+       <!--/end_if/--> 
+       <!--/end_if/--> 
+       <!--/end_if/--> 
+       </p>
+     </div>
+
+
+
+
+
+
+
+
+     <article class="option_area"> 
+      <!-- 상품구매 고정버튼 영역 -->
+      <div class="fixed-btn"> <img src="/images/d3/m_04/bt_option@2x.png" width="67" height="18" alt="옵션열기" class="btn_option"/> <a href="#" class="btn_Red">BUY</a> </div>
+      <!-- //상품구매 고정버튼 영역 -->
+      <div class="option_tk">
+       <div class="shopdetailInfoSelect"> 
+        <!--/if_not_multi_option/--> 
+        <!--/if_option/--> 
+        <!--/loop_option/-->
+        <p> <span class="shopdetailInfoName"><!--/option@title/--></span> <span class="shopdetailInfoCont"><!--/option@select/--></span> </p>
+        <!--/end_loop/--> 
+        <!--/end_if/--> 
+        <!--/if_not_multi_option_box/-->
+        <p class="shopdetailInfoCount"> <span class="shopdetailInfoName">QUANTITY</span> <span class="shopdetailInfoCont"><!--/input_quantity/--><a href="<!--/link_quantity_up/-->"><span class="fa fa-plus"></span></a><a href="<!--/link_quantity_down/-->"><span class="fa fa-minus"></span></a></span> </p>
+        <!--/end_if/--> 
+        <!--/end_if/--> 
+        <!--/if_is_unify_option/--> 
+        <!--/if_option_add/-->
+        <p class="add-option-sel">+ 추가 옵션 선택</p>
+        <!--/loop_option_add/-->
+        <p class="shopdetailInfoCount add-option"> <span class="shopdetailInfoName"><!--/option_add@title/--></span> <span class="shopdetailInfoCont"> 
+         <!--/option_add@select/--> 
+         <!--/option_add@input_quantity/--> 
+         <a href="<!--/option_add@link_quantity_up/-->"><span class="fa fa-plus"></span></a><a href="<!--/option_add@link_quantity_down/-->"><span class="fa fa-minus"></span></a> </span> </p>
+        <!--/end_loop/--> 
+        <!--/end_if/--> 
+        <!--/end_if/--> 
+       </div>
+       
+       <!--/if_not_multi_option_box/--> 
+       <!--/if_option_price_sell/-->
+       <div class="shopdetailTotal">
+        <p>옵션 적용가 <em class="bold"><!--/number/option_price_sell/--></em>원</p>
+       </div>
+       <!--/end_if/--> 
+       <!--/end_if/-->
+       
+       <div class="shopdetailInfoSelect"> 
+        <!--/if_multi_option/--> 
+        <!--/loop_multi_option/--> 
+        <!--/if_multi_option@title/-->
+        <p> <span class="shopdetailInfoName"><!--/multi_option@title/--></span> <span class="shopdetailInfoCont"><!--/multi_option@select/--></span> </p>
+        <!--/else/-->
+        <p><!--/multi_option@select/--></p>
+        <!--/end_if/--> 
+        <!--/end_loop/--> 
+        <!--/if_is_unify_option/--> 
+        <!--/if_link_option_select_complete/-->
+        <p class="opt-com"><a href="<!--/link_option_select_complete/-->"><img src="/images/d3/modern_simple/btn/btn_h18_select_complete.gif" title="옵션 선택 완료" alt="옵션 선택 완료" /></a></p>
+        <!--/end_if/--> 
+        <!--/end_if/--> 
+        <!--/end_if/--> 
+        
+        <!--/if_is_unify_option/--> 
+        <!--/if_multi_option_add/-->
+        <p class="add-option-sel">+ 추가 옵션 선택</p>
+        <!--/loop_multi_option_add/-->
+        <p> <span class="shopdetailInfoName"><!--/multi_option_add@title/--></span> <span class="shopdetailInfoCont"><!--/multi_option_add@select/--></span> </p>
+        <!--/end_loop/--> 
+        <!--/end_if/--> 
+        <!--/end_if/--> 
+       </div>
+       
+       <!--/if_is_unify_option/-->
+       <div class="shopdetailInfoMultiSelect"> 
+        <!-- 통합옵션 멀티옵션 수량, 가격 --> 
+        <!--/if_multi_option_box/-->
+        <div class="MK_optAddWrap">
+         <div id="MK_innerOptWrap">
+          <div id="MK_innerOptScroll"> 
+           <!--/multi_option_box/--> 
+           <!--/multi_option_add_box/--> 
+          </div>
+          <div id="MK_innerOptTotal" class="total"> <span class="MK_txt-total">총 상품 금액</span> <strong class="MK_total" id="MK_p_total"><!--/multi_option_total_price/--></strong> <span class="MK_txt-won">원</span> </div>
+         </div>
+        </div>
+        <!-- //통합옵션 멀티옵션 수량, 가격 --> 
+        <!--/end_if/--> 
+       </div>
+       <!--/else/-->
+       <div class="shopdetailInfoMultiSelect"> 
+        <!-- 멀티옵션 수량, 가격 --> 
+        <!--/if_multi_option_box/--> 
+        <!--/multi_option_box/--> 
+        <!--/end_if/--> 
+        <!-- //멀티옵션 수량, 가격 --> 
+       </div>
+       <!--/end_if/--> 
+      </div>
+      <div class="buy_on"> <a href="<!--/link_basket/-->">CART</a> <a href="<!--/link_immediate/-->" class="buy">BUY</a> </div>
+     </article>
+     
+     <!-- 상품 배송정보 영역 --> 
+     <!--/if_usergroup_name/-->
+     <div class="shopdetailInfoDelivery">
+      <p><strong><!--/user_name/--></strong>님은 <!--/if_group_free_delivery/-->기본배송비가 무료인 <!--/end_if/--><!--/if_group_allfree_delivery/-->전체 배송비가 무료인 <!--/end_if/--><strong>[<!--/usergroup_name/-->]</strong>회원입니다.</p>
+      <p><!--/if_usergroup_reserve_message/-->(<!--/usergroup_reserve_message/-->)<br />
+       <!--/end_if/--></p>
+      <!--/if_group_message/-->
+      <p><!--/group_message/--></p>
+      <!--/end_if/--> 
+     </div>
+     <!--/end_if/--> 
+     <!-- //상품 배송정보 영역 --> 
+     <!--/if_okcashbag_set/--> 
+     <!--/okcashbag_set/--> 
+     <!--/end_if/--> 
+
+
+
+
+
+
+
+
+
+
+
+<!---------------------3탭 시작-------------------->
+<div class="wrapper">
+ <div class="tabs cf">
+  <input type="radio" name="tabs" id="tab1" checked>
+  <label for="tab1"> DETAILS </label>
+  <input type="radio" name="tabs" id="tab2">
+  <label for="tab2"> INFORMATION </label>
+  <input type="radio" name="tabs" id="tab3">
+  <label for="tab3"  onClick="go_popup()" class="m_t3" data-needpopup-show="#small-popup"> SHIPPING </label>
+  <div id="tab-content1" class="tab-content"> 
+   <!--/detail_common/--> 
+  </div>
+  <div id="tab-content2" class="tab-content">
+   <table>
+    <colgroup>
+    <col width="40%" />
+    <col width="*" />
+    </colgroup>
+    <!--/loop_add_info/-->
+    <tr>
+     <th style="text-align:left; font-size:11px;"><span><!--/add_info@title/--></span></th>
+     <td style="font-size:11px;"><span><!--/add_info@content/--></span></td>
+    </tr>
+    <!--/end_loop/-->
+   </table>
+  </div>
+  <div id="tab-content3" class="tab-content"> &nbsp; 
+<div id='small-popup' class="needpopup">
+  <p><img src="/design/valenAK/img/returns.jpg" alt="shipping&amp;returns"></p>
+</div>  
+  </div>
+ </div>
+</div>
+<!---------------------3탭 끝-------------------->
+
+
+
+
+     <!-- 상품구매 버튼 영역 -->
+     <div class="shopdetailButton">
+      <div class="shopdetailButtonTop"> 
+       <!--/if_soldout/-->
+       <p>상품이 품절되었습니다.</p>
+       <!--/else/--> 
+       <!--/if_selling/--> 
+       <a href="<!--/link_immediate/-->" class="btn_Grey">BUY</a>
+       <a href="<!--/link_basket/-->" class="wish">CART</a>  <a href="<!--/link_wishlist/-->" class="wish">WISH LIST</a> 
+       <!--/else/--> 
+       <a href="<!--/link_wishlist/-->" class="wish">WISH LIST</a>
+       <p>선택하신 상품은 관리자에게 문의하세요.</p>
+       <!--/end_if/--> 
+       <!--/end_if/--> 
+      </div>
+      <!--/if_btn_dgg/-->
+      <div class="okdgg-checkout"> 
+       <!--/btn_dgg/--> 
+      </div>
+      <!--/end_if/-->
+      <div class="shopdetailButtonBottom"> 
+       <!--/if_link_scrap_fb/--> 
+       <a href="<!--/link_scrap_fb/-->"><img src="/images/d3/m_powerpack/32/btn/btn_facebook.gif" alt="페이스북"/></a> 
+       <!--/end_if/--> 
+       <!--/if_link_scrap_tw/--> 
+       <a href="<!--/link_scrap_tw/-->"><img src="/images/d3/m_powerpack/32/btn/btn_twitter.gif" alt="트위터"/></a> 
+       <!--/end_if/--> 
+       <!--/if_link_scrap_ws/--> 
+       <a href="<!--/link_scrap_ws/-->"><img src="/images/d3/m_powerpack/32/btn/btn_wisi.gif" alt="위시딕"/></a> 
+       <!--/end_if/--> 
+       <!--/if_link_scrap_ka/--> 
+       <a href="<!--/link_scrap_ka/-->"><img src="/images/d3/m_powerpack/32/btn/btn_kakatalk.gif" alt="카카오톡"/></a> 
+       <!--/end_if/--> 
+       <!--/if_link_scrap_ks/--> 
+       <a href="<!--/link_scrap_ks/-->"><img src="/images/d3/m_powerpack/32/btn/btn_story.gif" alt="카카오스토리"/></a> 
+       <!--/end_if/--> 
+      </div>
+      <!--/if_btn_payco/--> 
+      <!--/btn_payco/--> 
+      <!--/end_if/--> 
+      <!--/if_btn_nhn/-->
+      <div class="naver-checkout"> 
+       <!--/btn_nhn/--> 
+      </div>
+      <!--/end_if/--> 
+      <!--/if_btn_app/--> 
+      <!--/btn_app/--> 
+      <!--/end_if/--> 
+     </div>
+     <!-- //상품구매 버튼 영역 --> 
+    </div>
+    <!--/end_form/--> 
+   </section>
+
+
+<div class="review_btn">
+ <a href="<!--/link_review_board_more/-->">REVIEW</a>
+</div>
+
+   
+   <!--/if_coupon/-->
+   <section class="shopdetailCoupon">
+    <h3>클릭 쿠폰 받기</h3>
+    <div class="shopdetailCouponGet">
+     <ul>
+      <!--/loop_coupon/--> 
+      <a href="<!--/coupon@link/-->">
+      <li> 
+       <!--/if_coupon@image_src/--> 
+       <img src="<!--/coupon@image_src/-->" class="image_src"> 
+       <!--/else/-->
+       <dl class="MS_coupon">
+        <dt><strong><!--/coupon@attr_val/--><!--/coupon@attr_unit/--></strong></dt>
+        <dd>
+         <h4><!--/coupon@subject/--></h4>
+         <p><span>기간 : <!--/date(%M/%D)/coupon@start_date/--> ~ <!--/date(%M/%D)/coupon@end_date/--></span></p>
+        </dd>
+       </dl>
+       <!--/end_if/--> 
+      </li>
+      </a> 
+      <!--/end_loop/-->
+     </ul>
+    </div>
+   </section>
+   <!--/end_if/-->
+   <div class="shopdetailItem">
+    <div class="shopdetailItemPopup"> <a href="<!--/link_product_detail/-->">상세정보 새창 열기</a>
+     <p class="shopdetailItemZoom">상세 정보를 확대해 보실 수 있습니다.</p>
+    </div>
+    <div class="shopdetailImage"> 
+     <!--/mobile_detail/--> 
+    </div>
+    <!--/if_related_product/-->
+    <section id="related_product_tk" class="shopdetailRelation">
+    <div class="relate_title">MORE</div>
+     <!--/form_related_product/-->
+     <div class="list_shoppingRelationItem1x">
+      <ul class="clearFix">
+       <!--/loop_related_product(4)/-->
+       <li>
+        <figure> 
+         <a href="<!--/related_product@link/-->"><img src="<!--/related_product@mobile_image/-->" class="listPic" alt=""/></a>
+        </figure>
+       </li>
+<!--/if_step(2)/-->
+</ul><ul class="clearFix">
+<!--/end_if/-->
+       <!--/end_loop/-->
+      </ul>
+     </div>
+     <!--/end_form/--> 
+    </section>
+    <!--/end_if/--> 
+    <!--/if_product_info/-->
+    <section class="shopdetailNotify">
+     <h3 class="btn_toggle">상품 고시 정보 <span class="fa fa-caret-down"></span></h3>
+     <div class="shopdetailNotifyInfo" style="display:none;">
+      <dl>
+       <!--/loop_product_info/-->
+       <dt>ㆍ<!--/product_info@title/--></dt>
+       <dd><!--/product_info@content/--></dd>
+       <!--/end_loop/-->
+      </dl>
+     </div>
+    </section>
+    <!--/end_if/--> 
+    <!--/if_mobile_shop_policy/-->
+    <section class="shopdetailRelation">
+     <h3 class="btn_toggle">교환/반품/환불/취소 <span class="fa fa-caret-down"></span></h3>
+     <div style="display:none;"> 
+      <!--/mobile_shop_policy/--> 
+     </div>
+    </section>
+    <!--/end_if/--> 
+   </div>
+  </main>
+  <!-- //main --> 
+ </div>
+ <!-- //contents --> 
+</div>
+<!-- //container --> 
+
+<!--/include_footer(1)/--> 
+
+<style>
+ #slides { display:none; }
+ <!--/loop_multi_image_list/-->
+ #slides .slidesjs-pagination li:nth-child(<!--/idx/-->){background:url(<!--/multi_image_list@img/-->); background-size:47px 47px }
+ <!--/end_loop/-->  
+</style>
+
+<script>
+document.getElementById("lens_img").style.width = '100%';
+document.getElementById("lens_img").src = '<!--/image_l/-->';
+</script> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.slidesjs-control {max-height:352px; overflow:hidden;}
+
+.needpopup {
+  border-radius: 6px;
+  box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 1);
+}
+
+.needpopup p {
+  margin: 0;
+}
+.needpopup p + p {
+  margin-top: 10px;
+}
+
+.needpopup-opened, .needpopup-opened body {
+	overflow:hidden
+}
+.needpopup-opened.needpopup-scrolled, .needpopup-opened.needpopup-scrolled body {
+	height:auto
+}
+.needpopup-opened.needpopup-scrolled body {
+	position:fixed;
+	width:100%
+}
+.needpopup_wrapper {
+	position:fixed;
+	z-index:999;
+	top:0;
+	left:0;
+	visibility:hidden;
+	overflow:auto;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:100%;
+	height:100%;
+	padding:40px 0;
+-webkit-transition:opacity .3s ease;
+transition:opacity .3s ease;
+	opacity:0;
+	background:#000;
+	background:rgba(0, 0, 0, .8)
+}
+.needpopup-opened .needpopup_wrapper {
+	visibility:visible;
+	opacity:1
+}
+.needpopup-overflow .needpopup_wrapper {
+	padding:10px
+}
+.needpopup {
+	position:relative;
+	z-index:9999;
+	top:50%;
+	left:50%;
+	display:none;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:550px;
+	max-width:100%;
+	margin-left:-275px;
+	padding:5px;
+	-webkit-transform:scale(.1, .1);
+	-ms-transform:scale(.1, .1);
+	transform:scale(.1, .1);
+	opacity:0;
+	background:#fff
+}
+.needpopup.opened {
+-webkit-transition:opacity .5s ease, -webkit-transform .5s ease;
+transition:opacity .5s ease, transform .5s ease;
+	-webkit-transform:scale(1, 1);
+	-ms-transform:scale(1, 1);
+	transform:scale(1, 1);
+	opacity:1
+}
+.needpopup.stacked {
+	top:0!important;
+	margin-top:0!important
+}
+.needpopup-overflow .needpopup {
+	left:0;
+	width:auto;
+	margin-left:0
+}
+.needpopup_remover { position:fixed;
+	z-index:9999;
+	top:30px;
+	right:30px;
+	font-size:40px;
+	line-height:.5;
+	color:#fff;
+	text-decoration:none
+}
+.needpopup_remover:hover {
+	color:#ccc
+}
+.needpopup_remover:before {
+	content:'×'
+}
+.needpopup .needpopup_remover {
+	top:10px;
+	right:10px;
+	font-size:40px;
+	line-height:.5;
+	color:#000
+}
+.needpopup .needpopup_remover:hover {
+	color:#ccc
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**********************슬라이드 시작***********************/
+.detail_btn {
+	position:absolute;
+	right:1em;
+	text-align:center;
+	width:30%;
+	margin-top:10px;
+}
+.detail_btn .btn {
+	padding:0.7em 0.7em 0.6em 0.7em;
+	display:block;
+	font-size:0.8em;
+	font-weight:bold;
+}
+#slides {
+	position:relative
+}
+.slidesjs-navigation {
+	position:absolute;
+	top:50%;
+	width:22px;
+	height:38px;
+	display:block;
+	z-index:10;
+	margin-top:-50px;
+	font-size:0;
+}
+.slidesjs-next {
+	right:0;
+	background:url(/design/valenAK/m/bt_right.png);
+}
+.slidesjs-previous {
+	background:url(/design/valenAK/m/bt_left.png);
+}
+#slides .slidesjs-pagination {
+	position:absolute;
+	width:100%;
+	bottom:0px;
+	z-index:99
+}
+.thumb-wrap .tmbs {
+	width:100%;
+	margin-left:2px;
+	margin-top:20px;
+}
+#slides ul, .tmbs ul {
+	text-align:center
+}
+#slides li {
+	display: inline-block;
+	width:45px;
+	height:45px;
+	margin-right:10px;
+}
+#slides li a {
+	display: block;
+	width:100%;
+	height:100%;
+	overflow:hidden;
+	font-size:0;
+	border:1px #dedede solid;
+	opacity:0.8;
+}
+#slides .active {
+	border:1px #bebebe solid;
+	opacity:1;
+}
+.btn_detail_gray {
+	background: #8e8e8e;
+	width:47px;
+	height:47px;
+	color: #fff;
+	text-align: center;
+	display: inline-block;
+	box-sizing: border-box;
+	vertical-align: middle;
+	font-weight: bold;
+	float: left;
+	margin-right: 1%;
+}
+.detail_review {
+	display:none
+}
+.detail_review li {
+	padding:1em 0;
+	border-bottom:1px #ececec solid;
+	float:left;
+	width:100%;
+	margin:0
+}
+.detail_review li .left {
+	float:left;
+	margin-left:1em
+}
+.detail_review li .right {
+	float:right;
+	margin-right:1em
+}
+.total_price {
+	margin:0 0 30px 0;
+	float:left;
+	width:100%;
+	font-weight:bold
+}
+.total_price .title {
+	float:left
+}
+.total_price .price {
+	float:right;
+	color:#e1306e;
+	font-size:1.333em;
+}
+.shopdetail .shopdetailInfo .shopdetailInfoBottom .shopdetailInfoValue .price {
+	font-family:'Lato';
+	color:#333;
+	font-weight:bold;
+	font-size:1.2em;
+}
+.shopdetail .shopdetailInfo .shopdetailInfoBottom .shopdetailInfoValue .code {
+	font-family:'Monda';
+	color:#858585;
+	font-weight:normal;
+	font-size:1.1em;
+           margin-bottom:10px;
+}
+.shopdetail .shopdetailInfo .shopdetailInfoBottom .shopdetailInfoValue .name {
+	font-family:'Monda';
+	color:#333;
+	font-weight:bold;
+	font-size:1.6em;
+           margin-bottom:25px;
+}
+/**********************슬라이드 끝***********************/
+
+
+
+/**********************3탭 시작***********************/
+.wrapper {
+  max-width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top:45px;
+}
+
+/* tabs */
+.tabs {
+  /*border-right: 1px solid #ccc;*/
+}
+.tabs:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.tabs input[type=radio] {
+  display: none;
+}
+.tabs label {
+    display: inline-block;
+    float: left;
+    width: 32.7%;
+    padding: 1em 0em;
+    border-top: 1px solid #e1e1e1;
+    border-left: 1px solid #e1e1e1;
+    border-right: 1px solid #e1e1e1;
+    border-bottom: 1px solid #000;
+    /* border-right: none; */
+    background-color: #fff;
+    text-align: center;
+    font-weight: 700;
+    color: #6d6d6d;
+    cursor: pointer;
+    -webkit-transition: background-color 150ms ease-in-out;
+    transition: background-color 150ms ease-in-out;
+    font-family: 'Monda';
+}
+
+.m_t3 {border-left:none !important;}
+
+
+.tabs label:hover {
+  background-color: white;
+}
+.tabs [id^="tab"]:checked + label {
+    border-bottom-color: white;
+    background: white;
+    color: #333;
+    border-top: 1px solid #000;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+}
+
+.tab-content {
+    display: none;
+    float: left;
+    width: 100%;
+    padding: 0.5em;
+    /* border-bottom: 1px solid #ccc; */
+    /* border-left: 1px solid #ccc; */
+    background-color: white;
+}
+
+.tab-content table tbody tr td {font-family:'Monda','Dotum';}
+
+#tab1:checked ~ #tab-content1, #tab2:checked ~ #tab-content2, #tab3:checked ~ #tab-content3 {
+    display: block;
+}
+
+.other-content {
+  color: white;
+}
+
+
+
+/***팝업***/
+.Pstyle {
+    opacity: 1;
+    display: none;
+    position: relative;
+    width: auto;
+    border: 5px solid #fff;
+    padding: 20px;
+    background-color: #fff;
+}
+
+ 
+
+.b-close {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    padding: 5px;
+    display: inline-block;
+    cursor: pointer;
+}
+/**********************3탭 끝***********************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.MS_amount_basic {
+    height: 35px !important;
+    line-height: 35px !important;
+    text-align: center !important;
+    width: 40px !important;
+    padding: 0 10px !important;
+}
+
+
+
+.shopdetail .shopdetailInfo {background-color:#fff; /*border-top:1px solid #c7c7c7;*/}
+.shopdetail .shopdetailInfo h2 {font-size:1.333em; font-weight:bold; text-align:center; padding-top:16px;}
+.shopdetail h3 {font-weight:bold; padding:10px 15px; margin-bottom:10px; background-color:#E6D9D9;}
+.shopdetail h3 .fa {float:right; font-size: 1.5em;}
+.shopdetail .shopdetailInfo .shopdetailInfoTop figure {padding:0; border-bottom:1px solid #c7c7c7;}
+.shopdetail .shopdetailInfo .shopdetailInfoTop figcaption {text-align:left; margin-top:16px;}
+.shopdetail .shopdetailInfo .shopdetailInfoBottom {background-color:#fff;}
+.shopdetail .shopdetailInfo .shopdetailInfoBottom .shopdetailInfoValue {position: relative; /*border-bottom:1px solid #c7c7c7;*/ padding:40px 0px 30px 0;}
+.shopdetail .shopdetailInfo .shopdetailInfoBottom .shopdetailInfoValue em {color:#f1191f; font-size:1.333em;}
+.shopdetail .shopdetailInfo .shopdetailInfoBottom .shopdetailInfoValue p {margin-bottom:11px; text-align:center;}
+.shopdetail .shopdetailInfo .shopdetailInfoBottom .shopdetailInfoValue p:last-child {margin-bottom:0px;}
+.shopdetail .shopdetailInfo .shopdetailInfoBottom .shopdetailInfoValue .shopdetailInfoName {width:30%; display:inline-block;}
+.shopdetail .shopdetailInfo .shopdetailInfoBottom .shopdetailInfoValue .shopdetailInfoCont {width:70%; display:inline-block; margin-left: -4px;}
+.shopdetail .shopdetailInfo .shopdetailInfoBottom .shopdetailInfoValue .region {margin-left: 10px;}
+.shopdetail .shopdetailInfo .shopdetailInfoBottom .shopdetailInfoValue .btn_relation {position:absolute; top:50%; right:10px; text-align:center; margin-top: -25px;}
+.shopdetail .shopdetailInfo .shopdetailInfoBottom .shopdetailInfoValue .btn_relation a {width:50px; height:50px; color:#fff; background-color:#636363; display: inline-block; font-size:0.917em; border-radius: 4px; border:1px solid #424242;}
+.shopdetail .shopdetailInfo .shopdetailInfoBottom .shopdetailInfoValue .btn_relation a:first-child {}
+.shopdetail .shopdetailInfo .shopdetailInfoBottom .shopdetailInfoValue .btn_relation a .fa {display:block; margin:6px 0 3px 0;}
+.shopdetailInfoDelivery {padding:10px 15px;}
+/* 상품옵션 */
+.shopdetail .shopdetailInfo .shopdetailInfoBottom .option_area {}
+.shopdetail .shopdetailInfo .shopdetailInfoBottom .option_area.fixed {width: 100%; position: fixed; z-index: 101; bottom: 0; left: 0; right: 0;}
+.shopdetail .shopdetailInfo .shopdetailInfoBottom .option_area.fixed {-webkit-animation: qbuy 150ms linear 1 normal; animation: qbuy 150ms linear 1 normal;}
+@-webkit-keyframes qbuy {
+ from {bottom:-65px;}
+ to {bottom:0;}
+}
+@keyframes qbuy {
+ from {bottom:-65px;}
+ to {bottom:0;}
+}
+.shopdetail .shopdetailInfo .shopdetailInfoBottom .option_area.fixed .option_tk {overflow-y:auto; background:#f6f6f6; }
+.shopdetail .shopdetailInfo .shopdetailInfoBottom .fixed-btn {width:100%; box-sizing: border-box; position:relative; bottom:0; left:0; right:0; background-color:#f6f6f6; border-top:1px solid #dfdfdf; z-index: 101; text-align: center; padding:6px; margin:0 auto; display:none;}
+.shopdetail .shopdetailInfo .shopdetailInfoBottom .fixed-btn.fixed {display: block; position: fixed;}
+.shopdetail .shopdetailInfo .shopdetailInfoBottom .option_area.fixed .fixed-btn.fixed {display: block; position: relative;}
+.shopdetail .shopdetailInfo .shopdetailInfoBottom .fixed-btn .btn_option {position: absolute; top: -16px; left: 50%; margin-left:-33px;}
+.shopdetail .shopdetailInfo .shopdetailInfoBottom .shopdetailInfoMultiSelect {background-color: #fff; /*border-top: 1px dotted #444;*/}
+.shopdetail .shopdetailInfo .shopdetailInfoBottom .buy_on {background-color: #f6f6f6; text-align: center; padding: 10px 15px; display:none;}
+.shopdetail .shopdetailInfo .shopdetailInfoBottom .buy_on a {width:48%; color: #3b3b3b; background-color:#fff; border:1px solid #5F5F5F; display: inline-block; padding:6px 0; margin: 0;}
+.shopdetail .shopdetailInfo .shopdetailInfoBottom .buy_on a.buy {background-color:#5F5F5F; color:#fff;}
+.shopdetail .shopdetailInfo .shopdetailInfoBottom .shopdetailInfoSelect {}
+.shopdetail .shopdetailInfo .shopdetailInfoBottom .shopdetailInfoSelect .opt-com {text-align: right;}
+.shopdetail .shopdetailInfo .shopdetailInfoBottom .shopdetailInfoSelect p {/*background-color:#f6f6f6; padding: 5px 15px;*/ text-align:center;}
+.shopdetail .shopdetailInfo .shopdetailInfoBottom .shopdetailInfoSelect p:last-child {margin-bottom:0px;}
+.shopdetail .shopdetailInfo .shopdetailInfoBottom .shopdetailInfoSelect .shopdetailInfoName {padding-right: 5px; display:inline-block; color:#a7a7a7; font-size:1.1em;}
+.shopdetail .shopdetailInfo .shopdetailInfoBottom .shopdetailInfoSelect .shopdetailInfoCont { display:inline-block; margin-left: -4px;}
+.shopdetail .shopdetailInfo .shopdetailInfoBottom .shopdetailInfoSelect .shopdetailInfoCont select {width:100%;}
+.shopdetail .shopdetailInfo .shopdetailInfoBottom .shopdetailInfoSelect .shopdetailInfoCount .txt-qnty {text-align:right; padding:0 6px; width: 50px !important;}
+.shopdetail .shopdetailInfo .shopdetailInfoBottom .shopdetailInfoSelect .shopdetailInfoCount .fa-plus {background-color: #bbb; width: 35px; height: 35px; text-align: center; vertical-align: middle; line-height: 28px; color: #fff; margin: 0 5px;}
+.shopdetail .shopdetailInfo .shopdetailInfoBottom .shopdetailInfoSelect .shopdetailInfoCount .fa-minus {background-color: #bbb; width: 35px; height: 35px; text-align: center; vertical-align: middle; line-height: 28px; color: #fff;}
+.shopdetail .shopdetailInfo .shopdetailInfoBottom .shopdetailInfoMultiSelect .MK_optAddWrap #MK_innerOptScroll {background-color: #f6f6f6; padding:0 15px;}
+.shopdetail .shopdetailInfo .shopdetailInfoBottom .shopdetailInfoSelect .add-option-sel {font-weight: bold; font-size: 1.1em; padding-top: 10px;}
+.shopdetail .shopdetailInfo .shopdetailInfoBottom .shopdetailInfoSelect .add-option select {margin-bottom: 10px;}
+.shopdetail .shopdetailInfo .shopdetailInfoBottom .shopdetailInfoSelect .add-option .shopdetailInfoName {vertical-align: top; padding-top: 11px;}
+.shopdetail .shopdetailBoard {text-align:center; border-top:1px solid #bbb; border-bottom:1px solid #bbb; margin-bottom:32px;}
+.shopdetail .shopdetailBoard a {width:33.33%; background-color:#f8f8f8; border-left:1px solid #bbb; display:inline-block; margin-left: -1px; font-weight:bold; padding:20px 0;}
+.MK_optAddWrap .MK_inner-opt-cm li {position:relative; border-bottom:1px solid #c7c7c7; padding: 12px 0;}
+.MK_optAddWrap .MK_inner-opt-cm li:last-child {border-bottom:0px none;}
+.MK_optAddWrap .MK_inner-opt-cm .MK_p-name {padding-right: 30px; display: block;}
+.MK_optAddWrap .MK_inner-opt-cm .MK_qty-ctrl {margin-top:8px;}
+.MK_optAddWrap .MK_inner-opt-cm .MK_qty-ctrl input[type="tel"] {padding:0 6px; width: 50px;}
+.MK_optAddWrap .MK_inner-opt-cm .MK_btn-del {position:absolute; top:12px; right:0;}
+.MK_optAddWrap .MK_inner-opt-cm .MK_btn-del img {width: 20px;}
+.MK_optAddWrap .MK_inner-opt-cm .MK_price {position:absolute; bottom:21px; right:0; font-size: 1.3em;}
+.MK_optAddWrap .MK_inner-opt-cm .MK_qty-ctrl .btn-type-02 {background-color: #bbb; width: 35px; height: 35px; text-align: center; vertical-align: middle; line-height: 35px; color: #fff; display: inline-block;}
+.MK_optAddWrap .total {text-align:right; padding:10px 15px; font-size: 1.3em;}
+.MK_optAddWrap .MK_total {font-size:18px; color:#f1191f; margin-left:15px;}
+.MK_optAddWrap .MK_txt-won {font-size:17px;}
+
+.review_btn  {
+    width: 100%;
+    text-align: center;
+    height: 45px;
+    line-height: 45px;
+    border: 1px solid #d7d7d7;
+}
+
+.review_btn a {color:#a2a2a2; font-family:'Monda'; font-size:1.1em;}
+
+/* //상품옵션 */
+.shopdetail .shopdetailInfo .shopdetailInfoBottom .shopdetailTotal {background-color:#fff; text-align:right; padding:15px; font-size:1.2em;}
+.shopdetail .shopdetailInfo .shopdetailInfoBottom .shopdetailTotal em {color:#f1191f; font-size:1.333em; margin-left:16px;}
+.shopdetail .shopdetailInfo .shopdetailInfoBottom .shopdetailButton {text-align:center; padding:10px 0; /*border-top:1px solid #4a4a4a;*/}
+.shopdetail .shopdetailInfo .shopdetailInfoBottom .shopdetailButton .shopdetailButtonTop a {
+    /*padding: 15px 14px;*/
+    display: inline-block;
+    /* margin: 0 2px; */
+    font-weight: bold;
+    font-family: 'Monda';
+}
+
+.shopdetail .shopdetailInfo .shopdetailInfoBottom .shopdetailButton .shopdetailButtonTop a.wish {background-color:#FFF; border:1px solid #5f5f5f;  width: 48.5%; margin-top:7px; height:45px; line-height:45px;}
+.shopdetail .shopdetailInfo .shopdetailInfoBottom .shopdetailButton .shopdetailButtonTop a.cart {color:#fff; background-color:#393939; border:1px solid #393939;}
+.shopdetail .shopdetailInfo .shopdetailInfoBottom .shopdetailButton .shopdetailButtonTop a.buy {color:#fff; background-color:#f1191f; border:1px solid #f1191f; padding:15px 32px;}
+.shopdetail .shopdetailInfo .shopdetailInfoBottom .shopdetailButton .shopdetailButtonBottom {margin:20px 0;}
+.shopdetail .shopdetailInfo .shopdetailInfoBottom .shopdetailButton .shopdetailButtonBottom img {margin:0 2px; width:45px; height:auto;}
+.shopdetail .shopdetailCoupon {margin-top:15px;}
+.shopdetail .shopdetailCoupon .shopdetailCouponGet {padding:0 15px;}
+.shopdetail .shopdetailCoupon .shopdetailCouponGet .image_src {max-width: 100%; padding-bottom: 5px;}
+.shopdetail .shopdetailCoupon .shopdetailCouponGet li dl {height:34px; background:url("/images/d3/m_04/bg_coupon@2x.gif") no-repeat left center; padding:10px 0 10px 92px; border-bottom:1px dashed #cbcbcb; position:relative; background-size: 81px auto;}
+.shopdetail .shopdetailCoupon .shopdetailCouponGet li:last-child {border-bottom:0px none;}
+.shopdetail .shopdetailCoupon .shopdetailCouponGet .MS_coupon dt {width:82px; position:absolute; top:10px; left:0 ; color:#fff; text-align:center;}
+.shopdetail .shopdetailCoupon .shopdetailCouponGet .MS_coupon dt strong {font-weight: normal;}
+.shopdetail .shopdetailCoupon .shopdetailCouponGet .MS_coupon h4 {font-weight:bold;}
+.shopdetail .shopdetailItem .shopdetailItemPopup {text-align:center; padding:0px; margin:15px 0;}
+.shopdetail .shopdetailItem .shopdetailItemPopup a {
+    font-weight: bold;
+    color: #a2a2a2;
+    background-color: #fff;
+    display: block;
+    /* padding: 10px 0; */
+    height: 45px;
+    line-height: 45px;
+    border: 1px solid #d7d7d7;
+}
+.relate_title {font-family:'Monda'; color:#5f5f5f; font-weight:bold; font-size:1.1em; border-bottom:1px solid #333; padding:10px 0;}
+.shopdetail .shopdetailItem .shopdetailItemPopup .shopdetailItemZoom {height:60px; padding:0 0 0 75px; margin-top:10px; background:url("/images/d3/m_04/bg_hand@2x.gif") no-repeat 20px center; line-height: 60px; background-size: 50px auto;}
+.shopdetail .shopdetailItem .shopdetailImage img {max-width:100% !important; height: auto !important;}
+.shopdetail .shopdetailItem .shopdetailImage table {width:100% !important;}
+.shopdetail .shopdetailItem .shopdetailImage object {width:100% !important;}
+.shopdetail .shopdetailItem .shopdetailImage iframe {width:100% !important;}
+.shopdetail .shopdetailItem .shopdetailImage table {table-layout: auto !important;}
+.shopdetail .shopdetailItem .shopdetailImage div {width:100% !important;}
+.shopdetail .shopdetailItem .shopdetailNotify {margin-top:24px;}
+.shopdetail .shopdetailItem .shopdetailNotify .shopdetailNotifyInfo {padding:0 15px;}
+.shopdetail .shopdetailItem .shopdetailNotify .shopdetailNotifyInfo dt {font-weight:bold; margin-bottom:2px;}
+.shopdetail .shopdetailItem .shopdetailNotify .shopdetailNotifyInfo dd {margin:0 0 25px 6px;}
+.shopdetail .shopdetailRelationItem {padding:0 15px 30px 15px;}
+.shopdetail .shopdetailRelationItem .listName input {float:right;}
+.shopdetail .shopdetailRelationItem .btn_cart {width:290px; text-align:center; font-weight:bold; color:#fff; background-color:#393939; display:block; padding:10px 0; margin:0 auto;}
+/* 관련상품 */
+.shopdetailRelation {margin-bottom:30px;}
+.shopdetailRelation .list_shoppingRelationItem1x {padding: 0px;}
+.shopdetailRelation .list_shoppingRelationItem1x ul {width:100%; display:table; table-layout: fixed; box-sizing: border-box;}
+.shopdetailRelation .list_shoppingRelationItem1x li {
+    width: 50%;
+    /* display: inline-block; */
+    vertical-align: top;
+    /* border-top: 1px solid #d9d9d9; */
+    /* padding: 18px 0; */
+    /* float: left; */
+    display: inline-block;
+    text-align: center;
+}
+
+.shopdetailRelation .list_shoppingRelationItem1x li figure {padding:0px;}
+.shopdetailRelation .list_shoppingRelationItem1x li:first-child {border:0px none;}
+.shopdetailRelation .list_shoppingRelationItem1x li img.listPic {/*width:40%; float:left;*/}
+.shopdetailRelation .list_shoppingRelationItem1x .list_shoppingInfo {width:57%; float:left; padding-left:3%; position: relative;}
+.shopdetailRelation .list_shoppingRelationItem1x .list_shoppingInfo .listName {border-bottom: 1px solid #dedede; padding: 0 15px 2px 0; margin-bottom: 5px;}
+.shopdetailRelation .list_shoppingRelationItem1x .list_shoppingInfo .options-select {width:100%;}
+.shopdetailRelation .list_shoppingRelationItem1x .MS_related_checkbox {position:absolute; top:0; right:0;}
+.shopdetailRelation .list_shoppingRelationItem1x .list_shoppingInfo .listCount {margin: 12px 0;}
+.shopdetailRelation .list_shoppingRelationItem1x .list_shoppingInfo .listCount .amount-input {text-align:right;}
+.shopdetailRelation .list_shoppingRelationItem1x .list_shoppingInfo .listCount .fa-plus {background-color: #bbb; width: 30px; height: 30px; text-align: center; vertical-align: middle; line-height: 30px; color: #fff;}
+.shopdetailRelation .list_shoppingRelationItem1x .list_shoppingInfo .listCount .fa-minus {background-color: #bbb; width: 30px; height: 30px; text-align: center; vertical-align: middle; line-height: 30px; color: #fff;}
+.shopdetailRelation .list_shoppingRelationItem1x .btn_Black {width:290px; margin: 0 auto;}
+/* //관련상품 */
+
+/* OKDGG 버튼 */
+.shopdetail .okdgg-checkout {margin-top: 15px;}
+.shopdetail .okdgg-checkout img {max-width: 90%; height: auto;}
+/* //OKDGG 버튼 */
+
+/* 퀵바이 버튼 노출 시 커뮤니티 탭 위치 변경 */
+.cs-button {bottom: 53px !important;}
+/* //퀵바이 버튼 노출 시 커뮤니티 탭 위치 변경 */
+
+
+/* 임시품절 재입고 SMS 받기 */
+.shopdetail .soldout_anchor { display:block !important; }
+.shopdetail .MK_btn-sms {
+    display: inline-block; width: 100%; height: 35px; line-height: 35px; text-align: center; border: 1px solid #808080;
+    color: #fff; font-weight: bold;
+    background-color: #636363;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#636363), to(#5e5e5e));
+    background-image: -webkit-linear-gradient(top, #636363, #5e5e5e);
+    background-image:    -moz-linear-gradient(top, #636363, #5e5e5e);
+    background-image:      -o-linear-gradient(top, #636363, #5e5e5e);
+    background-image:   linear-gradient(to bottom, #636363, #5e5e5e);
+    -webkit-border-radius: 3px !important; border-radius: 3px !important; -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+}
+.shopdetail .MK_btn-sms span { padding-left: 24px; background: url(/images/d3/m_01/bull/alarm_fff@2x.png) no-repeat 0 50%; background-size: 18px 14px; }
+/* 임시품절 재입고 SMS 받기 끝 */
+
+@media screen and (min-width:420px) and (max-width:767px) {
+	.shopdetail .shopdetailInfo {position:relative; overflow:hidden; zoom:1; border-bottom:1px solid #c7c7c7; background-color: #fff;}
+	.shopdetail .shopdetailInfo h2 {border-bottom:1px solid #c7c7c7; padding-bottom:16px; background-color: #f5f5f5;}
+	.shopdetail .shopdetailInfo .shopdetailInfoTop {float:left;}
+	.shopdetail .shopdetailInfo .shopdetailInfoTop figure {border-bottom:0px none;}
+	.shopdetail .shopdetailInfo .shopdetailInfoTop, .shopdetail .shopdetailInfo .shopdetailInfoBottom {width:50%;}
+	.shopdetail .shopdetailInfo .shopdetailInfoBottom {float:right; background-color:#fff;}
+	.shopdetailInfoBottom .shopdetailInfoMultiSelect .MK_optAddWrap #MK_innerOptScroll {background-color: #fff;}
+	.shopdetail .shopdetailInfo .shopdetailInfoBottom .shopdetailTotal {border-top:1px solid #c7c7c7;}
+	.shopdetail .shopdetailCoupon .shopdetailCouponGet {width:335px; margin:0 auto;}
+	.shopdetail .shopdetailRelationItem {padding:0 0 30px 0;}
+	.shopdetail .shopdetailInfo .shopdetailInfoBottom .shopdetailButton .shopdetailButtonTop a {padding:10px 8px;}
+	.shopdetail .shopdetailInfo .shopdetailInfoBottom .shopdetailButton .shopdetailButtonTop a.buy {padding:10px 8px;}
+	.shopdetail .shopdetailItem .shopdetailItemPopup {width:335px; margin:22px auto;}
+	.shopdetail .shopdetailRelationItem .btn_cart {margin:34px auto;}
+	.shopdetailRelation .list_shoppingRelationItem1x li {width:50%;}
+	.shopdetailRelation .list_shoppingRelationItem1x li:nth-child(2) {border:0px none;}
+}
+@media screen and (min-width:768px) {
+	.shopdetail .shopdetailInfo {position:relative; overflow:hidden; zoom:1; border-bottom:1px solid #c7c7c7; background-color: #fff;}
+	.shopdetail .shopdetailInfo h2 {border-bottom:1px solid #c7c7c7; padding-bottom:16px; background-color: #f5f5f5;}
+	.shopdetail .shopdetailInfo .shopdetailInfoTop {float:left;}
+	.shopdetail .shopdetailInfo .shopdetailInfoTop figure {border-bottom:0px none;}
+	.shopdetail .shopdetailInfo .shopdetailInfoTop, .shopdetail .shopdetailInfo .shopdetailInfoBottom {width:50%;}
+	.shopdetailInfoBottom .shopdetailInfoMultiSelect .MK_optAddWrap #MK_innerOptScroll {background-color: #fff;}
+	.shopdetail .shopdetailInfo .shopdetailInfoBottom {float:right; background-color:#fff;}
+	.shopdetail .shopdetailInfo .shopdetailInfoBottom .shopdetailTotal {border-top:1px solid #c7c7c7;}
+	.shopdetail .shopdetailCoupon .shopdetailCouponGet {width:335px; margin:0 auto;}
+	.shopdetail .shopdetailRelationItem {padding:0 0 30px 0;}
+	.shopdetail .shopdetailItem .shopdetailItemPopup {width:335px; margin:22px auto;}
+	.shopdetail .shopdetailItem .shopdetailNotify {margin-top:36px;}
+	.shopdetail .shopdetailRelationItem .btn_cart {margin:34px auto;}
+	.shopdetailRelation .list_shoppingRelationItem1x li {width:50%;}
+	.shopdetailRelation .list_shoppingRelationItem1x li:nth-child(2) {border:0px none;}
+}
+
+#nhn_btn {padding-top:10px;}
+#payco_order_btn {padding-top:10px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***슬라이드***/
+var tmb_img = $( window ).width();
+
+    $(function(){
+      $("#slides").slidesjs({
+        width: tmb_img,
+        height: tmb_img+65
+      });
+    });
+
+
+/**
+$(function() {
+    var fixedBtn = $("#contents .fixed-btn");
+    $(window).scroll(function(e) {
+        var fixed_target = $("#contents .shopdetailButtonTop"),
+        fixed_target_top = fixed_target.offset()["top"];
+        if ($(window).scrollTop() > fixed_target_top) {
+            fixedBtn.addClass("fixed");
+            fixedBtn.siblings(".buy_on").show();
+            $(".section_fixedFooter").addClass("cs-button");
+        } else {
+            fixedBtn.removeClass("fixed");
+            fixedBtn.parent().removeClass("fixed");
+            fixedBtn.children("a").show();
+            fixedBtn.siblings(".buy_on").hide();
+            $(".section_fixedFooter").removeClass("cs-button");
+        }
+    });
+    fixedBtn.click(function(e){
+        e.preventDefault();
+        $(this).parent().toggleClass("fixed");
+        fixedBtn.children("a").toggle();
+    });
+});
+**/
+
+$(".btn_toggle").click(function(){
+    $(this).find(".fa").toggleClass("fa-rotate-180");
+    $(this).next("div").toggle();
+});
+var nwid = Math.floor([100/$(".ncount").find("a").size()]*100)/100;
+$(".ncount a").width(nwid+"%");
+
+
+
+
+
+function review_login(a) {
+    alert('로그인을 하셔야 등록하실 수 있습니다.');
+    var onfocus_move = "location.href = '/m/login.html?return_url=/m/review_list.html';";
+    jQuery('#review_content_box').attr('onfocus', onfocus_move);
+    location.href = '/m/login.html?return_url=/m/product.html?branduid='+a;
+}
+
+
+
+
+
+
+$(".slides_container").css("width",$( window ).width());
+$(".slide").css("width",$( window ).width());
+//$(".slide").css("height",$( window ).width()/1.9 + 16);
+
+
+
+
+

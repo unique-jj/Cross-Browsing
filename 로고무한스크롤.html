@@ -1,0 +1,182 @@
+<html>
+<head>
+	<title>http://www.blueb.co.kr</title>
+</head>
+<body>
+
+<script type="text/javascript">
+var sliderwidth="1155px"  //스크롤 가로 사이즈
+var sliderheight="130px"  //스크롤 세로 사이즈
+var slidespeed="1"  
+	slidebgcolor=""  //스크롤 배경 색상
+
+var leftarrowimage = "/design/pencafe/renewal2018/img/w/brand_logo_arr_left.png"
+var rightarrowimage = "/design/pencafe/renewal2018/img/w/brand_logo_arr_right.png"
+
+var leftrightslide=new Array()
+var finalslide=''
+	leftrightslide[0]='<a href="#" target=_blank><img src=http://pencafe.img4.kr/renewal/banner/main_banner/main_brand_logo_1.png border=0></A>'
+	leftrightslide[1]='<a href="#" target=_blank><img src=http://pencafe.img4.kr/renewal/banner/main_banner/main_brand_logo_2.png border=0></A>'
+	leftrightslide[2]='<a href="#" target=_blank><img src=http://pencafe.img4.kr/renewal/banner/main_banner/main_brand_logo_3.png border=0></A>'
+	leftrightslide[3]='<a href="#" target=_blank><img src=http://pencafe.img4.kr/renewal/banner/main_banner/main_brand_logo_4.png border=0></A>'
+	leftrightslide[4]='<a href="#" target=_blank><img src=http://pencafe.img4.kr/renewal/banner/main_banner/main_brand_logo_5.png border=0></A>'
+	leftrightslide[5]='<a href="#" target=_blank><img src=http://pencafe.img4.kr/renewal/banner/main_banner/main_brand_logo_6.png border=0></A>'
+	leftrightslide[6]='<a href="#" target=_blank><img src=http://pencafe.img4.kr/renewal/banner/main_banner/main_brand_logo_7.png border=0></A>'
+	leftrightslide[7]='<a href="#" target=_blank><img src=http://pencafe.img4.kr/renewal/banner/main_banner/main_brand_logo_8.png border=0></A>'
+	leftrightslide[8]='<a href="#" target=_blank><img src=http://pencafe.img4.kr/renewal/banner/main_banner/main_brand_logo_9.png border=0></A>'
+	leftrightslide[9]='<a href="#" target=_blank><img src=http://pencafe.img4.kr/renewal/banner/main_banner/main_brand_logo_10.png border=0></A>'
+	leftrightslide[10]='<a href="#" target=_blank><img src=http://pencafe.img4.kr/renewal/banner/main_banner/main_brand_logo_11.png border=0></A>'
+	leftrightslide[11]='<a href="#" target=_blank><img src=http://pencafe.img4.kr/renewal/banner/main_banner/main_brand_logo_12.png border=0></A>'
+	leftrightslide[12]='<a href="#" target=_blank><img src=http://pencafe.img4.kr/renewal/banner/main_banner/main_brand_logo_13.png border=0></A>'
+	leftrightslide[13]='<a href="#" target=_blank><img src=http://pencafe.img4.kr/renewal/banner/main_banner/main_brand_logo_14.png border=0></A>'
+	leftrightslide[14]='<a href="#" target=_blank><img src=http://pencafe.img4.kr/renewal/banner/main_banner/main_brand_logo_15.png border=0></A>'
+	leftrightslide[15]='<a href="#" target=_blank><img src=http://pencafe.img4.kr/renewal/banner/main_banner/main_brand_logo_16.png border=0></A>'
+	leftrightslide[16]='<a href="#" target=_blank><img src=http://pencafe.img4.kr/renewal/banner/main_banner/main_brand_logo_17.png border=0></A>'
+	leftrightslide[17]='<a href="#" target=_blank><img src=http://pencafe.img4.kr/renewal/banner/main_banner/main_brand_logo_18.png border=0></A>'
+	leftrightslide[18]='<a href="#" target=_blank><img src=http://pencafe.img4.kr/renewal/banner/main_banner/main_brand_logo_19.png border=0></A>'
+	leftrightslide[19]='<a href="#" target=_blank><img src=http://pencafe.img4.kr/renewal/banner/main_banner/main_brand_logo_20.png border=0></A>'
+	leftrightslide[20]='<a href="#" target=_blank><img src=http://pencafe.img4.kr/renewal/banner/main_banner/main_brand_logo_21.png border=0></A>'
+	leftrightslide[21]='<a href="#" target=_blank><img src=http://pencafe.img4.kr/renewal/banner/main_banner/main_brand_logo_22.png border=0></A>'
+	leftrightslide[22]='<a href="#" target=_blank><img src=http://pencafe.img4.kr/renewal/banner/main_banner/main_brand_logo_23.png border=0></A>'
+	leftrightslide[23]='<a href="#" target=_blank><img src=http://pencafe.img4.kr/renewal/banner/main_banner/main_brand_logo_24.png border=0></A>'
+	leftrightslide[24]='<a href="#" target=_blank><img src=http://pencafe.img4.kr/renewal/banner/main_banner/main_brand_logo_25.png border=0></A>'
+	leftrightslide[25]='<a href="#" target=_blank><img src=http://pencafe.img4.kr/renewal/banner/main_banner/main_brand_logo_26.png border=0></A>'
+	leftrightslide[26]='<a href="#" target=_blank><img src=http://pencafe.img4.kr/renewal/banner/main_banner/main_brand_logo_27.png border=0></A>'
+	leftrightslide[27]='<a href="#" target=_blank><img src=http://pencafe.img4.kr/renewal/banner/main_banner/main_brand_logo_28.png border=0></A>'
+	leftrightslide[28]='<a href="#" target=_blank><img src=http://pencafe.img4.kr/renewal/banner/main_banner/main_brand_logo_29.png border=0></A>'
+	leftrightslide[29]='<a href="#" target=_blank><img src=http://pencafe.img4.kr/renewal/banner/main_banner/main_brand_logo_30.png border=0></A>'
+	leftrightslide[30]='<a href="#" target=_blank><img src=http://pencafe.img4.kr/renewal/banner/main_banner/main_brand_logo_31.png border=0></A>'
+	leftrightslide[31]='<a href="#" target=_blank><img src=http://pencafe.img4.kr/renewal/banner/main_banner/main_brand_logo_32.png border=0></A>'
+	leftrightslide[32]='<a href="#" target=_blank><img src=http://pencafe.img4.kr/renewal/banner/main_banner/main_brand_logo_33.png border=0></A>'
+	leftrightslide[33]='<a href="#" target=_blank><img src=http://pencafe.img4.kr/renewal/banner/main_banner/main_brand_logo_34.png border=0></A>'
+	leftrightslide[34]='<a href="#" target=_blank><img src=http://pencafe.img4.kr/renewal/banner/main_banner/main_brand_logo_35.png border=0></A>'
+	leftrightslide[35]='<a href="#" target=_blank><img src=http://pencafe.img4.kr/renewal/banner/main_banner/main_brand_logo_36.png border=0></A>'
+	leftrightslide[36]='<a href="#" target=_blank><img src=http://pencafe.img4.kr/renewal/banner/main_banner/main_brand_logo_37.png border=0></A>'
+	leftrightslide[37]='<a href="#" target=_blank><img src=http://pencafe.img4.kr/renewal/banner/main_banner/main_brand_logo_38.png border=0></A>'
+	leftrightslide[38]='<a href="#" target=_blank><img src=http://pencafe.img4.kr/renewal/banner/main_banner/main_brand_logo_39.png border=0></A>'
+	leftrightslide[39]='<a href="#" target=_blank><img src=http://pencafe.img4.kr/renewal/banner/main_banner/main_brand_logo_40.png border=0></A>'
+	leftrightslide[40]='<a href="#" target=_blank><img src=http://pencafe.img4.kr/renewal/banner/main_banner/main_brand_logo_41.png border=0></A>'
+			
+var imagegap=""
+var slideshowgap=0
+
+var copyspeed=slidespeed
+	leftrightslide='<nobr>'+leftrightslide.join(imagegap)+'</nobr>'
+var iedom=document.all||document.getElementById
+	if (iedom)
+		document.write('<span id="temp" style="visibility:hidden;position:absolute;top:-100px;left:-9000px">'+leftrightslide+'</span>')
+
+var actualwidth=''
+var cross_slide, ns_slide
+var righttime,lefttime
+
+function fillup(){
+	if (iedom){
+		cross_slide=document.getElementById? document.getElementById("test2") : document.all.test2
+		cross_slide2=document.getElementById? document.getElementById("test3") : document.all.test3
+		cross_slide.innerHTML=cross_slide2.innerHTML=leftrightslide
+		actualwidth=document.all? cross_slide.offsetWidth : document.getElementById("temp").offsetWidth
+		cross_slide2.style.left=actualwidth+slideshowgap+"px"
+	}
+	else if (document.layers){
+		ns_slide=document.ns_slidemenu.document.ns_slidemenuorange
+		ns_slide2=document.ns_slidemenu.document.ns_slidemenu3
+		ns_slide.document.write(leftrightslide)
+		ns_slide.document.close()
+		actualwidth=ns_slide.document.width
+		ns_slide2.left=actualwidth+slideshowgap
+		ns_slide2.document.write(leftrightslide)
+		ns_slide2.document.close()
+	}
+	lefttime=setInterval("slideleft()",30)
+}
+window.onload=fillup
+
+function slideleft(){
+	if (iedom){
+	if (parseInt(cross_slide.style.left)>(actualwidth*(-1)+8))
+		cross_slide.style.left=parseInt(cross_slide.style.left)-copyspeed+"px"
+	else
+		cross_slide.style.left=parseInt(cross_slide2.style.left)+actualwidth+slideshowgap+"px"
+	if (parseInt(cross_slide2.style.left)>(actualwidth*(-1)+8))
+		cross_slide2.style.left=parseInt(cross_slide2.style.left)-copyspeed+"px"
+	else
+		cross_slide2.style.left=parseInt(cross_slide.style.left)+actualwidth+slideshowgap+"px"
+	}
+	else if (document.layers){
+	if (ns_slide.left>(actualwidth*(-1)+8))
+		ns_slide.left-=copyspeed
+	else
+		ns_slide.left=ns_slide2.left+actualwidth+slideshowgap
+	if (ns_slide2.left>(actualwidth*(-1)+8))
+		ns_slide2.left-=copyspeed
+	else
+		ns_slide2.left=ns_slide.left+actualwidth+slideshowgap
+	}
+}
+
+function slideright(){
+	if (iedom){
+	if (parseInt(cross_slide.style.left)<(actualwidth+8))
+		cross_slide.style.left=parseInt(cross_slide.style.left)+copyspeed+"px"
+	else
+		cross_slide.style.left=parseInt(cross_slide2.style.left)+actualwidth*(-1)+slideshowgap+"px"
+	if (parseInt(cross_slide2.style.left)<(actualwidth+8))
+		cross_slide2.style.left=parseInt(cross_slide2.style.left)+copyspeed+"px"
+	else
+		cross_slide2.style.left=parseInt(cross_slide.style.left)+actualwidth*(-1)+slideshowgap+"px"
+	}
+	else if (document.layers){
+	if (ns_slide.left>(actualwidth*(-1)+8))
+		ns_slide.left-=copyspeed
+	else
+		ns_slide.left=ns_slide2.left+actualwidth+slideshowgap
+	if (ns_slide2.left>(actualwidth*(-1)+8))
+		ns_slide2.left-=copyspeed
+	else
+		ns_slide2.left=ns_slide.left+actualwidth+slideshowgap
+	}
+}
+
+function right(){
+	if(lefttime){
+		clearInterval(lefttime)
+		clearInterval(righttime)
+		righttime=setInterval("slideright()",30)  
+	}
+}
+
+function left(){
+	if(righttime){
+		clearInterval(lefttime)
+		clearInterval(righttime)
+		lefttime=setInterval("slideleft()",30)  
+	}
+}
+	document.write('<table width='+sliderwidth+' border="0" cellspacing="0" cellpadding="0">');
+	document.write('<tr><td align=center valign=middle width=20><img src='+leftarrowimage+' onMouseover="left(); copyspeed=2" onMouseout="copyspeed=1" style="cursor:hand"></td>')
+
+
+	if (iedom||document.layers){
+		with (document){
+			document.write('<td>')
+	if (iedom){
+		write('<div style="position:relative;width:'+sliderwidth+';height:'+sliderheight+';overflow:hidden">')
+		write('<div style="position:absolute;width:'+sliderwidth+';height:'+sliderheight+';background-color:'+slidebgcolor+'" onMouseover="copyspeed=0" onMouseout="copyspeed=1">')
+		write('<div id="test2" style="position:absolute;left:0px;top:0px"></div>')
+		write('<div id="test3" style="position:absolute;left:-1000px;top:0px"></div>')
+		write('</div></div>')
+	}
+	else if (document.layers){
+		write('<ilayer width='+sliderwidth+' height='+sliderheight+' name="ns_slidemenu" bgColor='+slidebgcolor+'>')
+		write('<layer name="ns_slidemenuorange" left=0 top=0 onMouseover="copyspeed=0" onMouseout="copyspeed=slidespeed"></layer>')
+		write('<layer name="ns_slidemenu3" left=0 top=0 onMouseover="copyspeed=0" onMouseout="copyspeed=slidespeed"></layer>')
+		write('</ilayer>')
+	}
+	document.write('</td>')
+	}
+}
+
+document.write('<td width="20" align=center valign=middle><img src='+rightarrowimage+' onMouseover="right();copyspeed=2" onMouseout="copyspeed=1" style="cursor:hand"></td></tr></table>')
+
+</script>

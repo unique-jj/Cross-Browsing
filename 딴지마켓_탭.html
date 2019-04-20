@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="kr">
+<head>
+<meta charset="UTF-8">
+<title>http://www.blueb.co.kr</title>
+<style>
+/* highlight colors */
+::-moz-selection {
+ background-color: #333;
+ color: white;
+}
+
+::selection {
+ background-color: #333;
+ color: white;
+}
+/* wrapper */
+.wrapper {
+	max-width: 70ch;
+	padding-right: 10px;
+	padding-left: 10px;
+	margin-right: auto;
+	margin-left: auto;
+}
+/* tabs */
+.tabs {
+
+}
+.tabs:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+.tabs input[type=radio] {
+	display: none;
+}
+
+.tabs label {
+    display: block;
+    float: left;
+    width: 10%;
+    padding: 10px 15px;
+    border: 1px solid #225C9A;
+    /* border-right: none; */
+    background-color: #225c9a;
+    text-align: center;
+    font-weight: 700;
+    color: #FFF;
+    cursor: pointer;
+    -webkit-transition: background-color 150ms ease-in-out;
+    transition: background-color 150ms ease-in-out;
+				position:relative;
+				z-index:10
+}
+.tabs label:hover {
+	background-color: #3283D9;
+}
+.tabs [id^="tab"]:checked + label {
+    border-bottom-color: white;
+    background: white;
+    color: #225c9a;
+}
+.tab-content {
+    display: none;
+    float: left;
+    width: 98.2%;
+    padding: 1em;
+
+    background-color: white;
+    border-top: 1px solid #225c9a;
+				position:relative;
+				margin-top:-1px;
+				z-index:5;
+}
+ #tab1:checked ~ #tab-content1, #tab2:checked ~ #tab-content2, #tab3:checked ~ #tab-content3 {
+ display: block;
+}
+</style>
+</head>
+<body>
+<div class="tabs cf">
+
+ <input type="radio" name="tabs" id="tab1" checked>
+ <label for="tab1"> 검증기사 </label>
+ <input type="radio" name="tabs" id="tab2">
+ <label for="tab2"> 제품상세정보 </label>
+ <input type="radio" name="tabs" id="tab3">
+ <label for="tab3"> 구매후기/Q&A </label>
+
+ <div id="tab-content1" class="tab-content"> 111 </div>
+ <div id="tab-content2" class="tab-content"> 222 </div>
+ <div id="tab-content3" class="tab-content"> 333 </div>
+</div>
+</body>
+</html>

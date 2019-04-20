@@ -1,0 +1,165 @@
+<script type="text/javascript">
+
+// 최근 본 상품
+(function($) {
+    $(function() {
+        // 최근 본 상품 카운트
+        var count = 1;
+
+        if ($('.productrecent > ul.prd_ul').length) {
+
+            $('.productrecent > ul.prd_ul').each(function(i) {
+                if (i+1 > count) {
+                    $(this).addClass('displaynone');
+                }
+                
+                if ($(this).find('li').size() == 0) {
+                    $(this).remove();
+                }
+            });
+
+            $('.productrecent .prev').unbind('click').click(function()
+            {
+                var $first = $('.productrecent > ul.prd_ul:not(.displaynone)').first().prev();
+
+
+                if (typeof($first.html()) != 'undefined' && $first.html() != null && $first.attr('class') != 'player') {
+                    $first.removeClass('displaynone').fadeIn('fast');
+                } else {
+                    alert('최근 본 첫번째 상품입니다.');
+                    return;
+                }
+
+                var $last = $('.productrecent > ul.prd_ul:not(.displaynone)').last();
+                if (typeof($last.html()) != 'undefined') {
+                    $last.addClass('displaynone').hide();
+                }		
+                
+            }).css(
+            {
+                cursor : 'pointer'
+            });
+
+            $('.productrecent .next').unbind('click').click(function()
+            {
+                var $last = $('.productrecent > ul.prd_ul:not(.displaynone)').last().next();
+                if (typeof($last.html()) != 'undefined' && $last.html() != null && $last.attr('class') != 'player') {
+                    $last.removeClass('displaynone').fadeIn('fast');
+                } else {
+                    alert('최근 본 마지막 상품입니다.');
+                    return;
+                }
+
+                var $first = $('.productrecent > ul.prd_ul:not(.displaynone)').first();
+                if (typeof($first.html()) != 'undefined') {
+                    $first.addClass('displaynone').hide();
+                }		
+
+            }).css(
+            {
+                cursor : 'pointer'
+            });
+
+        
+        } else {
+            $('.productrecent').css('display', 'none');
+        }
+    });
+})(jQuery);
+</script>
+
+<!--/if_view_product/-->
+
+<div class="productrecent">
+	<p class="player" style="left:0px;"><img src="http://swooew.imglink.kr/onedesign2/images/btn_viewprd_lt.png" alt="이전 제품" class="prev" /></p>
+
+<ul class="prd_ul">	
+<!--/loop_view_product/-->
+			<li><a href="<!--/view_product@link/-->"><img src="<!--/view_product@image_s/-->" alt="상품 섬네일" title="상품 섬네일" /></a></li>
+<!--/if_step(2)/-->
+</ul><ul class="prd_ul">
+<!--/end_if/-->
+<!--/end_loop/-->
+</ul>
+
+<p class="player" style="right: 0px;"><img src="http://swooew.imglink.kr/onedesign2/images/btn_viewprd_rt.png" alt="다음 제품" class="next" /></p>
+</div>
+	
+<!--/end_if/-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 최근본상품 */
+
+#ALL{ 
+margin:8px auto;
+width:47px;
+height:62px;
+position:relative;}
+#Prev{
+position:absolute;
+top:0px;
+left:0px;
+cursor:pointer;}
+#Next{
+position:absolute;
+top:0px;
+right:0px;
+cursor:pointer;}
+#contentss{
+width:100%;
+height:100%;
+overflow:hidden;}
+
+#allpage {height:62px;}
+#allpage .page{ padding:0;margin:0;
+width:47px;
+height:62px;
+list-style-type:none;
+float:left;}
+#allpage .page li { float:left; width:47px; }
+#allpage .page li img { border:none; width:47px; }
+
+.displaynone { display: none; }
+
+
+
+
+
+/* productrecent */
+.productrecent {display:block; text-align:center; overflow:hidden; position: relative; width: 120px; margin: 0 auto; }
+.productrecent h3 { margin: 0 0 6px; padding: 0; }
+.productrecent ul { width:120px; list-style: none; }
+.productrecent li {margin:0; padding: 0; width: 100% !important; height: 120px !important; }
+.productrecent li a { color:#c1c1c0; font-size:11px; }
+.productrecent li img { width: 85px; height: 120px; }
+.productrecent li span { display:none; }
+.productrecent .quick_product_bt {overflow:hidden; position: relative; height: 15px; background-color: #535257; }
+.productrecent .player {margin:0; padding:0; position: absolute; top: 40px; }
+.productrecent .player img.prev {}
+.productrecent .player img.next {} 
+.productrecent .player:hover {}
+.productrecent .player img { display:block; padding:0; }
+.quick_product_top { margin-top: 3px; }
+
+
+
+
+#side_wrap #blk_scroll_wings { display: block; position: absolute !important; left: 0 !important; top: 0px !important; width: 100%; }
+#side_wrap #blk_scroll_wings .productrecent { display: block !important; }

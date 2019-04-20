@@ -1,0 +1,20 @@
+<script src="/design/vittz/js/jquery-1.9.1.min.js"></script>
+
+<script>
+   window.jQuery1_9_1 = jQuery.noConflict(true);
+</script>
+
+
+제이쿼리 1.9.1호출로 인해 로그인 회원가입 고급형주문서작성 의 기능(우편번호검색) 이 작동안할경우에는
+해당페이지에
+<script>
+   window.jQuery1_9_1 = jQuery.noConflict(true);
+</script>
+삽입해준다!!
+
+//해당문제
+비츠조명모바일에서 왼쪽햄버거메뉴와 메인 각종 슬라이드들을 사용하기위해
+까페에서 사용한 1.9.1을 그대로가져왔는데
+우리쪽 1.7.2과 충돌이나서 중요기능들이 작동안하는 오류가발생하여
+해당 연동페이지들에만 적용해줘서 해결완료
+

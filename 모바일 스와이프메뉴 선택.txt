@@ -1,0 +1,116 @@
+<link rel="stylesheet" href="/design/ezbaking/m/xeicon/xeicon.min.css">
+<link href="/design/ezbaking/m/css/swiper.min.css" rel="stylesheet" type="text/css">
+<script src="/design/ezbaking/m/js/swiper.min.js" type="text/javascript"></script>
+<div id="wrap">
+
+<!-- 모바일 왼쪽 메뉴 -->
+<!--/personal{m_aside}/-->
+
+
+
+<!-- 상단 / 기본상단 시작 -->
+<div id="hdWrap">
+    <div id="header">
+
+        <div class="hdBtm">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><a href="/m/product_list.html?xcode=043&type=Y" id="xcode043">레시피</a></div>
+                    <div class="swiper-slide"><a href="/m/product_list.html?type=X&xcode=020&viewtype=gallery" id="xcode020"><span class="bounce">HOT</span>DIY세트</a></div>
+                    <div class="swiper-slide"><a href="/m/product_list.html?xcode=113&type=N&mcode=001&viewtype=gallery" id="xcode113">신상품</a></div>
+                    <div class="swiper-slide"><a href="/m/product_list.html?xcode=010&mcode=001&type=Y&scode=&viewtype=gallery" id="xcode087">인기상품</a></div>
+                    <div class="swiper-slide"><a href="/m/product_list.html?xcode=061&type=Y&viewtype=gallery" id="xcode061">타임특가</a></div>
+                    <div class="swiper-slide"><a href="/m/page.html?id=1&xcode=event" id="xcodeevent">이벤트&기획전</a></div>
+                    <div class="swiper-slide"><a href="/m/product_list.html?type=Y&xcode=047&viewtype=gallery" id="xcode047">365행사</a></div>
+                    <!-- <div class="swiper-slide"><a href="/m/product_list.html?type=X&xcode=059&viewtype=gallery" id="xcode059">선착순특가</a></div> -->
+                </div>
+                <div class="swiper-button-prev"><i class="xi-angle-left"></i></div>
+                <div class="swiper-button-next"><i class="xi-angle-right"></i></div>
+            </div>
+        </div>
+    </div><!-- #header -->
+</div><!-- #hdWrap -->
+<!-- 상단 / 기본상단 끝 -->
+
+// xcode값
+var xcode = (function(n) {
+    n = n.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+    var r = new RegExp("[\\?&]" + n + "=([^&#]*)"),
+        s = r.exec(location.search);
+    return s == null ? "" : decodeURIComponent(s[1].replace(/\+/g, " "));
+})('xcode') || '';
+// plan_id
+var plan_id = (function(n) {
+    n = n.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+    var r = new RegExp("[\\?&]" + n + "=([^&#]*)"),
+        s = r.exec(location.search);
+    return s == null ? "" : decodeURIComponent(s[1].replace(/\+/g, " "));
+})('plan_id') || '';
+
+
+jQuery(function(){
+    jQuery(".searchBtn").click(function(){
+        jQuery(".search").slideToggle();
+        jQuery(".searchBtn").fadeToggle();
+    });
+
+    var swiper = new Swiper('.swiper-container', {
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        slidesPerView: 'auto',
+        spaceBetween: 0,
+        freeMode: true
+    });
+    
+    // 스와이프 메뉴 선택처리
+    jQuery("#xcode"+xcode).addClass("on");
+    if(plan_id) { jQuery("#xcodeevent").addClass("on"); }
+
+    jQuery(".swiper-slide a").each(function(index, value){
+        if(jQuery(this).attr("class") == "on") {
+            var printIndex = index;
+            if(printIndex == 1) {
+                  printIndex = 0;
+            }
+            swiper.slideTo(printIndex, 0);
+        }
+    });    
+});
+
+
+
+
+
+
+#header .hdBtm { position: relative; }
+#header .hdBtm .swiper-container { height:40px ; padding: 0 20px; }
+#header .hdBtm .swiper-container .swiper-wrapper {  }
+#header .hdBtm .swiper-container .swiper-slide { text-align: center;font-size: 15px;color: #555555;background: #fff; /* Center slide text vertically */display: -webkit-box;display: -ms-flexbox;display: -webkit-flex;display: flex;-webkit-box-pack: center;-ms-flex-pack: center;-webkit-justify-content: center;justify-content: center;-webkit-box-align: center;-ms-flex-align: center;-webkit-align-items: center;align-items: center;width: auto !important;padding-right: 15px;}
+#header .hdBtm .swiper-container .swiper-slide a.on {color: #d6000f;font-weight:bold;display: block;position: relative;height: 100%;line-height: 41px;}
+#header .hdBtm .swiper-container .swiper-slide a.on::after {content:"";display:block;width: 100%;height: 6px;background-color: #d6000f;position: absolute;bottom: 0px;}
+#header .hdBtm .swiper-container .swiper-slide span {color: #c70026;font-size: 10px;position: absolute;line-height: 10px;top: 3px;left: 10px;font-weight: bold;}
+#header .hdBtm .swiper-button-prev {background: none #fff;width: 20px;font-size: 17px;color: #bbbbbb;top: 0px;left: -5px;text-align: right;margin: 0;}
+#header .hdBtm .swiper-button-next { background: none #fff; width: 20px; font-size: 17px; color: #bbbbbb; right: 0px; top: 0px; margin: 0;}
+#header .hdBtm .swiper-button-prev i,
+#header .hdBtm .swiper-button-next i { padding:10px 0; }
+#bannerAll { display: none }
+.bounce {-webkit-animation: MK_shake_animation 2s;-webkit-animation-iteration-count: infinite;-webkit-animation-timing-function: ease-in-out;}
+@-webkit-keyframes MK_shake_animation { 
+    0% { -webkit-transform: scale(1) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg) }
+    10% { -webkit-transform: scale(1) rotate(0deg) translateX(0px) translateY(-2px) skewX(0deg) skewY(0deg) }
+    20% { -webkit-transform: scale(1) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg) }
+    30% { -webkit-transform: scale(1) rotate(0deg) translateX(0px) translateY(-2px) skewX(0deg) skewY(0deg) }
+    40% { -webkit-transform: scale(1) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg) }
+    50% { -webkit-transform: scale(1) rotate(0deg) translateX(0px) translateY(-2px) skewX(0deg) skewY(0deg) }
+    60% { -webkit-transform: scale(1) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg) }
+    100% { -webkit-transform: scale(1) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg) }
+}
+
+
+
+
+
+
+
+
+

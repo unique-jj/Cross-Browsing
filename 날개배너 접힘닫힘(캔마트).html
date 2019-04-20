@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+
+<script type="text/javascript" src="http://www.canmart.co.kr/design/jason006/js_j/jquery-1.7.2.min.js"></script> 
+
+<!----------한번접으면 계속 접혀있기------------->
+<script>
+var WB =  localStorage.getItem('fixrt');
+if(WB == 'actvz'){
+	document.getElementById("fix_rt_menu").style.right = "-124px";
+}
+</script>
+<!----------한번접으면 계속 접혀있기------------->
+
+
+
+
+<script>
+(function($){
+	
+	$(function(){
+		//공통
+		funcEvt.commonEvt.event();
+/*
+		if(_loc[0] > 0 ){
+			funcEvt.mainEvt.event();
+		}
+*/
+	});
+
+	funcEvt = {
+		commonEvt : {
+			event:function(){
+				$('.rt_btn, .fixclose_bt').on('click',function(){
+					var _cuRcss = $('.fix_rt_menu').css('right');
+					if(_cuRcss == '-124px'){
+						$('.fix_rt_menu').stop().animate({
+							'right' : 0
+						});
+						localStorage.removeItem('fixrt');
+					}else{
+						$('.fix_rt_menu').stop().animate({
+							'right' : '-124px'
+						});	
+						localStorage.setItem('fixrt', 'actvz');
+					}			
+				});
+			}
+		}
+		
+	}
+})(jQuery);
+
+
+
+
+				$('.rbanner_topbt').on('click',function(){
+					$('html, body').animate({
+						scrollTop : 0
+					});
+				});
+</script>
+
+<style>
+.fix_rt_menu {
+	position:fixed;
+	top:0px;
+	right:0px;
+	z-index:9999;
+	bottom:0px;
+	width:124px; /*border-left:1px solid #cccccc;background:#fff;*/
+	padding-top:108px;
+}
+.fix_rt_menu .fix_rt_content {
+	position:relative;
+	z-index:40;
+	width:232px;
+}
+.fix_rt_menu .fix_rt_content .fixclose_bt {
+	position:absolute;
+	top:-200px;
+	left:100px;
+	z-index:50;
+	color:#000000;
+	font-size:13px;
+	padding:4px 27px 4px 0px;
+	background:url(/design/yamiyami/wib2015/top/fix_closebtn.gif) no-repeat right 2px;
+	cursor:pointer;
+}
+.fix_rt_menu .fix_rt_content .rt_btn {
+	width:23px;
+	height:63px;
+	position:absolute;
+	top:194px;
+	left:-23px;
+	z-index:20;
+	cursor:pointer;
+}
+a {
+	text-decoration:none;
+}
+.rbanner_wrap {
+	width:124px;
+	height:572px;
+	background:#fff;
+	border:1px solid #d4d4d4;
+}
+.rbanner_1 {
+	width:124px;
+	height:33px;
+	background:#fff;
+	border-bottom:1px solid #d4d4d4;
+}
+.rbanner_crema {
+	width:124px;
+	height:144px;
+	background:#fff;
+	border-bottom:1px solid #d4d4d4;
+}
+.rbanner_text {
+	height:36px;
+	background:#fff;
+	border-bottom:1px solid #d4d4d4;
+	font-size:10pt;
+	font-family:돋움;
+	color:#000;
+	padding-left:13px;
+	line-height:36px;
+}
+.rbanner_icon {
+	width:124px;
+	height:44px;
+	background:#fff;
+	border-bottom:4px solid #595959;
+}
+.rbanner_beecon {
+	width:124px;
+	height:42px;
+	background:#fff;
+	border-bottom:1px solid #d4d4d4;
+}
+.rbanner_bn {
+	width:124px;
+	height:82px;
+	background:#fff;
+	border-bottom:1px solid #d4d4d4;
+}
+.rbanner_topbt {
+	width:124px;
+	height:31px;
+	background:#efefef;
+	text-align:center;
+	font-size:10pt;
+	color:#939393;
+	font-weight:bold;
+	line-height:32px;
+}
+.icon {
+	width:28px;
+	height:28px;
+	float:left;
+	padding:9px 4px 0px 8px;
+}
+</style>
+</head>
+
+<body>
+<!-- right menu -->
+<div class="fix_rt_menu" id="fix_rt_menu">
+ <div class="fix_rt_content">
+  <div class="rt_section03">
+   <div class="rbanner_wrap">
+   
+       <a href="http://www.shoemaru.com/?cm_id=can_bn" alt="슈마루바로가기" target="_blank">
+    <div class="rbanner_bn"><img src="http://www.canmart.co.kr/design/jason006/img_j/shoesbn2.jpg" /></div>
+    </a> 
+    
+        <a href="/shop/basket.html" alt="장바구니">
+    <div class="rbanner_text">장바구니</div>
+    </a> <a href="/shop/faq.html" alt="Q&A">
+    <div class="rbanner_text">Q&A</div>
+    </a> <a href="/shop/mypage.html?mypage_type=myorder" alt="배송조회">
+    <div class="rbanner_text">배송조회</div>
+    </a> <a href="/shop/shopbrand.html?xcode=245&type=P" alt="배송지연">
+    <div class="rbanner_text">배송지연</div>
+    </a> <a href="javascript:void(window.open('http://www.canmart.co.kr/html/unpaymentlist.html','popup','width=440 height=330,scrollbars=yes'))" coords="326,2,379,27" alt="입금자 확인">
+    <div class="rbanner_text">입금자 확인</div>
+    </a> <a href="/shop/shopbrand.html?xcode=128" alt="개인결제창">
+    <div class="rbanner_text">개인결제창</div>
+    </a>
+    
+        <div class="rbanner_icon">
+     <div class="icon"> <a href="/board/board.html?code=jason006_image3&page=1&type=v&num1=999903&num2=00000&lock=N" alt="카톡"> <img src="http://www.canmart.co.kr/design/jason006/img_j/cacao.gif"  onmouseover="this.src='http://www.canmart.co.kr/design/jason006/img_j/cacao_ov.gif'" onmouseout="this.src='http://www.canmart.co.kr/design/jason006/img_j/cacao.gif'"/> </a> </div>
+     <div class="icon"><a href="https://story.kakao.com/ch/canmart/feed" alt="카스"><img src="http://www.canmart.co.kr/design/jason006/img_j/cas.gif" onmouseover="this.src='http://www.canmart.co.kr/design/jason006/img_j/cas_ov.gif'" onmouseout="this.src='http://www.canmart.co.kr/design/jason006/img_j/cas.gif'" /></a></div>
+     <div class="icon"><a href="/shop/page.html?id=12" alt="캔마트"><img src="http://www.canmart.co.kr/design/jason006/img_j/can.gif" onmouseover="this.src='http://www.canmart.co.kr/design/jason006/img_j/can_ov.gif'" onmouseout="this.src='http://www.canmart.co.kr/design/jason006/img_j/can.gif'" /></a></div>
+    </div>
+    <div class="rbanner_beecon"> <!--/banner_beecon/--> </div>
+    
+   
+    <div class="rbanner_crema"><a href="/board/board.html?code=jason006_board19"><img src="http://www.canmart.co.kr/design/jason006/img_j/review.gif" /></a></div>
+
+
+
+    <a href="#">
+    <div class="rbanner_topbt"><img src="http://www.canmart.co.kr/design/jason006/img_j/wing_top.gif" alt=""></div>
+    </a> </div>
+  </div>
+  <div class="rt_btn"><img src="http://www.canmart.co.kr/design/jason006/img_j/open_btn.gif" alt=""></div>
+ </div>
+ <!-- fix_rt_content --> 
+</div>
+<!-- fix_rt_menu --> 
+<!-- right menu -->
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="CONTENT-TYPE" content="text/html;charset=UTF-8">
+<title>메뉴 예제</title>
+<style type="text/css">
+.brand-menu, .brand-menu li, .brand-sub ul .brand-sub ul li { border:0; padding:0; margin:0; }
+.brand-menu, .brand-sub { clear:both; }
+.brand-menu li, .brand-sub li { list-style:none; float:left; }
+.brand-menu li a img { width:100px; height:30px; }
+.brand-sub ul li a img { width:80px; height:20px; }
+.brand-sub { display:none; }
+</style>
+</head>
+<body>
+<script type="text/javascript" src="http://imomshop.special295.freesell.co.kr/js/jquery-1.7.2.min.js"></script>
+
+
+
+<div class="brand-menu_wrap">
+    <ul class="brand-menu">
+        <li><a href="#"><img src="http://imomshop.special295.freesell.co.kr/design/imomshop/m/brand_icon1_off.gif"></a></li>
+        <li><a href="#"><img src="http://imomshop.special295.freesell.co.kr/design/imomshop/m/brand_icon2_off.gif"></a></li>
+        <li><a href="#"><img src="http://imomshop.special295.freesell.co.kr/design/imomshop/m/brand_icon3_off.gif"></a></li>
+        <li><a href="#"><img src="http://imomshop.special295.freesell.co.kr/design/imomshop/m/brand_icon4_off.gif"></a></li>
+        <li><a href="#"><img src="http://imomshop.special295.freesell.co.kr/design/imomshop/m/brand_icon5_off.gif"></a></li>
+        <div style="clear:both;"></div>
+    </ul>
+</div>
+
+<div class="brand-sub">
+  <div class="headerBottom clearFix">
+   <div class="brandWrap swiper-container">
+    <ul class="brand swiper-wrapper">
+        <li class="swiper-slide onn1"><span link="/m/brand.html?brand_type=BRAND&brand_id=5"> 쇼콜라 </span></li>
+        <li class="swiper-slide onn2"><span link="/m/brand.html?brand_type=BRAND&brand_id=6"> MUAA </span></li>
+        <li class="swiper-slide onn3"><span link="/m/brand.html?brand_type=BRAND&brand_id=7"> The Organic Cotton </span></li>
+        <li class="swiper-slide onn4"><span link="/m/brand.html?brand_type=BRAND&brand_id=8"> 파셀  </span></li>
+    </ul>
+   </div>
+  </div>      
+</div>
+<div class="brand-sub">
+  <div class="headerBottom clearFix">
+   <div class="brandWrap swiper-container">
+    <ul class="brand swiper-wrapper">
+            <li class="swiper-slide onn5"><span link="/m/brand.html?brand_type=BRAND&brand_id=3"> Dr.Ato </span></li>
+            <li class="swiper-slide onn6"><span link="/m/brand.html?brand_type=BRAND&brand_id=9"> The Pure </span></li>
+            <li class="swiper-slide onn7"><span link="/m/brand.html?brand_type=BRAND&brand_id=10"> PureGani </span></li>
+    </ul>
+   </div>
+  </div>  
+</div>
+<div class="brand-sub">
+  <div class="headerBottom clearFix">
+   <div class="brandWrap swiper-container">
+    <ul class="brand swiper-wrapper">
+            <li class="swiper-slide onn8"><span link="/m/brand.html?brand_type=BRAND&brand_id=11"> UPIS  </span></li>
+            <li class="swiper-slide onn9"><span link="/m/brand.html?brand_type=BRAND&brand_id=12"> OnO2 </span></li>
+            <li class="swiper-slide onn10"><span link="/m/brand.html?brand_type=BRAND&brand_id=13"> BEABA </span></li>
+    </ul>
+   </div>
+  </div> 
+</div>
+<div class="brand-sub">
+  <div class="headerBottom clearFix">
+   <div class="brandWrap swiper-container">
+    <ul class="brand swiper-wrapper">
+            <li class="swiper-slide onn11"><span link="/m/brand.html?brand_type=BRAND&brand_id=14"> 스킵합 </span></li>
+            <li class="swiper-slide onn12"><span link="/m/brand.html?brand_type=BRAND&brand_id=15"> 유키두 </span></li>
+            <li class="swiper-slide onn13"><span link="/m/brand.html?brand_type=BRAND&brand_id=16"> KOTT </span></li>
+            <li class="swiper-slide onn14"><span link="/m/brand.html?brand_type=BRAND&brand_id=17"> 노미 </span></li>
+    </ul>
+   </div>
+  </div> 
+</div>
+<div class="brand-sub">
+  <div class="headerBottom clearFix">
+   <div class="brandWrap swiper-container">
+    <ul class="brand swiper-wrapper">
+            <li class="swiper-slide onn15"><span link="/m/brand.html?brand_type=BRAND&brand_id=1"> B&B </span></li>
+            <li class="swiper-slide onn16"><span link="/m/brand.html?brand_type=BRAND&brand_id=20"> Dr.Ato_위생 </span></li>
+            <li class="swiper-slide onn17"><span link="/m/brand.html?brand_type=BRAND&brand_id=21"> PureGanic_위생 </span></li>
+            <li class="swiper-slide onn18"><span link="/m/brand.html?brand_type=BRAND&brand_id=18"> 아토마일드 </span></li>
+            <li class="swiper-slide onn19"><span link="/m/brand.html?brand_type=BRAND&brand_id=19"> 올곧은 </span></li>
+    </ul>
+   </div>
+  </div> 
+</div>
+
+<script type="text/javascript">
+//menu show/hide script
+(function($) {
+    //img.src on/off 처리 function
+    $.fn._img_on = function() {
+        return this.each(function() {
+            $(this).attr('src', $(this).attr('src').replace('_off', '_on'));
+        });
+    };
+    $.fn._img_off = function() {
+        return this.each(function() {
+            $(this).attr('src', $(this).attr('src').replace('_on', '_off'));
+        });
+    };
+    
+    $('.brand-menu li a').each(function(i) {
+        var _th = $(this);
+        _th.on('click', function(e) {
+			e.preventDefault(); //a 태그 작동하지 말아라
+            $('.brand-menu li a img')._img_off().eq(i)._img_on();    //싹다 off 하고 해당 놈만 on
+            $('.brand-sub').hide().eq(i).show();   //싹다 hide 하고 해당 놈만 show
+        });
+    }).eq(0).trigger('click');    
+})(jQuery);
+</script>
+
+</body>
+</html>

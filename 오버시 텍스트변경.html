@@ -1,0 +1,32 @@
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<head>
+	<title>http://www.blueb.co.kr</title>
+
+<script language="JavaScript" type="Text/JavaScript">
+var fifteenth;
+var sixteenth;
+var seventeenth;
+
+function eighteenth(nineteenth,twentieth) {
+	seventeenth=eval("document.getElementById('"+nineteenth+"')");
+	sixteenth=twentieth;
+	fifteenth=seventeenth.childNodes[0].nodeValue;
+	seventeenth.childNodes[0].nodeValue=twentieth;
+}
+
+function first2() { 
+	seventeenth.childNodes[0].nodeValue=fifteenth;
+}
+function first3() { 
+	seventeenth.childNodes[0].nodeValue=fifteenth;
+}
+</script>
+</head>
+<body>
+
+<a href='#' id='fdstua' onMouseOver="eighteenth(this.id,'변경')" onMouseOut='first2()'>고정</a>
+<a href='#' id='fdstua2' onMouseOver="eighteenth(this.id,'바껴')" onMouseOut='first3()'>두번째</a>
+
+</body>
+</html>

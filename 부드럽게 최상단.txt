@@ -1,0 +1,16 @@
+<script>
+function grapes(){
+    scrollBy(0,scrollY/-10); 
+}
+function apple(){
+banana = setInterval("if(scrollY>10){grapes();}else{clearInterval(banana);}",10);
+}
+</script>
+
+사용할 때에는 apple함수를 불러오기
+
+
+예)
+<a href="javascript:apple();">Top</a>
+<img src="이미지주소" onclick="apple();?">
+

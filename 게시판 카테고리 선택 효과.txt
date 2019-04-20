@@ -1,0 +1,69 @@
+pc
+
+<div class="page_category">
+  <ul>
+    <li data-category="0" class="selected"><a href="/board/board.html?code=idasoni_image6">전체</a></li>
+    <li data-category="1"><a href="/board/board.html?code=idasoni_image6&amp;board_cate=1">포스트</a></li>
+    <li data-category="2"><a href="/board/board.html?code=idasoni_image6&amp;board_cate=2">영상</a></li>
+  </ul>
+</div>
+
+
+function getParamByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)");
+	var results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+};
+
+jQuery(document).ready(function() {
+    var board_cate = getParamByName('board_cate');
+    if (board_cate != null) {
+        jQuery('.page_category li[data-category="' + board_cate + '"]').addClass('selected');    
+    } else {
+        jQuery('.page_category li[data-category="0"]').addClass('selected');     
+    }
+}); 
+
+
+
+
+
+
+
+
+
+
+
+
+모바일
+<div class="page_sub_menu">
+  <ul>
+    <li data-category="0"><a href="/m/board.html?code=idasoni_image6">전체</a></li>
+    <li data-category="1"><a href="/m/board.html?code=idasoni_image6&board_cate=1">포스트</a></li>
+    <li data-category="2"><a href="/m/board.html?code=idasoni_image6&board_cate=2">영상</a></li>
+  </ul>
+</div>
+
+
+function getParamByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)");
+	var results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+};
+
+jQuery(document).ready(function() {
+    var board_cate = getParamByName('board_cate');
+    if (board_cate != null) {
+        jQuery('.page_sub_menu li[data-category="' + board_cate + '"]').addClass('selected');    
+    } else {
+        jQuery('.page_sub_menu li[data-category="0"]').addClass('selected');     
+    }
+}); 

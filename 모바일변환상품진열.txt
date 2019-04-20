@@ -1,0 +1,98 @@
+
+
+
+<style type="text/css">
+    .line-cols-btns * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+    .line-cols-btns { position: relative; margin: 5px 0 !important; text-align: center; }
+    .line-cols-btns > a { display: inline-block; margin: 0 5px; width: 34px; height: 32px; text-indent: -9999px; background-repeat: no-repeat; background-position: 0 0; background-size: 100% 100%; }
+    .line-cols-btns > a.col-btn-1 { background-image: url(./images/d3/m_powerpack/32/common/cols_one_off.png); }
+    .line-cols-btns > a.col-btn-1.on { background-image: url(./images/d3/m_powerpack/32/common/cols_one_on.png); }
+    .line-cols-btns > a.col-btn-2 { background-image: url(./images/d3/m_powerpack/32/common/cols_two_off.png); }
+    .line-cols-btns > a.col-btn-2.on { background-image: url(./images/d3/m_powerpack/32/common/cols_two_on.png); }
+    .line-cols-btns > a.col-btn-3 { background-image: url(./images/d3/m_powerpack/32/common/cols_three_off.png); }
+    .line-cols-btns > a.col-btn-3.on { background-image: url(./images/d3/m_powerpack/32/common/cols_three_on.png); }
+    .line-cols-btns > a.col-btn-4 { background-image: url(./images/d3/m_powerpack/32/common/cols_four_off.png); }
+    .line-cols-btns > a.col-btn-4.on { background-image: url(./images/d3/m_powerpack/32/common/cols_four_on.png); }
+    
+    .list ul[data-type=cols-line].cols-1 > li { float: left; position: relative; width: 100%; }
+    .list ul[data-type=cols-line].cols-2 > li { float: left; position: relative; width: 50%; }
+    .list ul[data-type=cols-line].cols-3 > li { float: left; position: relative; width: 33.333%; }
+    .list ul[data-type=cols-line].cols-4 > li { float: left; position: relative; width: 25%; }
+    </style>
+
+                    <div class="list">
+                        <h2 class="tit-h2">
+                            신상품
+                            <a href="#none" class="btn-bull arrow-up"><em></em></a>
+                        </h\2>
+                        <div class="line-cols-btns">
+                            <a href="#none" class="col-btn-1" data-line="1">1열</a>
+                            <a href="#none" class="col-btn-2" data-line="2">2열</a>
+                            <a href="#none" class="col-btn-3 on" data-line="3">3열</a>
+                            <a href="#none" class="col-btn-4" data-line="4">4열</a>
+                        </div>
+                        <ul class="cols-3" data-type="cols-line">
+                            <li>
+                                <a href="#none">
+                                    <span class="img"><img src="images/d3/m_powerpack/32/main/img_list04.jpg" alt="" /></span>
+                                    <span class="tit">심플 계산기</span>
+                                    <em>24,000원</em>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#none">
+                                    <span class="img"><img src="images/d3/m_powerpack/32/main/img_list04.jpg" alt="" /></span>
+                                    <span class="tit">심플 계산기</span>
+                                    <em>24,000원</em>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#none">
+                                    <span class="img"><img src="images/d3/m_powerpack/32/main/img_list04.jpg" alt="" /></span>
+                                    <span class="tit">심플 계산기</span>
+                                    <em>24,000원</em>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#none">
+                                    <span class="img"><img src="images/d3/m_powerpack/32/main/img_list04.jpg" alt="" /></span>
+                                    <span class="tit">심플 계산기1</span>
+                                    <em>24,000원</em>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#none">
+                                    <span class="img"><img src="images/d3/m_powerpack/32/main/img_list04.jpg" alt="" /></span>
+                                    <span class="tit">심플 계산기</span>
+                                    <em>24,000원</em>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#none">
+                                    <span class="img"><img src="images/d3/m_powerpack/32/main/img_list04.jpg" alt="" /></span>
+                                    <span class="tit">심플 계산기</span>
+                                    <em>24,000원</em>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+    <script type="text/javascript">
+    $(function() {
+        // 상품 진열 변경
+        $('.line-cols-btns a').on('click', function(e) {
+            e.preventDefault();
+            var $parent = $(this).parent(),
+                $target = $parent.next(),
+                $col = $(this).data('line');
+                
+            $(this).addClass('on').siblings().removeClass('on');
+            $target.attr('class', function(i, c) {
+                return c.replace(/(^|\s)cols-\S+/g, '');
+            }).addClass('cols-'+$col);
+        });
+    });
+    </script>
+
+
+

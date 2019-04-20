@@ -1,0 +1,728 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+
+<script type="text/javascript" src="http://www.canmart.co.kr/design/jason006/js_j/jquery.easing.1.3.min.js"></script>
+<script type="text/javascript" src="http://www.canmart.co.kr/design/jason006/js_j/jquery.sliderkit.1.9.2.pack.js"></script>
+<script>
+			$(window).load(function(){ //$(window).load() must be used instead of $(document).ready() because of Webkit compatibility				
+				$(".newslider-horizontal").sliderkit({
+					auto:true,
+					tabs:true,
+					mousewheel:false,
+					circular:true,
+					navitemshover:true,
+					panelfx:"sliding",
+					panelfxspeed:1000,
+					panelfxeasing:"easeInOutExpo",
+				});
+					
+			});	
+
+
+(function($) {
+	$(document).ready(function(){
+		
+		$('.thumb2').hover(function(){
+			$(".cover", this).stop().animate({bottom:'0', width:'100%'},{queue:false,duration:160});
+		}, function() {
+			$(".cover", this).stop().animate({bottom:'-147px', width:'100%'},{queue:false,duration:160});
+		});
+	});
+})(jQuery);
+
+
+(function($) {
+	$(document).ready(function(){
+		
+		$('.thumb3').hover(function(){
+			$(".cover2", this).stop().animate({bottom:'0', width:'100%'},{queue:false,duration:160});
+		}, function() {
+			$(".cover2", this).stop().animate({bottom:'-170px', width:'100%'},{queue:false,duration:160});
+		});
+	});
+})(jQuery);
+
+
+
+
+</script>
+
+<style>
+.sliderkit {
+	display: none;
+	position: relative;
+	overflow: hidden;
+	text-align: left;
+}
+.s1_sd {
+	float: left;
+	width: 1168px;
+	height: 497px;
+}
+
+.s1_bg {
+	width: 100%;
+	height: 554px;
+	background-color: #f2f2f2;
+	margin-bottom: 47px;
+}
+.s1_sd .sliderkit-panels {
+	float: left;
+	width: 1168px;
+	height: 459px;
+	background-color: #fff;
+	margin: 0;
+	overflow: hidden;
+}
+.sliderkit .sliderkit-nav {
+	z-index: 10;
+	/*position: absolute;*/
+	text-align: center;
+}
+.s1_sd .sliderkit-nav {
+	/*position: absolute;*/
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 43px;
+	text-align: left;
+}
+.sliderkit .sliderkit-nav-clip {
+	position: relative;
+	overflow: hidden;
+	margin: 0 auto;
+}
+.s1_sd .sliderkit-nav-clip {
+	float: left;
+	width: 100%;
+}
+ul, ol {
+	list-style: none;
+}
+.sliderkit .sliderkit-nav-clip ul {
+	position: relative;
+	left: 0px;
+	top: 0px;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.s1_sd .sliderkit-nav-clip ul {
+	height: 30px;
+	width: 100%;
+	/*padding-top: 7px;*/
+	padding-bottom: 8px;
+}
+.s1_sd .sliderkit-nav-clip li {
+	float: left;
+	height: 30px;
+	width: 192.5px;
+	padding: 0px;
+	margin: 0px;
+	background-color: #cdcdcd;
+	position: relative;
+	border:1px solid #eee;
+}
+.sliderkit .sliderkit-nav-clip ul li {
+	float: left;
+}
+.s1_sd .sliderkit-nav-clip li.sliderkit-selected {
+	background-color: #ffffff;
+color: #000;
+}
+.sliderkit a, .sliderkit a:hover {
+	text-decoration: none;
+}
+.s1_sd .sliderkit-nav-clip li span  {
+	float: left;
+	display: block;
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	color: #757575;
+	font-family:"돋움";
+	font-weight: normal;
+	font-size:11px;
+}
+
+
+
+.sliderkit .sliderkit-nav-clip ul li a {
+	display: block;
+	overflow: hidden;
+}
+/*
+.s1_sd .sliderkit-nav-clip li.sliderkit-selected em {
+	display: block;
+	width: 16px;
+	height: 7px;
+	background: url(http://fsdesign.cafe24.com/dsm/img/main/s1_sd_nav.png) no-repeat;
+	position: absolute;
+	top: -7px;
+	left: 50%;
+	margin-left: -8px;
+}
+*/
+.s1_sd .sliderkit-nav-clip li.sliderkit-selected em {display:none;}
+
+.sliderkit .sliderkit-panel {
+	z-index: 1;
+	position: absolute;
+	overflow: hidden;
+}
+.sliderkit .sliderkit-panel-old {
+	z-index: 4;
+}
+.sliderkit .sliderkit-panel-active {
+	z-index: 5;
+}
+.s1_sd .sliderkit-panel {
+	clear: both;
+	width: 1168px;
+	float: left;
+}
+.sliderkit img {
+	border: 0;
+}
+
+
+.prd-list .thumb { width: 140px; height: 140px; margin-left: auto; margin-right: auto; font-size:0; line-height: 0; border: 1px solid #fff; }
+
+
+
+
+
+
+
+
+
+
+.thumb2 { position: relative; margin-right:3px; overflow:hidden;}
+.thumb2 img {width:100%; height:100%}
+.thumb2 ul { padding:15px;}
+.thumb2 ul li{ font-family:돋움; text-align:left; color:#FFF;    margin-top:10px;}
+.thumb2 ul li a{ font-family:돋움; text-align:left; color:#FFF;    margin-top:10px;}
+.b1 { font-family:돋움; font-size:13px; border-bottom:1px solid #fff; font-weight:bold; padding-bottom:5px;}
+.b2 { font-family:돋움; font-size:12px; font-weight:normal; }
+.b3 { font-family:돋움; font-size:12px; font-weight:normal; }
+
+.thumb3 { position: relative; margin-right:3px; overflow:hidden;}
+.thumb3 img {width:100%;}
+.thumb3 ul { padding:5px;}
+.thumb3 ul li{ font-family:돋움; text-align:left; color:#FFF;    margin-top:5px;}
+.thumb3 ul li a{ font-family:돋움; text-align:left; color:#FFF;    margin-top:5px;}
+.s1 { font-family:돋움; font-size:11px; border-bottom:1px solid #fff; font-weight:bold; padding-bottom:4px;}
+.s2 { font-family:돋움; font-size:11px; font-weight:normal; }
+.s3 { font-family:돋움; font-size:11px; font-weight:normal; }
+
+.boxcaption{ position: absolute; background:#000;	height: 33%; 	width:100%; opacity: .6; 
+	/* For IE 5-7 */
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+	/* For IE 8 */
+	-MS-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+}
+
+.boxcaption2{ position: absolute; background:#000;	height: 40%; margin-top:10px;	width:100%; opacity: .6; 
+	/* For IE 5-7 */
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+	/* For IE 8 */
+	-MS-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+}
+
+.caption .boxcaption { /*width:100%;*/ bottom: -120px; }
+
+
+
+
+</style>
+</head>
+
+<body>
+<div class="sliderkit newslider-horizontal s1_sd">
+ <div class="sliderkit-nav">
+  <div class="sliderkit-nav-clip">
+<ul>
+<li><span>고객극찬</span></li>
+<li><span>인기신상품</span></li>
+    <li><span>워킹맘</span></li>
+    <li><span>캐주얼</span></li>
+    <li><span>통통맘</span></li>
+    <li><span>acc</span></li>
+   </ul>
+  </div>
+ </div>
+ <div class="sliderkit-panels">
+  <div class="sliderkit-panel">
+<!---------고객극찬(추천상품)시작----------->
+   <div class="prd-list"> 
+    <!--/if_add3_product/-->
+    <table summary="상품이미지, 상품 설명, 가격">
+     <caption>
+     상품 리스트
+     </caption>
+     <colgroup>
+     <col width="50%" />
+     <col width="25%" />
+     <col width="25%" />
+     <col width="25%" />
+     </colgroup>
+     <tbody>
+      <tr> 
+       <!--/loop_add3_product(42)/--> 
+       <!--/if_idx(1)/-->
+       <td rowspan="3">
+       <!--/end_if/-->
+       <!--/if_idx(2,3,4,5,6,7)/-->
+       <td><!--/end_if/-->
+        
+        <div class="tb-center">
+         <ul class="info">
+          <li> 
+           <!--/if_idx(1)/-->
+           <div class="thumb2" style="width: 480px; height: 459px"><a href="<!--/add3_product@link/-->"><img src="<!--/add3_product@image_m/-->" alt="상품 섬네일" title="상품 섬네일" /></a>
+
+<!-------오버메뉴시작------------->
+<a href="<!--/add3_product@link/-->">
+	<div class="cover boxcaption">
+<ul>
+<li class="b1"><!--/add3_product@name/--></li>
+<li class="b2"><!--/add3_product@subname/--></li>
+<li class="b3"><!--/add3_product@price_sell/-->원 </li>
+</ul>
+	</div>
+</a>
+<!-------오버메뉴 끝------------->
+
+</div>
+
+<!--/end_if/-->
+<!--/if_idx(2,3,4,5,6,7)/-->
+          
+           <div class="thumb3" style="width: 225px; height: 225px"><a href="<!--/add3_product@link/-->"><img src="<!--/add3_product@image_m/-->" alt="상품 섬네일" title="상품 섬네일" /></a>
+<!-------오버메뉴시작------------->
+<a href="<!--/add3_product@link/-->">
+	<div class="cover2 boxcaption2">
+<ul>
+
+<li class="s1"><!--/add3_product@name/--></li>
+<li class="s2"><!--/add3_product@subname/--></li>
+<li class="s3"><!--/add3_product@price_sell/-->원</li>
+
+</ul>
+	</div>
+</a>
+<!-------오버메뉴 끝------------->
+</div>
+
+           <!--/end_if/--> 
+          </li>
+         </ul>
+        </div></td>
+       <!--/if_idx(4,7)/--> 
+      </tr>
+      <tr> 
+       <!--/end_if/--> 
+       <!--/end_loop/--> 
+      </tr>
+     </tbody>
+    </table>
+    <!--/end_if/--> 
+   </div>
+<!---------고객극찬(추천상품)끝----------->
+  </div>
+  <div class="sliderkit-panel">
+
+<!---------인기신상품)시작----------->
+   <div class="prd-list"> 
+    <!--/if_add3_product/-->
+    <table summary="상품이미지, 상품 설명, 가격">
+     <caption>
+     상품 리스트
+     </caption>
+     <colgroup>
+     <col width="50%" />
+     <col width="25%" />
+     <col width="25%" />
+     <col width="25%" />
+     </colgroup>
+     <tbody>
+      <tr> 
+       <!--/loop_add3_product(42)/--> 
+       <!--/if_idx(8)/-->
+       <td rowspan="3">
+       <!--/end_if/-->
+       <!--/if_idx(9,10,11,12,13,14)/-->
+       <td><!--/end_if/-->
+        
+        <div class="tb-center">
+         <ul class="info">
+          <li> 
+           <!--/if_idx(8)/-->
+           <div class="thumb2" style="width: 480px; height: 459px"><a href="<!--/add3_product@link/-->"><img src="<!--/add3_product@image_m/-->" alt="상품 섬네일" title="상품 섬네일" /></a>
+
+<!-------오버메뉴시작------------->
+<a href="<!--/add3_product@link/-->">
+	<div class="cover boxcaption">
+<ul>
+<li class="b1"><!--/add3_product@name/--></li>
+<li class="b2"><!--/add3_product@subname/--></li>
+<li class="b3"><!--/add3_product@price_sell/-->원 </li>
+</ul>
+	</div>
+</a>
+<!-------오버메뉴 끝------------->
+
+</div>
+
+<!--/end_if/-->
+<!--/if_idx(9,10,11,12,13,14)/-->
+          
+           <div class="thumb3" style="width: 225px; height: 225px"><a href="<!--/add3_product@link/-->"><img src="<!--/add3_product@image_m/-->" alt="상품 섬네일" title="상품 섬네일" /></a>
+<!-------오버메뉴시작------------->
+<a href="<!--/add3_product@link/-->">
+	<div class="cover2 boxcaption2">
+<ul>
+<li class="s1"><!--/add3_product@name/--></li>
+<li class="s2"><!--/add3_product@subname/--></li>
+<li class="s3"><!--/add3_product@price_sell/-->원</li>
+</ul>
+	</div>
+</a>
+<!-------오버메뉴 끝------------->
+</div>
+
+           <!--/end_if/--> 
+          </li>
+         </ul>
+        </div></td>
+       <!--/if_idx(11,14)/--> 
+      </tr>
+      <tr> 
+       <!--/end_if/--> 
+       <!--/end_loop/--> 
+      </tr>
+     </tbody>
+    </table>
+    <!--/end_if/--> 
+   </div>
+<!---------인기신상픔 끝----------->
+  
+  </div>
+  <div class="sliderkit-panel">
+<!---------워킹맘(추가상품1)시작----------->
+   <div class="prd-list"> 
+    <!--/if_add3_product/-->
+    <table summary="상품이미지, 상품 설명, 가격">
+     <caption>
+     상품 리스트
+     </caption>
+     <colgroup>
+     <col width="50%" />
+     <col width="25%" />
+     <col width="25%" />
+     <col width="25%" />
+     </colgroup>
+     <tbody>
+      <tr> 
+       <!--/loop_add3_product(42)/--> 
+       <!--/if_idx(15)/-->
+       <td rowspan="3">
+       <!--/end_if/-->
+       <!--/if_idx(16,17,18,19,20,21)/-->
+       <td><!--/end_if/-->
+        
+        <div class="tb-center">
+         <ul class="info">
+          <li> 
+           <!--/if_idx(15)/-->
+           <div class="thumb2" style="width: 480px; height: 459px"><a href="<!--/add3_product@link/-->"><img src="<!--/add3_product@image_m/-->" alt="상품 섬네일" title="상품 섬네일" /></a>
+
+<!-------오버메뉴시작------------->
+<a href="<!--/add3_product@link/-->">
+	<div class="cover boxcaption">
+<ul>
+<li class="b1"><!--/add3_product@name/--></li>
+<li class="b2"><!--/add3_product@subname/--></li>
+<li class="b3"> <!--/add3_product@price_sell/-->원 </li>
+</ul>
+	</div>
+</a>
+<!-------오버메뉴 끝------------->
+
+</div>
+
+<!--/end_if/-->
+<!--/if_idx(16,17,18,19,20,21)/-->
+          
+           <div class="thumb3" style="width: 225px; height: 225px"><a href="<!--/add3_product@link/-->"><img src="<!--/add3_product@image_m/-->" alt="상품 섬네일" title="상품 섬네일" /></a>
+<!-------오버메뉴시작------------->
+<a href="<!--/add3_product@link/-->">
+	<div class="cover2 boxcaption2">
+<ul>
+<li class="s1"><!--/add3_product@name/--></li>
+<li class="s2"><!--/add3_product@subname/--></li>
+<li class="s3"><!--/add3_product@price_sell/-->원 </li>
+</ul>
+	</div>
+</a>
+<!-------오버메뉴 끝------------->
+</div>
+
+           <!--/end_if/--> 
+          </li>
+         </ul>
+        </div></td>
+       <!--/if_idx(18,21)/--> 
+      </tr>
+      <tr> 
+       <!--/end_if/--> 
+       <!--/end_loop/--> 
+      </tr>
+     </tbody>
+    </table>
+    <!--/end_if/--> 
+   </div>
+<!---------워킹맘(추가상품1)끝----------->  
+  </div>
+  <div class="sliderkit-panel">
+  
+<!---------캐주얼(추가상품2)시작----------->
+   <div class="prd-list"> 
+    <!--/if_add3_product/-->
+    <table summary="상품이미지, 상품 설명, 가격">
+     <caption>
+     상품 리스트
+     </caption>
+     <colgroup>
+     <col width="50%" />
+     <col width="25%" />
+     <col width="25%" />
+     <col width="25%" />
+     </colgroup>
+     <tbody>
+      <tr> 
+       <!--/loop_add3_product(42)/--> 
+       <!--/if_idx(22)/-->
+       <td rowspan="3">
+       <!--/end_if/-->
+       <!--/if_idx(23,24,25,26,27,28)/-->
+       <td><!--/end_if/-->
+        
+        <div class="tb-center">
+         <ul class="info">
+          <li> 
+           <!--/if_idx(22)/-->
+           <div class="thumb2" style="width: 480px; height: 459px"><a href="<!--/add3_product@link/-->"><img src="<!--/add3_product@image_m/-->" alt="상품 섬네일" title="상품 섬네일" /></a>
+
+<!-------오버메뉴시작------------->
+<a href="<!--/add3_product@link/-->">
+	<div class="cover boxcaption">
+<ul>
+<li class="b1"><!--/add3_product@name/--></li>
+<li class="b2"> <!--/add3_product@subname/--></li>
+<li class="b3"> <!--/add3_product@price_sell/-->원 </li>
+</ul>
+	</div>
+</a>
+<!-------오버메뉴 끝------------->
+
+</div>
+
+<!--/end_if/-->
+<!--/if_idx(23,24,25,26,27,28)/-->
+          
+           <div class="thumb3" style="width: 225px; height: 225px"><a href="<!--/add3_product@link/-->"><img src="<!--/add3_product@image_m/-->" alt="상품 섬네일" title="상품 섬네일" /></a>
+<!-------오버메뉴시작------------->
+<a href="<!--/add3_product@link/-->">
+	<div class="cover2 boxcaption2">
+<ul>
+<li class="s1"><!--/add3_product@name/--></li>
+<li class="s2"> <!--/add3_product@subname/--></li>
+<li class="s3"> <!--/add3_product@price_sell/-->원 </li>
+</ul>
+	</div>
+</a>
+<!-------오버메뉴 끝------------->
+</div>
+
+           <!--/end_if/--> 
+          </li>
+         </ul>
+        </div></td>
+       <!--/if_idx(25,28)/--> 
+      </tr>
+      <tr> 
+       <!--/end_if/--> 
+       <!--/end_loop/--> 
+      </tr>
+     </tbody>
+    </table>
+    <!--/end_if/--> 
+   </div>
+<!---------캐주얼(추가상품2)끝----------->    
+  
+  </div>
+  <div class="sliderkit-panel">
+  
+<!---------통통맘(추가상품3)시작----------->
+   <div class="prd-list"> 
+    <!--/if_add3_product/-->
+    <table summary="상품이미지, 상품 설명, 가격">
+     <caption>
+     상품 리스트
+     </caption>
+     <colgroup>
+     <col width="50%" />
+     <col width="25%" />
+     <col width="25%" />
+     <col width="25%" />
+     </colgroup>
+     <tbody>
+      <tr> 
+       <!--/loop_add3_product(42)/--> 
+       <!--/if_idx(29)/-->
+       <td rowspan="3">
+       <!--/end_if/-->
+       <!--/if_idx(30,31,32,33,34,35)/-->
+       <td><!--/end_if/-->
+        
+        <div class="tb-center">
+         <ul class="info">
+          <li> 
+           <!--/if_idx(29)/-->
+           <div class="thumb2" style="width: 480px; height: 459px"><a href="<!--/add3_product@link/-->"><img src="<!--/add3_product@image_m/-->" alt="상품 섬네일" title="상품 섬네일" /></a>
+
+<!-------오버메뉴시작------------->
+<a href="<!--/add3_product@link/-->">
+	<div class="cover boxcaption">
+<ul>
+<li class="b1"><!--/add3_product@name/--></li>
+<li class="b2"><!--/add3_product@subname/--></li>
+<li class="b3"><!--/add3_product@price_sell/-->원 </li>
+</ul>
+	</div>
+</a>
+<!-------오버메뉴 끝------------->
+
+</div>
+
+<!--/end_if/-->
+<!--/if_idx(30,31,32,33,34,35)/-->
+          
+           <div class="thumb3" style="width: 225px; height: 225px"><a href="<!--/add3_product@link/-->"><img src="<!--/add3_product@image_m/-->" alt="상품 섬네일" title="상품 섬네일" /></a>
+<!-------오버메뉴시작------------->
+<a href="<!--/add3_product@link/-->">
+	<div class="cover2 boxcaption2">
+<ul>
+<li class="s1"><!--/add3_product@name/--></li>
+<li class="s2"> <!--/add3_product@subname/--></li>
+<li class="s3"><!--/add3_product@price_sell/-->원 </li>
+</ul>
+	</div>
+</a>
+<!-------오버메뉴 끝------------->
+</div>
+
+           <!--/end_if/--> 
+          </li>
+         </ul>
+        </div></td>
+       <!--/if_idx(32,35)/--> 
+      </tr>
+      <tr> 
+       <!--/end_if/--> 
+       <!--/end_loop/--> 
+      </tr>
+     </tbody>
+    </table>
+    <!--/end_if/--> 
+   </div>
+<!---------통통맘(추가상품3)끝----------->   
+  
+  </div>
+  <div class="sliderkit-panel">
+  
+<!---------ACC(추가상품4)시작----------->
+   <div class="prd-list"> 
+    <!--/if_add3_product/-->
+    <table summary="상품이미지, 상품 설명, 가격">
+     <caption>
+     상품 리스트
+     </caption>
+     <colgroup>
+     <col width="50%" />
+     <col width="25%" />
+     <col width="25%" />
+     <col width="25%" />
+     </colgroup>
+     <tbody>
+      <tr> 
+       <!--/loop_add3_product(42)/--> 
+       <!--/if_idx(36)/-->
+       <td rowspan="3">
+       <!--/end_if/-->
+       <!--/if_idx(37,38,39,40,41,42)/-->
+       <td><!--/end_if/-->
+        
+        <div class="tb-center">
+         <ul class="info">
+          <li> 
+           <!--/if_idx(36)/-->
+           <div class="thumb2" style="width: 480px; height: 459px"><a href="<!--/add3_product@link/-->"><img src="<!--/add3_product@image_m/-->" alt="상품 섬네일" title="상품 섬네일" /></a>
+
+<!-------오버메뉴시작------------->
+<a href="<!--/add3_product@link/-->">
+	<div class="cover boxcaption">
+<ul>
+<li class="b1"><!--/add3_product@name/--></li>
+<li class="b2"> <!--/add3_product@subname/--></li>
+<li class="b3"> <!--/add3_product@price_sell/-->원 </li>
+</ul>
+	</div>
+</a>
+<!-------오버메뉴 끝------------->
+
+</div>
+
+<!--/end_if/-->
+<!--/if_idx(37,38,39,40,41,42)/-->
+          
+           <div class="thumb3" style="width: 225px; height: 225px"><a href="<!--/add3_product@link/-->"><img src="<!--/add3_product@image_m/-->" alt="상품 섬네일" title="상품 섬네일" /></a>
+<!-------오버메뉴시작------------->
+<a href="<!--/add3_product@link/-->">
+	<div class="cover2 boxcaption2">
+<ul>
+<li class="s1"><!--/add3_product@name/--></li>
+<li class="s2"> <!--/add3_product@subname/--></li>
+<li class="s3"> <!--/add3_product@price_sell/-->원 </li>
+</ul>
+	</div>
+</a>
+<!-------오버메뉴 끝------------->
+</div>
+
+           <!--/end_if/--> 
+          </li>
+         </ul>
+        </div></td>
+       <!--/if_idx(39,42)/--> 
+      </tr>
+      <tr> 
+       <!--/end_if/--> 
+       <!--/end_loop/--> 
+      </tr>
+     </tbody>
+    </table>
+    <!--/end_if/--> 
+   </div>
+<!---------ACC(추가상품4)끝----------->     
+  
+  </div>
+ </div>
+</div>
+</body>
+</html>

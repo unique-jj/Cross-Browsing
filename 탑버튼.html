@@ -1,0 +1,28 @@
+<div class="top_btn">
+  <span class="top_iconz"><img src="http://www.akta.co.kr/design/valenAK/img/top_btn.png"></span>
+</div>
+
+.top_btn {
+    width: 44px;
+    height: 44px;
+    background: #fff;
+    position: fixed;
+    bottom: 2%;
+    right: 3%;
+    z-index: 99999;
+    text-align: center;
+    cursor: pointer;
+}
+
+.top_btn .top_iconz {
+    position: relative;
+}
+
+
+(function($) {
+$('.top_btn').on('click',function(){
+ $('html, body').animate({
+   scrollTop : 0
+ });
+});
+})(jQuery);

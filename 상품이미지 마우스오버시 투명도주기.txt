@@ -1,0 +1,14 @@
+jQuery(function() {
+ 	jQuery(.thumb).hover(
+ 		function (){
+ 			jQuery(this).stop(true,true).animate({
+ 				opacity 0.5
+ 			});
+
+ 		},function (){
+ 			jQuery(this).stop(true,true).animate({
+ 				opacity 100
+ 			});
+ 		}
+	);
+});

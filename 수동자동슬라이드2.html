@@ -1,0 +1,55 @@
+<html>
+<head>
+	<title>http://www.blueb.co.kr</title>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+NewImg = new Array (
+	"http://www.blueb.co.kr/SRC/javascript/image/img01.jpg",
+	"http://www.blueb.co.kr/SRC/javascript/image/img03.jpg",
+	"http://www.blueb.co.kr/SRC/javascript/image/img04.jpg",
+	"http://www.blueb.co.kr/SRC/javascript/image/img05.jpg",
+	"http://www.blueb.co.kr/SRC/javascript/image/img06.jpg"
+);
+var ImgNum = 0;
+var ImgLength = NewImg.length - 1;
+
+var delay = 1000;  //오토일경우 전환속도 (1000=1초)
+
+var lock = false;
+var run;
+
+function chgImg(direction) {
+	if (document.images) {
+		ImgNum = ImgNum + direction;
+	if (ImgNum > ImgLength) {
+		ImgNum = 0;
+		}
+	if (ImgNum < 0) {
+		ImgNum = ImgLength;
+		}
+		document.slideshow.src = NewImg[ImgNum];
+	}
+}
+
+function auto() {
+	if (lock == true) {
+		lock = false;
+		window.clearInterval(run);
+	}
+	else if (lock == false) {
+		lock = true;
+		run = setInterval("chgImg(1)", delay);
+   }
+}
+//-->
+</script>
+</HEAD>
+
+<BODY>
+<img src="http://www.blueb.co.kr/SRC/javascript/image/img01.jpg" name="slideshow"><P>
+<B>
+| <a href="javascript:chgImg(-1)">Previous</a>
+| <a href="javascript:auto()">Auto/Stop</a>
+| <a href="javascript:chgImg(1)">Next</a>
+| 

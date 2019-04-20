@@ -1,0 +1,41 @@
+<style>
+.caption{position: relative; height:250px;}
+.caption:hover .dsc{ /*캡션 텍스트*/
+	display: block;
+	color:#000;
+	position: absolute;
+	bottom: 0px;
+	width: 100%; 
+	height:40px;
+	background:#fff;
+}
+.dsc {display:none;}
+</style>
+
+                                        <!--/loop_product(16)/-->
+                                            <td>
+                                                <div class="tb-center">
+                                                    <ul class="info">
+                                                        <li class="caption">
+                                                          <div class="thumb"><a href="<!--/product@link/-->"><img src="<!--/product@image_l/-->"  onmouseover="this.src='<!--/product@image_m/-->'" onmouseout="this.src='<!--/product@image_l/-->'" alt="상품 섬네일" /></a>
+                                                            <div class="dsc">
+                                                              <!--/product@icons/--> <!--/product@name(30)/--> <!--/product@btn_option_preview/--> <br/>
+                                                              <!--/number/product@price_sell/-->원
+                                                            </div>
+                                                          </div>
+                                                        </li>
+                                                        <!--/if_product@color/-->
+                                                        <li>
+                                                            <!--/loop_product@color/-->
+                                                            <font color="<!--/product@color@code/-->">■</font>
+                                                            <!--/end_loop/-->
+                                                        </li>
+                                                        <!--/end_if/-->
+                                                    </ul>
+                                                </div>
+                                               </td>
+                                             <!--/if_step(4)/-->
+                                             </tr><tr>
+                                             <!--/end_if/-->
+                                            
+                                        <!--/end_loop/-->

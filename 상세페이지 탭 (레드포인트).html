@@ -1,0 +1,479 @@
+				function initTabMenu(tabContainerID) {
+					var tabContainer = document.getElementById(tabContainerID);
+					var tabAnchor = tabContainer.getElementsByTagName("a");
+					var i = 0;
+
+					for(i=0; i<tabAnchor.length; i++) {
+						if (tabAnchor.item(i).className == "tab")
+							thismenu = tabAnchor.item(i);
+						else
+							continue;
+
+						thismenu.container = tabContainer;
+						thismenu.targetEl = document.getElementById(tabAnchor.item(i).href.split("#")[1]);
+						thismenu.targetEl.style.display = "none";
+						thismenu.imgEl = thismenu.getElementsByTagName("img").item(0);
+						thismenu.onclick = function tabMenuClick() {
+							currentmenu = this.container.current;
+							if (currentmenu == this)
+								return false;
+
+							if (currentmenu) {
+								currentmenu.targetEl.style.display = "none";
+								if (currentmenu.imgEl) {
+									currentmenu.imgEl.src = currentmenu.imgEl.src.replace("_ov.png", ".png");
+								} else {
+									currentmenu.className = currentmenu.className.replace(" ov", "");
+								}
+							}
+							this.targetEl.style.display = "";
+							if (this.imgEl) {
+								this.imgEl.src = this.imgEl.src.replace(".png", "_ov.png");
+							} else {
+								this.className += " ov";
+							}
+							this.container.current = this;
+							
+							
+							
+							
+							
+							
+							if (currentmenu) {
+								currentmenu.targetEl.style.display = "none";
+								if (currentmenu.imgEl) {
+									currentmenu.imgEl.src = currentmenu.imgEl.src.replace("_ov.gif", ".gif");
+								} else {
+									currentmenu.className = currentmenu.className.replace(" ov", "");
+								}
+							}
+							this.targetEl.style.display = "";
+							if (this.imgEl) {
+								this.imgEl.src = this.imgEl.src.replace(".gif", "_ov.gif");
+							} else {
+								this.className += " ov";
+							}
+							this.container.current = this;
+							
+							
+														
+
+							return false;
+						};
+
+						if (!thismenu.container.first)
+							thismenu.container.first = thismenu;
+					}
+					if (tabContainer.first)
+						tabContainer.first.onclick();
+				}
+
+
+
+
+
+
+
+<!----탭 시작---->
+<div style="width:100%;">
+ <div id="detail_tab">
+  <ul>
+   <li><a class="tab" href="#tab01"><img src="/design/redpoint80/img/peoduct_tap01.gif" alt=""></a></li>
+   <li><a class="tab" href="#tab02"><img src="/design/redpoint80/img/peoduct_tap02.gif" alt=""></a></li>
+   <li><a class="tab" href="#tab03"><img src="/design/redpoint80/img/peoduct_tap03.gif" alt=""></a></li>
+   <li><a class="tab" href="#tab04"><img src="/design/redpoint80/img/peoduct_tap04.gif" alt=""></a></li>
+   <li><a class="tab" href="#tab05"><img src="/design/redpoint80/img/peoduct_tap05.gif" alt=""></a></li>
+  </ul>
+  <a href="#top" style="position:absolute; top:25px; right:0px;"><img src="/design/redpoint80/img/goodsview_title_top.gif"></a> </div>
+ <div id="tab01" style="padding: 20px 0px;"> 
+  <!-- 상세 설명 -->
+  <div id="contents" style="width:100%; padding-bottom:40px;overflow:hidden;">
+   <table width="100%">
+    <tbody>
+     <tr>
+      <td> <!--/detail/--> </td>
+     </tr>
+    </tbody>
+   </table>
+  </div>
+ </div>
+ <div id="tab02" style="padding: 20px 0px; min-height: 500px; display: none;">
+<!---상품후기 시작--->
+
+                        <!--/review_board_target/-->
+                        <h3 class="tit-detail">
+                        <img src="/images/d3/modern_simple/prd_review_tit.gif" alt="review board - 상품후기" title="review board - 상품후기" />
+                            <span class="btns">
+                                <!--/if_link_review_board_more/--><a href="<!--/link_review_board_more/-->"><img src="/images/d3/modern_simple/btn/btn_h25_all_view.gif" alt="전체보기" title="전체보기" /></a><!--/end_if/-->
+                                <!--/if_link_review_board_write/--><a href="<!--/link_review_board_write/-->"><img src="/images/d3/modern_simple/btn/btn_h25_review_write.gif" alt="후기쓰기" title="후기쓰기" /></a><!--/end_if/-->
+                            </span>
+                        </h3>
+                        <div class="table-slide review-list">
+                            <table summary="번호, 제목, 작성자, 작성일, 조회">
+                                <caption>review 리스트</caption>
+                                <!--/if_review_board/-->
+                                    <!--/loop_review_board/-->
+                                        <!--/if_idx(1)/-->
+                                        <colgroup>
+                                            <col width="80" />
+                                            <col width="30" />
+                                            <col width="*" />
+                                            <col width="100" />
+                                            <col width="100" />
+                                            <!--/if_review_board@score_text/--><col width="120" /><!--/end_if/-->
+                                            <col width="80" />
+                                        </colgroup>
+                                        <thead >
+                                            <tr>
+                                                <th scope="col"><div class="tb-center">번호</div></th>
+                                                <th scope="col"></th>
+                                                <th scope="col"><div class="tb-center">제목</div></th>
+                                                <th scope="col"><div class="tb-center">작성자</div></th>
+                                                <th scope="col"><div class="tb-center">작성일</div></th>
+                                                <!--/if_review_board@score_text/--><th scope="col"><div class="tb-center">평점</div></th><!--/end_if/-->
+                                                <th scope="col"><div class="tb-center">조회</div></th>
+                                            </tr >
+                                        </thead>
+                                        <!--/end_if/-->
+                                        <tbody>
+                                            <tr class="nbg">
+                                                <td><div class="tb-center"><!--/review_board@number/--></div></td>
+                                                <td><div class="tb-center"><!--/if_review_board@attach_icon/--><img src="<!--/review_board@attach_icon/-->" /><!--/end_if/--></div></td>
+                                                <td><div class="tb-left reply_depth<!--/review_board@depth/-->">
+                                                    <!--/if_review_board@delete_message/--><!--/review_board@delete_message/--><!--/end_if/-->
+                                                    <span>
+                                                        <!--/if_review_board@depth(+1)/--><img src="/board/images/board2_reply2.gif" /><!--/end_if/-->
+                                                        <!--/if_review_board@lock_icon/--><img src="<!--/review_board@lock_icon/-->" /><!--/end_if/-->
+                                                        <a href="<!--/review_board@link/-->"><!--/review_board@subject(15)/--></a>
+                                                    </span>
+                                                    <!--/if_review_board@cnt_comment/--><span style="font-size: 8pt;">(<!--/review_board@cnt_comment/-->)</span><!--/end_if/-->
+                                                    <!--/review_board@reply_status/-->
+                                                    <!--/if_review_board@new_icon/--><img src="<!--/review_board@new_icon/-->" /><!--/end_if/-->
+                                                    <!--/if_review_board@hit_icon/--><img src="<!--/review_board@hit_icon/-->" /><!--/end_if/-->
+                                                    </div></td>
+                                                <td><div class="tb-center"><!--/if_review_board@group_icon/--><img src="<!--/review_board@group_icon/-->" /><!--/end_if/--><!--/review_board@writer/--></div></td>
+                                                <td><div class="tb-center"><!--/date(%Y/%M/%D)/review_board@date_write/--></div></td>
+                                                <!--/if_review_board@score_text/--><td><div class="tb-center"><!--/review_board@score_text/--></div></td><!--/end_if/-->
+                                                <td><div class="tb-center"><!--/review_board@cnt_read/--></div></td>
+                                            </tr>
+                                            <tr class="cnt" id="<!--/review_board@id_content/-->">
+                                                <td colspan="6">
+                                                    <div class="tb-left">
+                                                        <!--/block_review_board/-->
+                                                        <div style="padding-bottom: 15px; padding-left: 80px; padding-right: 15px; padding-top: 15px">
+                                                            <!--/if_review_board_comment_attach_image/-->
+                                                            <div style="text-align: center; margin-bottom: 10px"><img src="<!--/review_board_comment_attach_image/-->" /></div>
+                                                            <!--/end_if/-->
+                                                            <!--/review_board_comment_content/-->
+                                                            <!--/if_review_board_comment_link_modify/-->
+                                                            <div style="text-align: right;">
+                                                                <a href ="<!--/review_board_comment_link_modify/-->"><img src="<!--/review_board_comment_modify_image/-->"></a>
+                                                            </div>
+                                                            <!--/end_if/-->
+                                                        </div>
+                                                        <div class="MS_cmt_list_box">
+                                                            <!--/loop_review_board_comment/-->
+                                                            <div class="comment_depth<!--/review_board_comment@depth/-->">
+                                                                <table class="MS_cmt_list" border="0" cellspacing="0" cellpadding="0">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td class="MS_cmt_detail">
+                                                                            <span class="MS_cmt_hname MS_cmt_depth MS_cmt_depth01"><!--/review_board_comment@writer/--></span>
+                                                                            <span class="MS_cmt_date"><!--/date(%Y-%M-%D %H:%i:%s)/review_board_comment@date_write/--></span>
+                                                                            <div class="MS_cmt_content MS_cmt_depth01"><!--/review_board_comment@content/--></div>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                                </table>
+                                                            </div>
+                                                            <!--/end_loop/-->
+                                                        </div>
+                                                        <!--/end_block/-->
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                    <!--/end_loop/-->
+                                    <!--/if_pager_review_board/-->
+                                            <tr>
+                                                <td colspan="6" style="text-align:center;">
+                                                    <ol class="paging">
+                                                        <!--/if_pager_review_board::first/-->
+                                                        <li class="first"><a href="<!--/pager_review_board::first@link/-->">[처음]</a></li>
+                                                        <!--/end_if/-->
+                                                        <!--/if_pager_review_board::prev/-->
+                                                        <li class="prev"><a href="<!--/pager_review_board::prev@link/-->">[이전]</a></li>
+                                                        <!--/end_if/-->
+
+                                                        <!--/loop_pager_review_board::page/-->
+                                                            <!--/if_pager_review_board::page@current/-->
+                                                        <li class="now"><a href="<!--/pager_review_board::page@link/-->"><!--/pager_review_board::page/--></a></li>
+                                                            <!--/else/-->
+                                                        <li><a href="<!--/pager_review_board::page@link/-->"><!--/pager_review_board::page/--></a></li>
+                                                            <!--/end_if/-->
+                                                        <!--/end_loop/-->
+
+                                                        <!--/if_pager_review_board::next/-->
+                                                        <li class="next"><a href="<!--/pager_review_board::next@link/-->">[다음]</a></li>
+                                                        <!--/end_if/-->
+                                                        <!--/if_pager_review_board::last/-->
+                                                        <li class="last"><a href="<!--/pager_review_board::last@link/-->">[끝]</a></li>
+                                                        <!--/end_if/-->
+                                                    </ol>
+                                                </td>
+                                            </tr>
+                                    <!--/end_if/-->
+                                <!--/else/-->
+                                            <tr class="nbg">
+                                                <td colspan="5"><div class="tb-center">등록된 리뷰가 없습니다.</div></td>
+                                            </tr>
+                                <!--/end_if/-->
+                                        </tbody>
+                            </table>
+                        </div><!-- .review-list -->
+<!---상품후기 끝--->
+ </div>
+ <div id="tab03" style="padding: 20px 0px; min-height: 500px; display: none;">
+<!---상품문의 시작--->
+
+                        <!--/qna_board_target/-->
+                        <h3 class="tit-detail">
+                        <img src="/images/d3/modern_simple/prd_qna_tit.gif" alt="QnA board - 상품문의" title="QnA board - 상품문의" />
+                            <span class="btns">
+                                <!--/if_link_qna_board_more/--><a href="<!--/link_qna_board_more/-->"><img src="/images/d3/modern_simple/btn/btn_h25_all_view.gif" alt="전체보기" title="전체보기" /></a><!--/end_if/-->
+                                <!--/if_link_qna_board_write/--><a href="<!--/link_qna_board_write/-->"><img src="/images/d3/modern_simple/btn/btn_h25_prd_qna.gif" alt="상품문의" title="상품문의" /></a><!--/end_if/-->
+                            </span>
+                        </h3>
+                        <div class="table-slide qna-list">
+                            <table summary="번호, 제목, 작성자, 작성일, 조회">
+                                <caption>QnA 리스트</caption>
+                                <!--/if_qna_board/-->
+                                <colgroup>
+                                    <col width="80" />
+                                    <col width="30" />
+                                    <col width="*" />
+                                    <col width="100" />
+                                    <col width="100" />
+                                    <col width="80" />
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col"><div class="tb-center">번호</div></th>
+                                        <th scope="col"></th>
+                                        <th scope="col"><div class="tb-center">제목</div></th>
+                                        <th scope="col"><div class="tb-center">작성자</div></th>
+                                        <th scope="col"><div class="tb-center">작성일</div></th>
+                                        <th scope="col"><div class="tb-center">조회</div></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!--/loop_qna_board/-->
+                                    <tr class="nbg">
+                                        <td><div class="tb-center"><!--/qna_board@number/--></div></td>
+                                        <td><div class="tb-center"><!--/if_qna_board@attach_icon/--><img src="<!--/qna_board@attach_icon/-->" /><!--/end_if/--></div></td>
+                                        <td><div class="tb-left reply_depth<!--/qna_board@depth/-->">
+                                            <!--/if_qna_board@delete_message/--><!--/qna_board@delete_message/--><!--/end_if/-->
+                                            <span>
+                                                <!--/if_qna_board@depth(+1)/--><img src="/board/images/board2_reply2.gif" /><!--/end_if/-->
+                                                <!--/if_qna_board@lock_icon/--><img src="<!--/qna_board@lock_icon/-->" /><!--/end_if/-->
+                                                <a href="<!--/qna_board@link/-->"><!--/qna_board@subject(15)/--></a>
+                                            </span>
+                                            <!--/if_qna_board@cnt_comment/--><span style="font-size: 8pt;">(<!--/qna_board@cnt_comment/-->)</span><!--/end_if/-->
+                                            <!--/qna_board@reply_status/-->
+                                            <!--/if_qna_board@new_icon/--><img src="<!--/qna_board@new_icon/-->" /><!--/end_if/-->
+                                            <!--/if_qna_board@hit_icon/--><img src="<!--/qna_board@hit_icon/-->" /><!--/end_if/-->
+                                            </div></td>
+                                        <td><div class="tb-center"><!--/if_qna_board@group_icon/--><img src="<!--/qna_board@group_icon/-->" /><!--/end_if/--><!--/qna_board@writer/--></div></td>
+                                        <td><div class="tb-center"><!--/date(%Y/%M/%D)/qna_board@date_write/--></div></td>
+                                        <td><div class="tb-center"><!--/qna_board@cnt_read/--></div></td>
+                                    </tr>
+                                    <tr class="cnt" id="<!--/qna_board@id_content/-->">
+                                        <td colspan="6">
+                                            <div class="tb-left">
+                                                <!--/block_qna_board/-->
+                                                <div style="padding-bottom: 15px; padding-left: 80px; padding-right: 15px; padding-top: 15px">
+                                                    <!--/if_qna_board_comment_attach_image/-->
+                                                    <div style="text-align: center; margin-bottom: 10px"><img src="<!--/qna_board_comment_attach_image/-->" /></div>
+                                                    <!--/end_if/-->
+                                                    <!--/qna_board_comment_content/-->
+                                                    <!--/if_qna_board_comment_link_modify/-->
+                                                    <div style="text-align: right;">
+                                                        <a href ="<!--/qna_board_comment_link_modify/-->"><img src="<!--/qna_board_comment_modify_image/-->"></a>
+                                                    </div>
+                                                    <!--/end_if/-->
+                                                </div>
+                                                <div class="MS_cmt_list_box">
+                                                    <!--/loop_qna_board_comment/-->
+                                                    <div class="comment_depth<!--/qna_board_comment@depth/-->">
+                                                        <table class="MS_cmt_list" border="0" cellspacing="0" cellpadding="0">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="MS_cmt_detail">
+                                                                    <span class="MS_cmt_hname MS_cmt_depth MS_cmt_depth01"><!--/qna_board_comment@writer/--></span>
+                                                                    <span class="MS_cmt_date"><!--/date(%Y-%M-%D %H:%i:%s)/qna_board_comment@date_write/--></span>
+                                                                    <div class="MS_cmt_content MS_cmt_depth01"><!--/qna_board_comment@content/--></div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <!--/end_loop/-->
+                                                </div>
+                                                <!--/end_block/-->
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <!--/end_loop/-->
+                                    <!--/if_pager_qna_board/-->
+                                    <tr>
+                                        <td colspan="6" style="text-align:center;">
+                                            <ol class="paging">
+                                                <!--/if_pager_qna_board::first/-->
+                                                <li class="first"><a href="<!--/pager_qna_board::first@link/-->">[처음]</a></li>
+                                                <!--/end_if/-->
+                                                <!--/if_pager_qna_board::prev/-->
+                                                <li class="prev"><a href="<!--/pager_qna_board::prev@link/-->">[이전]</a></li>
+                                                <!--/end_if/-->
+
+                                                <!--/loop_pager_qna_board::page/-->
+                                                    <!--/if_pager_qna_board::page@current/-->
+                                                <li class="now"><a href="<!--/pager_qna_board::page@link/-->"><!--/pager_qna_board::page/--></a></li>
+                                                    <!--/else/-->
+                                                <li><a href="<!--/pager_qna_board::page@link/-->"><!--/pager_qna_board::page/--></a></li>
+                                                    <!--/end_if/-->
+                                                <!--/end_loop/-->
+
+                                                <!--/if_pager_qna_board::next/-->
+                                                <li class="next"><a href="<!--/pager_qna_board::next@link/-->">[다음]</a></li>
+                                                <!--/end_if/-->
+                                                <!--/if_pager_qna_board::last/-->
+                                                <li class="last"><a href="<!--/pager_qna_board::last@link/-->">[끝]</a></li>
+                                                <!--/end_if/-->
+                                            </ol>
+                                        </td>
+                                    </tr>
+                                    <!--/end_if/-->
+                                <!--/else/-->
+                                <tr class="nbg">
+                                    <td colspan="5"><div class="tb-center">등록된 문의가 없습니다.</div></td>
+                                </tr>
+                                <!--/end_if/-->
+                                </tbody>
+                            </table>
+                        </div><!-- .qna-list -->
+
+<!---상품문의 끝--->
+ </div>
+ <div id="tab04" style="padding: 20px; text-align: center; display: none;"> <img src="/design/redpoint80/img/shipping01.gif"> <img src="/design/redpoint80/img/shipping02.gif"> <img src="/design/redpoint80/img/shipping03.gif"> <img src="/design/redpoint80/img/shipping04.gif"> </div>
+ <div id="tab05" style="padding: 20px; min-height: 500px; display: none;">
+  <div class="r01_tab">
+   <p><strong style="margin-right:15px;">■ 상품 필수 표기 정보</strong> <span style="font-size:12px;">교육쇼핑몰 레드포인트 상품정보는 전자상거래 등에서 상품정보제공 고시에 따라 작성됩니다.</span></p>
+   <table>
+    <thead>
+     <tr>
+      <th>항목</th>
+      <th>내용</th>
+     </tr>
+    </thead>
+    <thead>
+    </thead>
+    <tbody>
+     <tr>
+      <th>품명 및 모델명</th>
+      <td><!--/name/--></td>
+     </tr>
+     <tr>
+      <th>법적 허가 사항</th>
+      <td>상세설명 별도표기</td>
+     </tr>
+     <tr>
+      <th>제조국 또는 원산지</th>
+      <td><!--/origin/--></td>
+     </tr>
+     <tr>
+      <th>제조사 또는 브랜드</th>
+      <td><!--/brand/--> <a href="<!--/link_brand_product/-->"><img src="/design/redpoint80/img/btn_brand001.gif"></a></td>
+     </tr>
+     <tr>
+      <th>소비자 상담 전화번호</th>
+      <td>1544-8085</td>
+     </tr>
+    </tbody>
+   </table>
+  </div>
+ </div>
+ <a href="#inreview"></a> 
+ <script type="text/javascript">initTabMenu("detail_tab");</script> 
+</div>
+<!----탭 끝---->
+<!----탭 끝---->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.thum01 {width:380px; overflow:hidden; margin:20px auto;}
+.thum01 img {width:100%;}
+.product_sum {width:100%; font-size:12px; margin:10px auto;}
+.product_sum tr th {text-align:left; padding:7px 0px 7px 30px; border:none; font-weight:normal; width:120px;}
+.product_sum tr td {padding:7px 10px 7px 0px;}
+.product_sum01 {width:100%; font-size:12px; background:#fff; border-top:1px solid #e9e9e9;}
+.product_sum01 tr th {text-align:left; padding:7px 0px 7px 30px; border:none; font-weight:normal; width:120px;}
+.product_sum01 tr td {padding:7px 10px 7px 0px;}
+.product_sum02 {width:100%; font-size:11px; background:#f9eef3; border-top:1px solid #e9e9e9;}
+.product_sum02 tr th {text-align:left; padding:10px 0px 7px 30px; border:none; font-weight:normal; width:120px;}
+.product_sum02 tr td {padding:10px 0px 7px 0px; line-height:16px; letter-spacing:-1px;}
+.product_sum03 {width:100%; font-size:12px; margin:0px auto;}
+.product_sum03 tr th {text-align:left; padding:5px 0px 5px 30px; border:none; font-weight:normal; width:120px;}
+.product_sum03 tr td {padding:5px 10px 5px 0px;}
+#detail_tab {width:100%; height:45px; border-bottom:2px solid #555555; position:relative;}
+#detail_tab ul li {float:left; margin-right:-1px;}
+
+.r01_tab {width:905px; margin:40px auto; font-size:14px; color:#000;}
+.r01_tab table {width:100%; font-size:14px; margin:15px auto; color:#000;}
+.r01_tab table tr th {background:#555555; padding:10px 0; font-size:12px;}
+.r01_tab table thead tr th {background:#555555; padding:15px 0; color:#fff;}
+.r01_tab table tbody tr th {width:25%; background:#F8F8F8; padding:15px 30px; font-size:14px; text-align:left; border-right:1px solid #CCCCCC; border-bottom:1px solid #CCCCCC;}
+.r01_tab table tbody tr td {width:75%; background:#fff; padding:15px 30px; font-size:14px; text-align:left; border-bottom:1px solid #CCCCCC}
+
+
+
+
+

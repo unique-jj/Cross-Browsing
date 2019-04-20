@@ -1,0 +1,67 @@
+<!----탭메뉴 작동---->
+<script src="http://code.jquery.com/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+
+
+/*************탭***************/
+function productShow(product) {
+document.all.product1.style.display = "none";
+document.all.product2.style.display = "none";
+document.all.product3.style.display = "none";
+document.all.product4.style.display = "none";
+var obj = eval("document.all." + product);
+obj.style.display = "block";
+}
+
+function productView(product) {
+document.all.product5.style.display = "none";
+document.all.product6.style.display = "none";
+document.all.product7.style.display = "none";
+document.all.product8.style.display = "none";
+var obj = eval("document.all." + product);
+obj.style.display = "block";
+}
+
+$(function() { 
+ $(".tab-area div").click(function() { 
+   $(".tab-area div").removeClass("active-tab"); 
+   $(this).addClass("active-tab");   
+ }); 
+}); 
+
+
+
+
+ <div class="list_tab" id="tab-6">
+  <div class="tab_title">
+   <div class="tab-area active-tab" style="width:24%" >
+    <div class="title" onclick="javascript:productShow('product1')">JACK&amp;JILL</div>
+   </div>
+   <div class="tab-area" style="width:24%" >
+    <div class="title" onclick="javascript:productShow('product2')">PEARLYGATES</div>
+   </div>
+   <div class="tab-area" style="width:24%" >
+    <div class="title" onclick="javascript:productShow('product3')">PING</div>
+   </div>
+   <div class="tab-area" style="width:24%" >
+    <div class="title" onclick="javascript:productShow('product4')">FANTOM</div>
+   </div>
+  </div>
+
+  <div class="list_tabcontent" id="tabcontent-6">
+   <div class="swipe_tab" style="clear: both; overflow: hidden;" id="swipe_tab-6">
+    <div style="list-style: none; margin: 0px;">
+<!------첫번째 상품진열 시작------->
+     <div class="list_content" id="product1">
+      <div class="list_content_tab_border"></div>
+      <!--/loop_category_product_019(6)/-->
+      <a href="<!--/category_product_019@link/-->">
+      <div class="list_item" style="width:32%">
+       <div class="item_img"><img src="<!--/category_product_019@image_m/-->"></div>
+       <div class="item_name" style="width:97px;"><!--/category_product_019@name/--></div>
+       <div class="item_price"><!--/number/category_product_019@price_sell/--> 원</div>
+      </div>
+      </a>
+       <!--/end_loop/--> 
+      <div class="list_content_border"></div>
+     </div>
+<!------첫번째 상품진열 끝------->

@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script src="http://www.canmart.co.kr/design/jason006/js_j/jquery.touchwipe.min.js"></script>
+<script src="http://www.canmart.co.kr/design/jason006/js_j/jquery.scrollBanner.js"></script>
+<script>
+(function($) {
+ $(document).ready(function(){
+ $(".cContents").scrollBanner({
+  //컨텐츠 영역 정의
+  "cContentsClass" : "cContents2",
+  "cContentsWidth" : "100%",
+  "cContentsHeight" : "219px",
+  //ul
+  "cWrapperClass" : "cWrapper2",
+  //li
+  "cListClass" : "cList2",
+  //한번에 노출할 리스트의 개수
+  "viewItemCnt" : "1",
+  //한번에 움직일 배너의 개수
+  "moveItemCnt" : "1",
+  //좌우버튼 정의
+  "leftBtnClass" : "cLeft2",
+  "rightBtnClass" : "cRight2",
+  //dot영역 정의
+  "dotMoveYn" : true,
+  "dotWrap" : "cdot",
+  "dotElementClass" : "dotList",
+  "dotActClass" : "active",
+  //자동롤링
+  "autoScrollYn" : true,
+  "scorllTimer" : "2000",
+  //터치이벤트
+  "touchEvent" : true,
+  //상하롤링
+  "verticalMove" : false
+ });
+ });
+})(jQuery);
+
+</script>
+<style>
+#visualBox2 { width:315px; height:219px; position:relative; margin:0px !important;}
+
+ .dotWrap li {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  padding: 0px 2px;
+  background: url(img/icon_dot02.png) no-repeat top left;
+  -webkit-background-size: 7px;
+  background-size: 7px;
+  vertical-align: top;
+ }
+ 
+ .dotWrap2 li.active {
+  background: url(img/icon_dot01.png) no-repeat top left;
+  -webkit-background-size: 7px;
+  background-size: 7px;
+ }
+ 
+ .cList2 {
+  text-align : center;
+ }
+
+
+ .sBnBtn2 { position:absolute; top:95px; right:5px; }
+</style>
+</head>
+
+<body>
+<div id="visualBox2">
+	<div class="cContents2">
+		<ul class="cWrapper2">
+		  <li class="cList2"><a href="/shop/shopbrand.html?xcode=212&type=Y"><img src="http://www.canmart.co.kr/design/jason006/image/md1.jpg" /> </a></li>
+		  <li class="cList2"><a href="/shop/shopbrand.html?xcode=135&type=Y"><img src="http://www.canmart.co.kr/design/jason006/image/md2.jpg" /> </a></li>
+		</ul>
+	</div>
+	<ul class="dotWrap2 cdot">
+		<li class="dotList active"></li>
+		<li class="dotList"></li>
+		<li class="dotList"></li>
+	</ul>
+	<div class="sBnBtn2">
+	    <input type="image" value="right" class="cRight2" src="http://www.canmart.co.kr/design/jason006/img_j/prev_s.png" alt="왼쪽버튼" style="margin-right:260px;"/>
+            <input type="image" value="left" class="cLeft2" src="http://www.canmart.co.kr/design/jason006/img_j/next_s.png" alt="오른쪽버튼" style="margin-right:0px;" />  
+	</div>
+</div>
+
+</body>
+</html>

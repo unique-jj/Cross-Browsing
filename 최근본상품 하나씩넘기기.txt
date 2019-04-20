@@ -1,0 +1,55 @@
+*gdscroll 이 키워드
+
+
+
+
+
+<div id="scroll" style="">
+ <div><img src="/design/chakanfac/img/kakao1.gif" align="absmiddle"></div>
+ <div style="width:90px;">
+  <div><img src="/design/chakanfac/img/sky_btn_todayview.gif" border="10"></div>
+  <table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-style:solid;border-color:#E3E3E3;border-width:0 1px;">
+   <tbody>
+
+<tr><td style="text-align:center;padding:5px 0"><a href="javascript:gdscroll(-73)" onfocus="blur()"><img src="/design/chakanfac/img/sky_btn_up.gif" border="0"></a></td></tr>
+
+    <tr>
+     <td align="center">
+      <div id="gdscroll" style="height:216px;overflow:hidden">
+      <!--/loop_view_product/-->
+       <div><a href="<!--/view_product@link/-->"><img src="<!--/view_product@image_s/-->" width="70" /></a></div>
+      <!--/end_loop/-->
+      </div>
+      </td>
+    </tr>
+
+<tr><td style="text-align:center;padding:5px 0"><a href="javascript:gdscroll(73)" onfocus="blur()"><img src="/design/chakanfac/img/sky_btn_down.gif" border="0"></a></td></tr>
+
+   </tbody>
+  </table>
+ </div>
+ <div style="margin-bottom:5px;">
+  <table cellpadding="0" cellspacing="0">
+   <tbody>
+    <tr>
+     <td><a href="#top" target=""><img src="/design/chakanfac/img/sky_btn_top.gif" align="absmiddle"></a></td>
+     <td><a href="javascript:history.back();" target=""><img src="/design/chakanfac/img/sky_btn_back.gif" align="absmiddle"></a></td>
+    </tr>
+   </tbody>
+  </table>
+ </div>
+ <div>
+  <a href="/shop/shopdetail.html?branduid=14&xcode=007&mcode=000&scode=&type=P&sort=order&cur_code=007&GfDT=bmV6"target=""><img src="/design/chakanfac/img/sky_ban_event02.gif" align="absmiddle"> </a>
+ </div>
+</div> 
+
+
+
+<script>
+function gdscroll(gap)
+{
+	var gdscroll = document.getElementById('gdscroll');
+	gdscroll.scrollTop += gap;
+}
+
+</script>
