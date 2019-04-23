@@ -1,9 +1,0 @@
-    //header ½ºÅ©·Ñ
-    jQuery(window).scroll(function() {
-        if (jQuery(this).scrollTop() > 1){
-            jQuery('header').addClass("fixed");
-        }
-        else{
-            jQuery('header').removeClass("fixed");
-        }
-    });

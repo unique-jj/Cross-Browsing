@@ -1,9 +1,0 @@
-$(function(){
-  $(window).scroll(function(){
-    if($(this).scrollTop() >200){
-      $("#masthead").addClass("stuck move_down");
-    }else{
-      $("#masthead").removeClass("stuck move_down"); 
-    }
-  });
-});

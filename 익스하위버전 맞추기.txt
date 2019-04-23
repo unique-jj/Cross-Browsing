@@ -1,8 +1,0 @@
-기본적으로 html5코딩을할떄는 인라인형태로 표시되는 요소들을 블럭요소로 변경해주어야한다.
-
-header,footer,section,article,aside,nav,hgroup,details,menu,figure,figcaption {display:inline-block;}
-
-그이고 익스에서 html5렌더링 문제를 고쳐주는 스크립트를 추가해야 ie8에서도 틀어지지않고 보입니다.
-<!--[if lt IE 9]>
- <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->

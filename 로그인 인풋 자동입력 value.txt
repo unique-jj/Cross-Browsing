@@ -1,8 +1,0 @@
-<script type="text/javascript">
-document.formlogin.passwd.value = '비밀번호';
-</script>
-<script type="text/javascript">
-document.formlogin.passwd.onfocus = function () {
-    this.value = '';
-}
-</script>

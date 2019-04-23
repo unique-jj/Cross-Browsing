@@ -1,7 +1,0 @@
-						jQuery(document).ready(function(){
-							jQuery('#contents img').each(function(){
-								if(!jQuery(this).attr('resize')){
-									jQuery(this).jScale({w:'710'})
-								}
-							});
-						});

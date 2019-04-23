@@ -1,7 +1,0 @@
-jquery.sliderkit.1.9.2.pack.js
-를 사용할떄는 꼭
-
-		<!-- jQuery Plugin scripts 스르륵넘어가는효과 이거없으면 뚝뚝끊김-->
-		<script type="text/javascript" src="jquery.easing.1.3.min.js"></script>
-
-이걸써줘야지 다른 스크립트와의 충돌을 막을수 있다!
